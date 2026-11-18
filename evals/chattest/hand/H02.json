@@ -1,0 +1,57 @@
+{
+ "id": "H02",
+ "patient": "Dad",
+ "other": "Tom",
+ "medicines": [
+  {
+   "name": "amlodipine",
+   "strength": "5mg"
+  }
+ ],
+ "reaction": "ankle swelling",
+ "messages": [
+  {
+   "sender": "Dad",
+   "date": "2026-07-23",
+   "says": "I started taking amlodipine",
+   "mustContain": "tonight",
+   "text": "I've started taking amlodipine tonight. Doctor's prescription."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-08-04",
+   "says": "my ankle swelling started",
+   "mustContain": "since yesterday",
+   "text": "My ankles have been swollen since yesterday. Shoes feel tight."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-08-14",
+   "says": "I stopped taking amlodipine",
+   "mustContain": "since Wednesday",
+   "text": "I haven't taken amlodipine since Wednesday. Wanted to mention it."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-08-15",
+   "says": "my ankle swelling has gone",
+   "mustContain": "this morning",
+   "text": "The swelling in my ankles went down this morning. Much more comfortable."
+  },
+  {
+   "sender": "Tom",
+   "date": "2026-08-05",
+   "says": "asks Dad how the ankle swelling is",
+   "mustContain": "",
+   "text": "Dad, how's the ankle swelling? Feet looking any better?"
+  },
+  {
+   "sender": "Tom",
+   "date": "2026-08-07",
+   "says": "says they read online that amlodipine can cause ankle swelling in general",
+   "mustContain": "",
+   "text": "I read online that amlodipine can make your ankles swell. Apparently quite common."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

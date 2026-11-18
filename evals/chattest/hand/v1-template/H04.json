@@ -1,0 +1,70 @@
+{
+ "id": "H04",
+ "patient": "Mum",
+ "other": "Priya",
+ "medicines": [
+  {
+   "name": "ramipril",
+   "strength": "5mg"
+  }
+ ],
+ "reaction": "dry cough",
+ "messages": [
+  {
+   "sender": "Mum",
+   "date": "2026-02-15",
+   "says": "I started taking ramipril",
+   "mustContain": "yesterday",
+   "text": "I started taking ramipril yesterday."
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-02-27",
+   "says": "Mum's dry cough started",
+   "mustContain": "this morning",
+   "text": "Mum's dry cough started this morning."
+  },
+  {
+   "sender": "Mum",
+   "date": "2026-03-21",
+   "says": "I stopped taking ramipril",
+   "mustContain": "for five days",
+   "text": "I stopped taking ramipril for five days."
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-03-25",
+   "says": "Mum's dry cough has gone",
+   "mustContain": "two days ago",
+   "text": "Mum's dry cough has gone two days ago."
+  },
+  {
+   "sender": "Mum",
+   "date": "2026-04-09",
+   "says": "I started taking ramipril again",
+   "mustContain": "since Monday",
+   "text": "I started taking ramipril again since Monday."
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-04-09",
+   "says": "Mum's dry cough is back",
+   "mustContain": "since yesterday",
+   "text": "Mum's dry cough is back since yesterday."
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-03-01",
+   "says": "asks Mum how the dry cough is",
+   "mustContain": "",
+   "text": "How are your dry cough feelings?"
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-03-03",
+   "says": "says they read online that ramipril can cause dry cough in general",
+   "mustContain": "",
+   "text": "I read online that ramipril can cause dry cough in general."
+  }
+ ]
+}

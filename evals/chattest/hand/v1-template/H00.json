@@ -1,0 +1,70 @@
+{
+ "id": "H00",
+ "patient": "Margaret",
+ "other": "Sarah",
+ "medicines": [
+  {
+   "name": "atorvastatin",
+   "strength": "20mg"
+  }
+ ],
+ "reaction": "muscle aches",
+ "messages": [
+  {
+   "sender": "Margaret",
+   "date": "2026-06-26",
+   "says": "I started taking atorvastatin",
+   "mustContain": "tonight",
+   "text": "I took atorvastatin tonight for the first time. I will let you know if I have any side effects."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-07-15",
+   "says": "my muscle aches started",
+   "mustContain": "since Saturday",
+   "text": "My muscle aches started on Saturday."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-07-20",
+   "says": "I stopped taking atorvastatin",
+   "mustContain": "since yesterday",
+   "text": "I stopped taking atorvastatin yesterday."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-07-29",
+   "says": "my muscle aches has gone",
+   "mustContain": "for five days",
+   "text": "My muscle aches has gone for five days."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-08-12",
+   "says": "I started taking atorvastatin again",
+   "mustContain": "for three days",
+   "text": "I started taking atorvastatin again for three days."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-08-11",
+   "says": "my muscle aches is back",
+   "mustContain": "this morning",
+   "text": "My muscle aches is back this morning."
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-07-13",
+   "says": "asks Margaret how the muscle aches is",
+   "mustContain": "",
+   "text": "How are your muscle aches feeling?"
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-07-15",
+   "says": "says they read online that atorvastatin can cause muscle aches in general",
+   "mustContain": "",
+   "text": "I read online that atorvastatin can cause muscle aches in general."
+  }
+ ]
+}

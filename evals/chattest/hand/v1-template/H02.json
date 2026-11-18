@@ -1,0 +1,56 @@
+{
+ "id": "H02",
+ "patient": "Dad",
+ "other": "Tom",
+ "medicines": [
+  {
+   "name": "amlodipine",
+   "strength": "5mg"
+  }
+ ],
+ "reaction": "ankle swelling",
+ "messages": [
+  {
+   "sender": "Dad",
+   "date": "2026-07-23",
+   "says": "I started taking amlodipine",
+   "mustContain": "tonight",
+   "text": "I started taking amlodipine tonight."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-08-04",
+   "says": "my ankle swelling started",
+   "mustContain": "since yesterday",
+   "text": "My ankle swelling started since yesterday."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-08-14",
+   "says": "I stopped taking amlodipine",
+   "mustContain": "since Wednesday",
+   "text": "I stopped taking amlodipine since Wednesday."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-08-15",
+   "says": "my ankle swelling has gone",
+   "mustContain": "this morning",
+   "text": "My ankle swelling has gone this morning."
+  },
+  {
+   "sender": "Tom",
+   "date": "2026-08-05",
+   "says": "asks Dad how the ankle swelling is",
+   "mustContain": "",
+   "text": "How are your ankle swelling feelings?"
+  },
+  {
+   "sender": "Tom",
+   "date": "2026-08-07",
+   "says": "says they read online that amlodipine can cause ankle swelling in general",
+   "mustContain": "",
+   "text": "I read online that amlodipine can cause ankle swelling in general."
+  }
+ ]
+}

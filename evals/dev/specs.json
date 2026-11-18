@@ -1,0 +1,11 @@
+{ "seed": 0, "cases": [ { "id": "D01", "source": "dev", "variant": "full", "patient": "Margaret", "other": "Sarah", "dateOrder": "dmy",
+  "medicines": [{ "name": "atorvastatin" }, { "name": "metformin" }],
+  "reaction": { "label": "muscle aches", "keywords": ["ache", "aching", "achy", "muscle", "legs", "sore"] },
+  "chatEnd": "2026-04-21",
+  "scripted": [
+    { "event": { "kind": "medicine_started", "entity": "atorvastatin", "date": "2026-03-01" } },
+    { "event": { "kind": "symptom_started", "entity": "muscle aches", "date": "2026-03-14" } },
+    { "event": { "kind": "medicine_stopped", "entity": "atorvastatin", "date": "2026-03-31" } },
+    { "event": { "kind": "symptom_gone", "entity": "muscle aches", "date": "2026-04-05" } },
+    { "event": { "kind": "medicine_restarted", "entity": "atorvastatin", "date": "2026-04-18" } },
+    { "event": { "kind": "symptom_returned", "entity": "muscle aches", "date": "2026-04-20" } } ] } ] }

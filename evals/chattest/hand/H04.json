@@ -1,0 +1,71 @@
+{
+ "id": "H04",
+ "patient": "Mum",
+ "other": "Priya",
+ "medicines": [
+  {
+   "name": "ramipril",
+   "strength": "5mg"
+  }
+ ],
+ "reaction": "dry cough",
+ "messages": [
+  {
+   "sender": "Mum",
+   "date": "2026-02-15",
+   "says": "I started taking ramipril",
+   "mustContain": "yesterday",
+   "text": "I started taking ramipril yesterday, dear. All fine with the tablets."
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-02-27",
+   "says": "Mum's dry cough started",
+   "mustContain": "this morning",
+   "text": "Mum's got that tickly dry cough, started this morning 😕"
+  },
+  {
+   "sender": "Mum",
+   "date": "2026-03-21",
+   "says": "I stopped taking ramipril",
+   "mustContain": "for five days",
+   "text": "I've been off ramipril for five days. Haven't touched it."
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-03-25",
+   "says": "Mum's dry cough has gone",
+   "mustContain": "two days ago",
+   "text": "Mum's cough disappeared two days ago. She's so relieved!"
+  },
+  {
+   "sender": "Mum",
+   "date": "2026-04-09",
+   "says": "I started taking ramipril again",
+   "mustContain": "since Monday",
+   "text": "I've been taking ramipril again since Monday. Hoping for the best."
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-04-09",
+   "says": "Mum's dry cough is back",
+   "mustContain": "since yesterday",
+   "text": "Oh no, mum's dry cough has been back since yesterday 😩"
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-03-01",
+   "says": "asks Mum how the dry cough is",
+   "mustContain": "",
+   "text": "Mum, how's the coughing? Is it bothering you much?"
+  },
+  {
+   "sender": "Priya",
+   "date": "2026-03-03",
+   "says": "says they read online that ramipril can cause dry cough in general",
+   "mustContain": "",
+   "text": "I read online that ramipril can cause a dry cough. Looks like a known side effect."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

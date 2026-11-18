@@ -1,0 +1,70 @@
+{
+ "id": "H06",
+ "patient": "Margaret",
+ "other": "Sarah",
+ "medicines": [
+  {
+   "name": "sertraline",
+   "strength": "50mg"
+  }
+ ],
+ "reaction": "trouble sleeping",
+ "messages": [
+  {
+   "sender": "Margaret",
+   "date": "2026-04-02",
+   "says": "I started taking sertraline",
+   "mustContain": "yesterday",
+   "text": "I started taking sertraline yesterday."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-04-18",
+   "says": "my trouble sleeping started",
+   "mustContain": "for four days",
+   "text": "My trouble sleeping started for four days."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-03",
+   "says": "I stopped taking sertraline",
+   "mustContain": "two days ago",
+   "text": "I stopped taking sertraline two days ago."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-12",
+   "says": "my trouble sleeping has gone",
+   "mustContain": "since Thursday",
+   "text": "My trouble sleeping has gone since Thursday."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-18",
+   "says": "I started taking sertraline again",
+   "mustContain": "for two days",
+   "text": "I started taking sertraline again for two days."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-20",
+   "says": "my trouble sleeping is back",
+   "mustContain": "since Sunday",
+   "text": "My trouble sleeping is back since Sunday."
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-04-16",
+   "says": "asks Margaret how the trouble sleeping is",
+   "mustContain": "",
+   "text": "How are your trouble sleeping feelings?"
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-04-18",
+   "says": "says they read online that sertraline can cause trouble sleeping in general",
+   "mustContain": "",
+   "text": "I read online that sertraline can cause trouble sleeping in general."
+  }
+ ]
+}

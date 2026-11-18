@@ -1,0 +1,43 @@
+{
+ "id": "H09",
+ "patient": "Linda",
+ "other": "James",
+ "medicines": [
+  {
+   "name": "simvastatin",
+   "strength": "40mg"
+  }
+ ],
+ "reaction": "muscle pain",
+ "messages": [
+  {
+   "sender": "Linda",
+   "date": "2026-01-06",
+   "says": "I started taking simvastatin",
+   "mustContain": "tonight",
+   "text": "I've started taking simvastatin tonight. Hope it agrees with me."
+  },
+  {
+   "sender": "James",
+   "date": "2026-01-17",
+   "says": "Linda's muscle pain started",
+   "mustContain": "",
+   "text": "Linda's muscle pain has kicked in, poor thing 😕"
+  },
+  {
+   "sender": "James",
+   "date": "2026-01-19",
+   "says": "asks Linda how the muscle pain is",
+   "mustContain": "",
+   "text": "Mum, how's that muscle pain? Is it easing up at all?"
+  },
+  {
+   "sender": "James",
+   "date": "2026-01-21",
+   "says": "says they read online that simvastatin can cause muscle pain in general",
+   "mustContain": "",
+   "text": "I read online that simvastatin can cause muscle pain. Seems to be a known side effect."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

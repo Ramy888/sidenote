@@ -1,0 +1,82 @@
+{
+ "id": "H05",
+ "patient": "Grandpa Joe",
+ "other": "Ellie",
+ "medicines": [
+  {
+   "name": "metformin",
+   "strength": "500mg"
+  },
+  {
+   "name": "vitamin D",
+   "strength": ""
+  }
+ ],
+ "reaction": "stomach upset",
+ "messages": [
+  {
+   "sender": "Grandpa Joe",
+   "date": "2026-04-22",
+   "says": "I started taking metformin",
+   "mustContain": "this morning",
+   "text": "I started taking metformin this morning, Ellie. As prescribed."
+  },
+  {
+   "sender": "Ellie",
+   "date": "2026-05-02",
+   "says": "Grandpa Joe started taking vitamin D",
+   "mustContain": "tonight",
+   "text": "Grandad's started his vitamin D tonight too 😊"
+  },
+  {
+   "sender": "Grandpa Joe",
+   "date": "2026-05-13",
+   "says": "my stomach upset started",
+   "mustContain": "since yesterday",
+   "text": "My stomach has been upset since yesterday. Not feeling great, love."
+  },
+  {
+   "sender": "Grandpa Joe",
+   "date": "2026-05-27",
+   "says": "I stopped taking metformin",
+   "mustContain": "for two days",
+   "text": "I've been off metformin for two days. Haven't taken any."
+  },
+  {
+   "sender": "Grandpa Joe",
+   "date": "2026-06-01",
+   "says": "my stomach upset has gone",
+   "mustContain": "three days ago",
+   "text": "My stomach trouble cleared up three days ago. Feeling much better."
+  },
+  {
+   "sender": "Ellie",
+   "date": "2026-06-13",
+   "says": "Grandpa Joe started taking metformin again",
+   "mustContain": "this morning",
+   "text": "Grandpa Joe's back on metformin this morning. He told me himself."
+  },
+  {
+   "sender": "Grandpa Joe",
+   "date": "2026-06-21",
+   "says": "my stomach upset is back",
+   "mustContain": "since Wednesday",
+   "text": "My stomach has been playing up again since Wednesday. Very unpleasant."
+  },
+  {
+   "sender": "Ellie",
+   "date": "2026-05-04",
+   "says": "asks Grandpa Joe how the stomach upset is",
+   "mustContain": "",
+   "text": "Grandad, how's your tummy? Is it feeling any better? ❤️"
+  },
+  {
+   "sender": "Ellie",
+   "date": "2026-05-06",
+   "says": "says they read online that metformin can cause stomach upset in general",
+   "mustContain": "",
+   "text": "I read online that metformin can cause stomach upset. Apparently it's pretty common."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "sidenote",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*"]
+  }
+}

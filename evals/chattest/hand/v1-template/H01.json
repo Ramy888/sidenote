@@ -1,0 +1,70 @@
+{
+ "id": "H01",
+ "patient": "Ahmed",
+ "other": "Mona",
+ "medicines": [
+  {
+   "name": "simvastatin",
+   "strength": "40mg"
+  }
+ ],
+ "reaction": "muscle pain",
+ "messages": [
+  {
+   "sender": "Ahmed",
+   "date": "2026-03-07",
+   "says": "I started taking simvastatin",
+   "mustContain": "since yesterday",
+   "text": "I started taking simvastatin since yesterday."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-03-23",
+   "says": "my muscle pain started",
+   "mustContain": "this morning",
+   "text": "My muscle pain started this morning."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-04-08",
+   "says": "I stopped taking simvastatin",
+   "mustContain": "today",
+   "text": "I stopped taking simvastatin today."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-04-16",
+   "says": "Ahmed's muscle pain has gone",
+   "mustContain": "yesterday",
+   "text": "Ahmed's muscle pain has gone yesterday."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-04-22",
+   "says": "Ahmed started taking simvastatin again",
+   "mustContain": "tonight",
+   "text": "Ahmed started taking simvastatin again tonight."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-04-26",
+   "says": "my muscle pain is back",
+   "mustContain": "since Thursday",
+   "text": "My muscle pain is back since Thursday."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-03-25",
+   "says": "asks Ahmed how the muscle pain is",
+   "mustContain": "",
+   "text": "How are your muscle pain feelings?"
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-03-27",
+   "says": "says they read online that simvastatin can cause muscle pain in general",
+   "mustContain": "",
+   "text": "I read online that simvastatin can cause muscle pain in general."
+  }
+ ]
+}

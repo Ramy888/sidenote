@@ -1,0 +1,42 @@
+{
+ "id": "H03",
+ "patient": "Linda",
+ "other": "James",
+ "medicines": [
+  {
+   "name": "lisinopril",
+   "strength": "10mg"
+  }
+ ],
+ "reaction": "dry cough",
+ "messages": [
+  {
+   "sender": "Linda",
+   "date": "2026-05-17",
+   "says": "I started taking lisinopril",
+   "mustContain": "last night",
+   "text": "I started taking lisinopril last night."
+  },
+  {
+   "sender": "Linda",
+   "date": "2026-06-09",
+   "says": "my dry cough started",
+   "mustContain": "three days ago",
+   "text": "My dry cough started three days ago."
+  },
+  {
+   "sender": "James",
+   "date": "2026-06-08",
+   "says": "asks Linda how the dry cough is",
+   "mustContain": "",
+   "text": "How are your dry cough feelings?"
+  },
+  {
+   "sender": "James",
+   "date": "2026-06-10",
+   "says": "says they read online that lisinopril can cause dry cough in general",
+   "mustContain": "",
+   "text": "I read online that lisinopril can cause dry cough in general."
+  }
+ ]
+}

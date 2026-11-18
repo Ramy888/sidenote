@@ -1,0 +1,43 @@
+{
+ "id": "H03",
+ "patient": "Linda",
+ "other": "James",
+ "medicines": [
+  {
+   "name": "lisinopril",
+   "strength": "10mg"
+  }
+ ],
+ "reaction": "dry cough",
+ "messages": [
+  {
+   "sender": "Linda",
+   "date": "2026-05-17",
+   "says": "I started taking lisinopril",
+   "mustContain": "last night",
+   "text": "I started the lisinopril last night. Hopefully it'll suit me."
+  },
+  {
+   "sender": "Linda",
+   "date": "2026-06-09",
+   "says": "my dry cough started",
+   "mustContain": "three days ago",
+   "text": "This annoying dry cough began three days ago. Very tickly."
+  },
+  {
+   "sender": "James",
+   "date": "2026-06-08",
+   "says": "asks Linda how the dry cough is",
+   "mustContain": "",
+   "text": "Mum, how's that dry cough? Getting any better?"
+  },
+  {
+   "sender": "James",
+   "date": "2026-06-10",
+   "says": "says they read online that lisinopril can cause dry cough in general",
+   "mustContain": "",
+   "text": "I read online that lisinopril can cause a dry cough. It's listed as a possible side effect."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

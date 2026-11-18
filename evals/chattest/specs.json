@@ -1,0 +1,3124 @@
+{
+ "seed": 20261116,
+ "cases": [
+  {
+   "id": "H00",
+   "source": "hand",
+   "variant": "full",
+   "patient": "Margaret",
+   "other": "Sarah",
+   "reporter": "Margaret",
+   "format": "ios",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "atorvastatin",
+     "strength": "20mg"
+    }
+   ],
+   "reaction": {
+    "label": "muscle aches",
+    "keywords": [
+     "ache",
+     "aching",
+     "achy",
+     "muscle",
+     "legs",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-06-23",
+   "chatEnd": "2026-08-12",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "atorvastatin",
+      "date": "2026-06-26"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-06-26",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle aches",
+      "date": "2026-07-11"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-07-15",
+      "mustContain": "since Saturday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "atorvastatin",
+      "date": "2026-07-19"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-07-20",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "muscle aches",
+      "date": "2026-07-24"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-07-29",
+      "mustContain": "for five days"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "atorvastatin",
+      "date": "2026-08-09"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-12",
+      "mustContain": "for three days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "muscle aches",
+      "date": "2026-08-11"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-11",
+      "mustContain": "this morning"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Sarah",
+     "date": "2026-07-13",
+     "gist": "asks Margaret how the muscle aches is"
+    },
+    {
+     "sender": "Sarah",
+     "date": "2026-07-15",
+     "gist": "says they read online that atorvastatin can cause muscle aches in general"
+    }
+   ]
+  },
+  {
+   "id": "H01",
+   "source": "hand",
+   "variant": "full",
+   "patient": "Ahmed",
+   "other": "Mona",
+   "reporter": "Ahmed",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "simvastatin",
+     "strength": "40mg"
+    }
+   ],
+   "reaction": {
+    "label": "muscle pain",
+    "keywords": [
+     "pain",
+     "ache",
+     "aching",
+     "muscle",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-03-03",
+   "chatEnd": "2026-04-26",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "simvastatin",
+      "date": "2026-03-06"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-03-07",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle pain",
+      "date": "2026-03-23"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-03-23",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "simvastatin",
+      "date": "2026-04-08"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-04-08",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "muscle pain",
+      "date": "2026-04-15"
+     },
+     "message": {
+      "sender": "Mona",
+      "date": "2026-04-16",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "simvastatin",
+      "date": "2026-04-22"
+     },
+     "message": {
+      "sender": "Mona",
+      "date": "2026-04-22",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "muscle pain",
+      "date": "2026-04-23"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-04-26",
+      "mustContain": "since Thursday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Mona",
+     "date": "2026-03-25",
+     "gist": "asks Ahmed how the muscle pain is"
+    },
+    {
+     "sender": "Mona",
+     "date": "2026-03-27",
+     "gist": "says they read online that simvastatin can cause muscle pain in general"
+    }
+   ]
+  },
+  {
+   "id": "H02",
+   "source": "hand",
+   "variant": "no_restart",
+   "patient": "Dad",
+   "other": "Tom",
+   "reporter": "Dad",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "amlodipine",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "ankle swelling",
+    "keywords": [
+     "swollen",
+     "swelling",
+     "ankles",
+     "puffy",
+     "feet"
+    ]
+   },
+   "chatStart": "2026-07-20",
+   "chatEnd": "2026-08-21",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "amlodipine",
+      "date": "2026-07-23"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-07-23",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "ankle swelling",
+      "date": "2026-08-03"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-08-04",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "amlodipine",
+      "date": "2026-08-12"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-08-14",
+      "mustContain": "since Wednesday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "ankle swelling",
+      "date": "2026-08-15"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-08-15",
+      "mustContain": "this morning"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Tom",
+     "date": "2026-08-05",
+     "gist": "asks Dad how the ankle swelling is"
+    },
+    {
+     "sender": "Tom",
+     "date": "2026-08-07",
+     "gist": "says they read online that amlodipine can cause ankle swelling in general"
+    }
+   ]
+  },
+  {
+   "id": "H03",
+   "source": "hand",
+   "variant": "no_pause",
+   "patient": "Linda",
+   "other": "James",
+   "reporter": "Linda",
+   "format": "android",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "lisinopril",
+     "strength": "10mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-05-13",
+   "chatEnd": "2026-06-16",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "lisinopril",
+      "date": "2026-05-16"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-05-17",
+      "mustContain": "last night"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-06-06"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-06-09",
+      "mustContain": "three days ago"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "James",
+     "date": "2026-06-08",
+     "gist": "asks Linda how the dry cough is"
+    },
+    {
+     "sender": "James",
+     "date": "2026-06-10",
+     "gist": "says they read online that lisinopril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "H04",
+   "source": "hand",
+   "variant": "other_sender",
+   "patient": "Mum",
+   "other": "Priya",
+   "reporter": "Mum",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "ramipril",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-02-11",
+   "chatEnd": "2026-04-23",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "ramipril",
+      "date": "2026-02-14"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-02-15",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-02-27"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-02-27",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "ramipril",
+      "date": "2026-03-16"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-03-21",
+      "mustContain": "for five days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry cough",
+      "date": "2026-03-23"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-03-25",
+      "mustContain": "two days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "ramipril",
+      "date": "2026-04-06"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-04-09",
+      "mustContain": "since Monday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "dry cough",
+      "date": "2026-04-08"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-04-09",
+      "mustContain": "since yesterday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Priya",
+     "date": "2026-03-01",
+     "gist": "asks Mum how the dry cough is"
+    },
+    {
+     "sender": "Priya",
+     "date": "2026-03-03",
+     "gist": "says they read online that ramipril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "H05",
+   "source": "hand",
+   "variant": "two_medicines",
+   "patient": "Grandpa Joe",
+   "other": "Ellie",
+   "reporter": "Grandpa Joe",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "metformin",
+     "strength": "500mg"
+    },
+    {
+     "name": "vitamin D",
+     "strength": ""
+    }
+   ],
+   "reaction": {
+    "label": "stomach upset",
+    "keywords": [
+     "stomach",
+     "tummy",
+     "diarrhoea",
+     "diarrhea",
+     "sick"
+    ]
+   },
+   "chatStart": "2026-04-19",
+   "chatEnd": "2026-07-12",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "metformin",
+      "date": "2026-04-22"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-04-22",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "vitamin D",
+      "date": "2026-05-02"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-05-02",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "stomach upset",
+      "date": "2026-05-12"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-13",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "metformin",
+      "date": "2026-05-25"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-27",
+      "mustContain": "for two days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "stomach upset",
+      "date": "2026-05-29"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-06-01",
+      "mustContain": "three days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "metformin",
+      "date": "2026-06-13"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-06-13",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "stomach upset",
+      "date": "2026-06-17"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-06-21",
+      "mustContain": "since Wednesday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Ellie",
+     "date": "2026-05-04",
+     "gist": "asks Grandpa Joe how the stomach upset is"
+    },
+    {
+     "sender": "Ellie",
+     "date": "2026-05-06",
+     "gist": "says they read online that metformin can cause stomach upset in general"
+    }
+   ]
+  },
+  {
+   "id": "H06",
+   "source": "hand",
+   "variant": "full",
+   "patient": "Margaret",
+   "other": "Sarah",
+   "reporter": "Margaret",
+   "format": "ios",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "sertraline",
+     "strength": "50mg"
+    }
+   ],
+   "reaction": {
+    "label": "trouble sleeping",
+    "keywords": [
+     "sleep",
+     "sleeping",
+     "insomnia",
+     "awake"
+    ]
+   },
+   "chatStart": "2026-03-29",
+   "chatEnd": "2026-06-26",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "sertraline",
+      "date": "2026-04-01"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-04-02",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "trouble sleeping",
+      "date": "2026-04-14"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-04-18",
+      "mustContain": "for four days"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "sertraline",
+      "date": "2026-05-01"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-05-03",
+      "mustContain": "two days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "trouble sleeping",
+      "date": "2026-05-07"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-05-12",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "sertraline",
+      "date": "2026-05-16"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-05-18",
+      "mustContain": "for two days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "trouble sleeping",
+      "date": "2026-05-17"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-05-20",
+      "mustContain": "since Sunday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Sarah",
+     "date": "2026-04-16",
+     "gist": "asks Margaret how the trouble sleeping is"
+    },
+    {
+     "sender": "Sarah",
+     "date": "2026-04-18",
+     "gist": "says they read online that sertraline can cause trouble sleeping in general"
+    }
+   ]
+  },
+  {
+   "id": "H07",
+   "source": "hand",
+   "variant": "full",
+   "patient": "Ahmed",
+   "other": "Mona",
+   "reporter": "Ahmed",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "amitriptyline",
+     "strength": "10mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry mouth",
+    "keywords": [
+     "dry mouth",
+     "mouth",
+     "thirsty"
+    ]
+   },
+   "chatStart": "2026-02-03",
+   "chatEnd": "2026-03-15",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "amitriptyline",
+      "date": "2026-02-06"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-02-06",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry mouth",
+      "date": "2026-02-16"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-02-21",
+      "mustContain": "since Monday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "amitriptyline",
+      "date": "2026-02-26"
+     },
+     "message": {
+      "sender": "Mona",
+      "date": "2026-03-01",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry mouth",
+      "date": "2026-03-05"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-03-06",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "amitriptyline",
+      "date": "2026-03-12"
+     },
+     "message": {
+      "sender": "Mona",
+      "date": "2026-03-15",
+      "mustContain": "for three days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "dry mouth",
+      "date": "2026-03-14"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-03-15",
+      "mustContain": "since yesterday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Mona",
+     "date": "2026-02-18",
+     "gist": "asks Ahmed how the dry mouth is"
+    },
+    {
+     "sender": "Mona",
+     "date": "2026-02-20",
+     "gist": "says they read online that amitriptyline can cause dry mouth in general"
+    }
+   ]
+  },
+  {
+   "id": "H08",
+   "source": "hand",
+   "variant": "no_restart",
+   "patient": "Dad",
+   "other": "Tom",
+   "reporter": "Dad",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "atorvastatin",
+     "strength": "20mg"
+    }
+   ],
+   "reaction": {
+    "label": "muscle aches",
+    "keywords": [
+     "ache",
+     "aching",
+     "achy",
+     "muscle",
+     "legs",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-04-07",
+   "chatEnd": "2026-05-08",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "atorvastatin",
+      "date": "2026-04-10"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-04-10",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle aches",
+      "date": "2026-04-19"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-04-21",
+      "mustContain": "two days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "atorvastatin",
+      "date": "2026-05-02"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-05-02",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "muscle aches",
+      "date": "2026-05-05"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-05-07",
+      "mustContain": "two days ago"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Tom",
+     "date": "2026-04-21",
+     "gist": "asks Dad how the muscle aches is"
+    },
+    {
+     "sender": "Tom",
+     "date": "2026-04-23",
+     "gist": "says they read online that atorvastatin can cause muscle aches in general"
+    }
+   ]
+  },
+  {
+   "id": "H09",
+   "source": "hand",
+   "variant": "no_pause",
+   "patient": "Linda",
+   "other": "James",
+   "reporter": "Linda",
+   "format": "android",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "simvastatin",
+     "strength": "40mg"
+    }
+   ],
+   "reaction": {
+    "label": "muscle pain",
+    "keywords": [
+     "pain",
+     "ache",
+     "aching",
+     "muscle",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-01-03",
+   "chatEnd": "2026-01-23",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "simvastatin",
+      "date": "2026-01-06"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-01-06",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle pain",
+      "date": "2026-01-17"
+     },
+     "message": {
+      "sender": "James",
+      "date": "2026-01-17",
+      "mustContain": ""
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "James",
+     "date": "2026-01-19",
+     "gist": "asks Linda how the muscle pain is"
+    },
+    {
+     "sender": "James",
+     "date": "2026-01-21",
+     "gist": "says they read online that simvastatin can cause muscle pain in general"
+    }
+   ]
+  },
+  {
+   "id": "G10",
+   "source": "generated",
+   "variant": "other_sender",
+   "patient": "Mum",
+   "other": "Priya",
+   "reporter": "Mum",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "amlodipine",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "ankle swelling",
+    "keywords": [
+     "swollen",
+     "swelling",
+     "ankles",
+     "puffy",
+     "feet"
+    ]
+   },
+   "chatStart": "2026-06-20",
+   "chatEnd": "2026-08-13",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "amlodipine",
+      "date": "2026-06-23"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-06-23",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "ankle swelling",
+      "date": "2026-07-04"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-07-08",
+      "mustContain": "since Saturday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "amlodipine",
+      "date": "2026-07-13"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-07-15",
+      "mustContain": "for two days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "ankle swelling",
+      "date": "2026-07-18"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-07-20",
+      "mustContain": "since Saturday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "amlodipine",
+      "date": "2026-08-02"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-08-07",
+      "mustContain": "for five days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "ankle swelling",
+      "date": "2026-08-03"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-08-03",
+      "mustContain": "today"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Priya",
+     "date": "2026-07-06",
+     "gist": "asks Mum how the ankle swelling is"
+    },
+    {
+     "sender": "Priya",
+     "date": "2026-07-08",
+     "gist": "says they read online that amlodipine can cause ankle swelling in general"
+    }
+   ]
+  },
+  {
+   "id": "G11",
+   "source": "generated",
+   "variant": "two_medicines",
+   "patient": "Grandpa Joe",
+   "other": "Ellie",
+   "reporter": "Grandpa Joe",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "lisinopril",
+     "strength": "10mg"
+    },
+    {
+     "name": "aspirin",
+     "strength": ""
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-07-01",
+   "chatEnd": "2026-08-29",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "lisinopril",
+      "date": "2026-07-04"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-07-05",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "aspirin",
+      "date": "2026-07-12"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-07-15",
+      "mustContain": "three days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-07-15"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-07-15",
+      "mustContain": ""
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "lisinopril",
+      "date": "2026-07-23"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-07-25",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry cough",
+      "date": "2026-07-28"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-07-29",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "lisinopril",
+      "date": "2026-08-13"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-08-16",
+      "mustContain": "for three days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "dry cough",
+      "date": "2026-08-14"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-08-19",
+      "mustContain": "five days ago"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Ellie",
+     "date": "2026-07-14",
+     "gist": "asks Grandpa Joe how the dry cough is"
+    },
+    {
+     "sender": "Ellie",
+     "date": "2026-07-16",
+     "gist": "says they read online that lisinopril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "G12",
+   "source": "generated",
+   "variant": "full",
+   "patient": "Margaret",
+   "other": "Sarah",
+   "reporter": "Margaret",
+   "format": "ios",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "ramipril",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-03-22",
+   "chatEnd": "2026-06-05",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "ramipril",
+      "date": "2026-03-25"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-03-26",
+      "mustContain": "last night"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-04-04"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-04-08",
+      "mustContain": "since Saturday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "ramipril",
+      "date": "2026-04-22"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-04-26",
+      "mustContain": "four days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry cough",
+      "date": "2026-04-28"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-04-28",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "ramipril",
+      "date": "2026-05-07"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-05-09",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "dry cough",
+      "date": "2026-05-11"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-05-14",
+      "mustContain": "since Monday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Sarah",
+     "date": "2026-04-06",
+     "gist": "asks Margaret how the dry cough is"
+    },
+    {
+     "sender": "Sarah",
+     "date": "2026-04-08",
+     "gist": "says they read online that ramipril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "G13",
+   "source": "generated",
+   "variant": "full",
+   "patient": "Ahmed",
+   "other": "Mona",
+   "reporter": "Ahmed",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "metformin",
+     "strength": "500mg"
+    }
+   ],
+   "reaction": {
+    "label": "stomach upset",
+    "keywords": [
+     "stomach",
+     "tummy",
+     "diarrhoea",
+     "diarrhea",
+     "sick"
+    ]
+   },
+   "chatStart": "2026-04-29",
+   "chatEnd": "2026-07-27",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "metformin",
+      "date": "2026-05-02"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-03",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "stomach upset",
+      "date": "2026-05-13"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-14",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "metformin",
+      "date": "2026-05-26"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-30",
+      "mustContain": "for four days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "stomach upset",
+      "date": "2026-06-01"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-06-03",
+      "mustContain": "since Monday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "metformin",
+      "date": "2026-06-16"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-06-20",
+      "mustContain": "for four days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "stomach upset",
+      "date": "2026-06-17"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-06-18",
+      "mustContain": "since yesterday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Mona",
+     "date": "2026-05-15",
+     "gist": "asks Ahmed how the stomach upset is"
+    },
+    {
+     "sender": "Mona",
+     "date": "2026-05-17",
+     "gist": "says they read online that metformin can cause stomach upset in general"
+    }
+   ]
+  },
+  {
+   "id": "G14",
+   "source": "generated",
+   "variant": "no_restart",
+   "patient": "Dad",
+   "other": "Tom",
+   "reporter": "Dad",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "sertraline",
+     "strength": "50mg"
+    }
+   ],
+   "reaction": {
+    "label": "trouble sleeping",
+    "keywords": [
+     "sleep",
+     "sleeping",
+     "insomnia",
+     "awake"
+    ]
+   },
+   "chatStart": "2026-01-21",
+   "chatEnd": "2026-02-21",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "sertraline",
+      "date": "2026-01-24"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-01-25",
+      "mustContain": "last night"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "trouble sleeping",
+      "date": "2026-02-06"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-02-10",
+      "mustContain": "for four days"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "sertraline",
+      "date": "2026-02-17"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-02-18",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "trouble sleeping",
+      "date": "2026-02-20"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-02-20",
+      "mustContain": "this morning"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Tom",
+     "date": "2026-02-08",
+     "gist": "asks Dad how the trouble sleeping is"
+    },
+    {
+     "sender": "Tom",
+     "date": "2026-02-10",
+     "gist": "says they read online that sertraline can cause trouble sleeping in general"
+    }
+   ]
+  },
+  {
+   "id": "G15",
+   "source": "generated",
+   "variant": "no_pause",
+   "patient": "Linda",
+   "other": "James",
+   "reporter": "Linda",
+   "format": "android",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "amitriptyline",
+     "strength": "10mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry mouth",
+    "keywords": [
+     "dry mouth",
+     "mouth",
+     "thirsty"
+    ]
+   },
+   "chatStart": "2026-05-19",
+   "chatEnd": "2026-06-14",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "amitriptyline",
+      "date": "2026-05-22"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-05-23",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry mouth",
+      "date": "2026-06-11"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-06-14",
+      "mustContain": "since Thursday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "James",
+     "date": "2026-06-13",
+     "gist": "asks Linda how the dry mouth is"
+    },
+    {
+     "sender": "James",
+     "date": "2026-06-15",
+     "gist": "says they read online that amitriptyline can cause dry mouth in general"
+    }
+   ]
+  },
+  {
+   "id": "G16",
+   "source": "generated",
+   "variant": "other_sender",
+   "patient": "Mum",
+   "other": "Priya",
+   "reporter": "Mum",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "atorvastatin",
+     "strength": "20mg"
+    }
+   ],
+   "reaction": {
+    "label": "muscle aches",
+    "keywords": [
+     "ache",
+     "aching",
+     "achy",
+     "muscle",
+     "legs",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-07-18",
+   "chatEnd": "2026-09-12",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "atorvastatin",
+      "date": "2026-07-21"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-07-21",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle aches",
+      "date": "2026-08-10"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-08-10",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "atorvastatin",
+      "date": "2026-08-20"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-08-22",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "muscle aches",
+      "date": "2026-08-26"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-08-27",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "atorvastatin",
+      "date": "2026-09-02"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-09-07",
+      "mustContain": "since Wednesday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "muscle aches",
+      "date": "2026-09-06"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-09-10",
+      "mustContain": "since Sunday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Priya",
+     "date": "2026-08-12",
+     "gist": "asks Mum how the muscle aches is"
+    },
+    {
+     "sender": "Priya",
+     "date": "2026-08-14",
+     "gist": "says they read online that atorvastatin can cause muscle aches in general"
+    }
+   ]
+  },
+  {
+   "id": "G17",
+   "source": "generated",
+   "variant": "two_medicines",
+   "patient": "Grandpa Joe",
+   "other": "Ellie",
+   "reporter": "Grandpa Joe",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "simvastatin",
+     "strength": "40mg"
+    },
+    {
+     "name": "aspirin",
+     "strength": ""
+    }
+   ],
+   "reaction": {
+    "label": "muscle pain",
+    "keywords": [
+     "pain",
+     "ache",
+     "aching",
+     "muscle",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-04-14",
+   "chatEnd": "2026-06-25",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "simvastatin",
+      "date": "2026-04-17"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-04-18",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "aspirin",
+      "date": "2026-04-22"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-04-22",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle pain",
+      "date": "2026-05-08"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-08",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "simvastatin",
+      "date": "2026-05-22"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-24",
+      "mustContain": "two days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "muscle pain",
+      "date": "2026-05-26"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-26",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "simvastatin",
+      "date": "2026-06-11"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-06-13",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "muscle pain",
+      "date": "2026-06-15"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-06-17",
+      "mustContain": "since Monday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Ellie",
+     "date": "2026-04-24",
+     "gist": "asks Grandpa Joe how the muscle pain is"
+    },
+    {
+     "sender": "Ellie",
+     "date": "2026-04-26",
+     "gist": "says they read online that simvastatin can cause muscle pain in general"
+    }
+   ]
+  },
+  {
+   "id": "G18",
+   "source": "generated",
+   "variant": "full",
+   "patient": "Margaret",
+   "other": "Sarah",
+   "reporter": "Margaret",
+   "format": "ios",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "amlodipine",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "ankle swelling",
+    "keywords": [
+     "swollen",
+     "swelling",
+     "ankles",
+     "puffy",
+     "feet"
+    ]
+   },
+   "chatStart": "2026-07-16",
+   "chatEnd": "2026-09-22",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "amlodipine",
+      "date": "2026-07-19"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-07-19",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "ankle swelling",
+      "date": "2026-08-04"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-04",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "amlodipine",
+      "date": "2026-08-21"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-21",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "ankle swelling",
+      "date": "2026-08-24"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-24",
+      "mustContain": ""
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "amlodipine",
+      "date": "2026-09-05"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-09-08",
+      "mustContain": "for three days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "ankle swelling",
+      "date": "2026-09-07"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-09-10",
+      "mustContain": "for three days"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Sarah",
+     "date": "2026-08-06",
+     "gist": "asks Margaret how the ankle swelling is"
+    },
+    {
+     "sender": "Sarah",
+     "date": "2026-08-08",
+     "gist": "says they read online that amlodipine can cause ankle swelling in general"
+    }
+   ]
+  },
+  {
+   "id": "G19",
+   "source": "generated",
+   "variant": "full",
+   "patient": "Ahmed",
+   "other": "Mona",
+   "reporter": "Ahmed",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "lisinopril",
+     "strength": "10mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-04-01",
+   "chatEnd": "2026-06-13",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "lisinopril",
+      "date": "2026-04-04"
+     },
+     "message": {
+      "sender": "Mona",
+      "date": "2026-04-04",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-04-21"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-04-26",
+      "mustContain": "since Tuesday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "lisinopril",
+      "date": "2026-04-29"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-04-29",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry cough",
+      "date": "2026-05-06"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-06",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "lisinopril",
+      "date": "2026-05-17"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-17",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "dry cough",
+      "date": "2026-05-19"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-22",
+      "mustContain": "since Tuesday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Mona",
+     "date": "2026-04-23",
+     "gist": "asks Ahmed how the dry cough is"
+    },
+    {
+     "sender": "Mona",
+     "date": "2026-04-25",
+     "gist": "says they read online that lisinopril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "G20",
+   "source": "generated",
+   "variant": "no_restart",
+   "patient": "Dad",
+   "other": "Tom",
+   "reporter": "Dad",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "ramipril",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-03-25",
+   "chatEnd": "2026-05-31",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "ramipril",
+      "date": "2026-03-28"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-03-28",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-04-06"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-04-06",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "ramipril",
+      "date": "2026-04-17"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-04-20",
+      "mustContain": "since Friday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry cough",
+      "date": "2026-04-21"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-04-24",
+      "mustContain": "since Tuesday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Tom",
+     "date": "2026-04-08",
+     "gist": "asks Dad how the dry cough is"
+    },
+    {
+     "sender": "Tom",
+     "date": "2026-04-10",
+     "gist": "says they read online that ramipril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "G21",
+   "source": "generated",
+   "variant": "no_pause",
+   "patient": "Linda",
+   "other": "James",
+   "reporter": "Linda",
+   "format": "android",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "metformin",
+     "strength": "500mg"
+    }
+   ],
+   "reaction": {
+    "label": "stomach upset",
+    "keywords": [
+     "stomach",
+     "tummy",
+     "diarrhoea",
+     "diarrhea",
+     "sick"
+    ]
+   },
+   "chatStart": "2026-07-07",
+   "chatEnd": "2026-07-20",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "metformin",
+      "date": "2026-07-10"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-07-11",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "stomach upset",
+      "date": "2026-07-19"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-07-19",
+      "mustContain": ""
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "James",
+     "date": "2026-07-21",
+     "gist": "asks Linda how the stomach upset is"
+    },
+    {
+     "sender": "James",
+     "date": "2026-07-23",
+     "gist": "says they read online that metformin can cause stomach upset in general"
+    }
+   ]
+  },
+  {
+   "id": "G22",
+   "source": "generated",
+   "variant": "other_sender",
+   "patient": "Mum",
+   "other": "Priya",
+   "reporter": "Mum",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "sertraline",
+     "strength": "50mg"
+    }
+   ],
+   "reaction": {
+    "label": "trouble sleeping",
+    "keywords": [
+     "sleep",
+     "sleeping",
+     "insomnia",
+     "awake"
+    ]
+   },
+   "chatStart": "2026-03-16",
+   "chatEnd": "2026-05-05",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "sertraline",
+      "date": "2026-03-19"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-03-20",
+      "mustContain": "last night"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "trouble sleeping",
+      "date": "2026-03-30"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-03-30",
+      "mustContain": ""
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "sertraline",
+      "date": "2026-04-09"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-04-09",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "trouble sleeping",
+      "date": "2026-04-16"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-04-21",
+      "mustContain": "five days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "sertraline",
+      "date": "2026-04-29"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-05-01",
+      "mustContain": "since Wednesday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "trouble sleeping",
+      "date": "2026-05-02"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-05-02",
+      "mustContain": "today"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Priya",
+     "date": "2026-04-01",
+     "gist": "asks Mum how the trouble sleeping is"
+    },
+    {
+     "sender": "Priya",
+     "date": "2026-04-03",
+     "gist": "says they read online that sertraline can cause trouble sleeping in general"
+    }
+   ]
+  },
+  {
+   "id": "G23",
+   "source": "generated",
+   "variant": "two_medicines",
+   "patient": "Grandpa Joe",
+   "other": "Ellie",
+   "reporter": "Grandpa Joe",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "amitriptyline",
+     "strength": "10mg"
+    },
+    {
+     "name": "aspirin",
+     "strength": ""
+    }
+   ],
+   "reaction": {
+    "label": "dry mouth",
+    "keywords": [
+     "dry mouth",
+     "mouth",
+     "thirsty"
+    ]
+   },
+   "chatStart": "2026-04-23",
+   "chatEnd": "2026-06-19",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "amitriptyline",
+      "date": "2026-04-26"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-04-27",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "aspirin",
+      "date": "2026-05-02"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-07",
+      "mustContain": "since Saturday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry mouth",
+      "date": "2026-05-07"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-09",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "amitriptyline",
+      "date": "2026-05-25"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-28",
+      "mustContain": "for three days"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry mouth",
+      "date": "2026-05-28"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-05-30",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "amitriptyline",
+      "date": "2026-06-12"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-06-12",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "dry mouth",
+      "date": "2026-06-13"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-06-18",
+      "mustContain": "for five days"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Ellie",
+     "date": "2026-05-04",
+     "gist": "asks Grandpa Joe how the dry mouth is"
+    },
+    {
+     "sender": "Ellie",
+     "date": "2026-05-06",
+     "gist": "says they read online that amitriptyline can cause dry mouth in general"
+    }
+   ]
+  },
+  {
+   "id": "G24",
+   "source": "generated",
+   "variant": "full",
+   "patient": "Margaret",
+   "other": "Sarah",
+   "reporter": "Margaret",
+   "format": "ios",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "atorvastatin",
+     "strength": "20mg"
+    }
+   ],
+   "reaction": {
+    "label": "muscle aches",
+    "keywords": [
+     "ache",
+     "aching",
+     "achy",
+     "muscle",
+     "legs",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-07-20",
+   "chatEnd": "2026-09-14",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "atorvastatin",
+      "date": "2026-07-23"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-07-24",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle aches",
+      "date": "2026-08-09"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-14",
+      "mustContain": "since Sunday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "atorvastatin",
+      "date": "2026-08-17"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-20",
+      "mustContain": "since Monday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "muscle aches",
+      "date": "2026-08-23"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-08-23",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "atorvastatin",
+      "date": "2026-09-01"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-09-01",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "muscle aches",
+      "date": "2026-09-04"
+     },
+     "message": {
+      "sender": "Margaret",
+      "date": "2026-09-06",
+      "mustContain": "two days ago"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Sarah",
+     "date": "2026-08-11",
+     "gist": "asks Margaret how the muscle aches is"
+    },
+    {
+     "sender": "Sarah",
+     "date": "2026-08-13",
+     "gist": "says they read online that atorvastatin can cause muscle aches in general"
+    }
+   ]
+  },
+  {
+   "id": "G25",
+   "source": "generated",
+   "variant": "full",
+   "patient": "Ahmed",
+   "other": "Mona",
+   "reporter": "Ahmed",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "simvastatin",
+     "strength": "40mg"
+    }
+   ],
+   "reaction": {
+    "label": "muscle pain",
+    "keywords": [
+     "pain",
+     "ache",
+     "aching",
+     "muscle",
+     "sore"
+    ]
+   },
+   "chatStart": "2026-05-06",
+   "chatEnd": "2026-07-05",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "simvastatin",
+      "date": "2026-05-09"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-09",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "muscle pain",
+      "date": "2026-05-19"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-05-21",
+      "mustContain": "since Tuesday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "simvastatin",
+      "date": "2026-06-08"
+     },
+     "message": {
+      "sender": "Mona",
+      "date": "2026-06-13",
+      "mustContain": "five days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "muscle pain",
+      "date": "2026-06-11"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-06-15",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "simvastatin",
+      "date": "2026-06-19"
+     },
+     "message": {
+      "sender": "Ahmed",
+      "date": "2026-06-21",
+      "mustContain": "two days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "muscle pain",
+      "date": "2026-06-20"
+     },
+     "message": {
+      "sender": "Mona",
+      "date": "2026-06-22",
+      "mustContain": "two days ago"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Mona",
+     "date": "2026-05-21",
+     "gist": "asks Ahmed how the muscle pain is"
+    },
+    {
+     "sender": "Mona",
+     "date": "2026-05-23",
+     "gist": "says they read online that simvastatin can cause muscle pain in general"
+    }
+   ]
+  },
+  {
+   "id": "G26",
+   "source": "generated",
+   "variant": "no_restart",
+   "patient": "Dad",
+   "other": "Tom",
+   "reporter": "Dad",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "amlodipine",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "ankle swelling",
+    "keywords": [
+     "swollen",
+     "swelling",
+     "ankles",
+     "puffy",
+     "feet"
+    ]
+   },
+   "chatStart": "2026-07-12",
+   "chatEnd": "2026-09-04",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "amlodipine",
+      "date": "2026-07-15"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-07-15",
+      "mustContain": "this morning"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "ankle swelling",
+      "date": "2026-07-25"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-07-30",
+      "mustContain": "for five days"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "amlodipine",
+      "date": "2026-08-05"
+     },
+     "message": {
+      "sender": "Dad",
+      "date": "2026-08-07",
+      "mustContain": "two days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "ankle swelling",
+      "date": "2026-08-10"
+     },
+     "message": {
+      "sender": "Tom",
+      "date": "2026-08-15",
+      "mustContain": "five days ago"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Tom",
+     "date": "2026-07-27",
+     "gist": "asks Dad how the ankle swelling is"
+    },
+    {
+     "sender": "Tom",
+     "date": "2026-07-29",
+     "gist": "says they read online that amlodipine can cause ankle swelling in general"
+    }
+   ]
+  },
+  {
+   "id": "G27",
+   "source": "generated",
+   "variant": "no_pause",
+   "patient": "Linda",
+   "other": "James",
+   "reporter": "Linda",
+   "format": "android",
+   "dateOrder": "mdy",
+   "medicines": [
+    {
+     "name": "lisinopril",
+     "strength": "10mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-03-25",
+   "chatEnd": "2026-05-23",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "lisinopril",
+      "date": "2026-03-28"
+     },
+     "message": {
+      "sender": "Linda",
+      "date": "2026-03-29",
+      "mustContain": "yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-04-13"
+     },
+     "message": {
+      "sender": "James",
+      "date": "2026-04-15",
+      "mustContain": "for two days"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "James",
+     "date": "2026-04-15",
+     "gist": "asks Linda how the dry cough is"
+    },
+    {
+     "sender": "James",
+     "date": "2026-04-17",
+     "gist": "says they read online that lisinopril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "G28",
+   "source": "generated",
+   "variant": "other_sender",
+   "patient": "Mum",
+   "other": "Priya",
+   "reporter": "Mum",
+   "format": "ios",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "ramipril",
+     "strength": "5mg"
+    }
+   ],
+   "reaction": {
+    "label": "dry cough",
+    "keywords": [
+     "cough",
+     "coughing",
+     "tickly"
+    ]
+   },
+   "chatStart": "2026-07-25",
+   "chatEnd": "2026-09-08",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "ramipril",
+      "date": "2026-07-28"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-07-28",
+      "mustContain": "today"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "dry cough",
+      "date": "2026-08-10"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-08-13",
+      "mustContain": "since Monday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "ramipril",
+      "date": "2026-08-20"
+     },
+     "message": {
+      "sender": "Mum",
+      "date": "2026-08-22",
+      "mustContain": "two days ago"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "dry cough",
+      "date": "2026-08-26"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-08-31",
+      "mustContain": "for five days"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "ramipril",
+      "date": "2026-09-03"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-09-06",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "dry cough",
+      "date": "2026-09-07"
+     },
+     "message": {
+      "sender": "Priya",
+      "date": "2026-09-08",
+      "mustContain": "yesterday"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Priya",
+     "date": "2026-08-12",
+     "gist": "asks Mum how the dry cough is"
+    },
+    {
+     "sender": "Priya",
+     "date": "2026-08-14",
+     "gist": "says they read online that ramipril can cause dry cough in general"
+    }
+   ]
+  },
+  {
+   "id": "G29",
+   "source": "generated",
+   "variant": "two_medicines",
+   "patient": "Grandpa Joe",
+   "other": "Ellie",
+   "reporter": "Grandpa Joe",
+   "format": "android",
+   "dateOrder": "dmy",
+   "medicines": [
+    {
+     "name": "metformin",
+     "strength": "500mg"
+    },
+    {
+     "name": "aspirin",
+     "strength": ""
+    }
+   ],
+   "reaction": {
+    "label": "stomach upset",
+    "keywords": [
+     "stomach",
+     "tummy",
+     "diarrhoea",
+     "diarrhea",
+     "sick"
+    ]
+   },
+   "chatStart": "2026-03-05",
+   "chatEnd": "2026-04-25",
+   "scripted": [
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "metformin",
+      "date": "2026-03-08"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-03-09",
+      "mustContain": "last night"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_started",
+      "entity": "aspirin",
+      "date": "2026-03-11"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-03-11",
+      "mustContain": "tonight"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_started",
+      "entity": "stomach upset",
+      "date": "2026-03-25"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-03-25",
+      "mustContain": ""
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_stopped",
+      "entity": "metformin",
+      "date": "2026-04-02"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-04-06",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_gone",
+      "entity": "stomach upset",
+      "date": "2026-04-09"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-04-11",
+      "mustContain": "since Thursday"
+     }
+    },
+    {
+     "event": {
+      "kind": "medicine_restarted",
+      "entity": "metformin",
+      "date": "2026-04-19"
+     },
+     "message": {
+      "sender": "Ellie",
+      "date": "2026-04-20",
+      "mustContain": "since yesterday"
+     }
+    },
+    {
+     "event": {
+      "kind": "symptom_returned",
+      "entity": "stomach upset",
+      "date": "2026-04-22"
+     },
+     "message": {
+      "sender": "Grandpa Joe",
+      "date": "2026-04-25",
+      "mustContain": "three days ago"
+     }
+    }
+   ],
+   "distractors": [
+    {
+     "sender": "Ellie",
+     "date": "2026-03-13",
+     "gist": "asks Grandpa Joe how the stomach upset is"
+    },
+    {
+     "sender": "Ellie",
+     "date": "2026-03-15",
+     "gist": "says they read online that metformin can cause stomach upset in general"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "id": "H01",
+ "patient": "Ahmed",
+ "other": "Mona",
+ "medicines": [
+  {
+   "name": "simvastatin",
+   "strength": "40mg"
+  }
+ ],
+ "reaction": "muscle pain",
+ "messages": [
+  {
+   "sender": "Ahmed",
+   "date": "2026-03-07",
+   "says": "I started taking simvastatin",
+   "mustContain": "since yesterday",
+   "text": "Started simvastatin since yesterday. Hope it helps."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-03-23",
+   "says": "my muscle pain started",
+   "mustContain": "this morning",
+   "text": "Got this weird muscle pain since this morning. Not great."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-04-08",
+   "says": "I stopped taking simvastatin",
+   "mustContain": "today",
+   "text": "Stopped taking simvastatin today. Couldn't deal with it."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-04-16",
+   "says": "Ahmed's muscle pain has gone",
+   "mustContain": "yesterday",
+   "text": "Ahmed's muscle pain cleared up yesterday, thank goodness 🙏"
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-04-22",
+   "says": "Ahmed started taking simvastatin again",
+   "mustContain": "tonight",
+   "text": "Ahmed's gone back on simvastatin tonight. Let's see how he gets on."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-04-26",
+   "says": "my muscle pain is back",
+   "mustContain": "since Thursday",
+   "text": "Ugh, the muscle pain is back since Thursday. Really annoying."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-03-25",
+   "says": "asks Ahmed how the muscle pain is",
+   "mustContain": "",
+   "text": "Ahmed, how's the muscle pain? Any improvement?"
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-03-27",
+   "says": "says they read online that simvastatin can cause muscle pain in general",
+   "mustContain": "",
+   "text": "I read online that simvastatin can cause muscle pain. Seems to be a recognised side effect."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

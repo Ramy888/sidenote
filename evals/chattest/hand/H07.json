@@ -1,0 +1,71 @@
+{
+ "id": "H07",
+ "patient": "Ahmed",
+ "other": "Mona",
+ "medicines": [
+  {
+   "name": "amitriptyline",
+   "strength": "10mg"
+  }
+ ],
+ "reaction": "dry mouth",
+ "messages": [
+  {
+   "sender": "Ahmed",
+   "date": "2026-02-06",
+   "says": "I started taking amitriptyline",
+   "mustContain": "today",
+   "text": "Started amitriptyline today. Let's see how it goes."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-02-21",
+   "says": "my dry mouth started",
+   "mustContain": "since Monday",
+   "text": "My mouth has been really dry since Monday. So annoying."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-03-01",
+   "says": "Ahmed stopped taking amitriptyline",
+   "mustContain": "since Thursday",
+   "text": "Ahmed hasn't taken amitriptyline since Thursday. He's off it."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-03-06",
+   "says": "my dry mouth has gone",
+   "mustContain": "yesterday",
+   "text": "The dry mouth went away yesterday. Such a relief."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-03-15",
+   "says": "Ahmed started taking amitriptyline again",
+   "mustContain": "for three days",
+   "text": "Ahmed's been taking amitriptyline again for three days. Giving it another shot."
+  },
+  {
+   "sender": "Ahmed",
+   "date": "2026-03-15",
+   "says": "my dry mouth is back",
+   "mustContain": "since yesterday",
+   "text": "Ugh, dry mouth is back since yesterday. Hate this feeling."
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-02-18",
+   "says": "asks Ahmed how the dry mouth is",
+   "mustContain": "",
+   "text": "Ahmed, how's your mouth? Is it less dry?"
+  },
+  {
+   "sender": "Mona",
+   "date": "2026-02-20",
+   "says": "says they read online that amitriptyline can cause dry mouth in general",
+   "mustContain": "",
+   "text": "I read online that amitriptyline can cause dry mouth. Apparently it's a known side effect."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

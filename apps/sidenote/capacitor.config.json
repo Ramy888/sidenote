@@ -1,0 +1,6 @@
+{
+  "appId": "app.sidenote.hybrid",
+  "appName": "SideNote",
+  "webDir": "dist",
+  "experimental": { "ios": { "spm": { "packageOptions": { "@capacitor-firebase/app-check": { "symlink": true } } } } }
+}

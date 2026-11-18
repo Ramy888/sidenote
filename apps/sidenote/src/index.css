@@ -1,0 +1,136 @@
+/* Design tokens from DESIGN.md (source of truth; change both together). Fonts are self-hosted:
+   the app must work offline and the leakage test fails on any third-party request. */
+@import '@fontsource-variable/public-sans';
+@import '@fontsource-variable/cairo';
+@import '@fontsource/atkinson-hyperlegible-mono/400.css';
+/* shortcut: no <link rel=preload> for Public Sans latin / Cairo arabic yet; add a transformIndexHtml
+   preload when the hero UI lands if a font swap shows on first paint. */
+
+:root {
+  --paper: #F6F7F4;
+  --surface: #FFFFFF;
+  --surface-quiet: #EEF0EB;
+  --line: #D5D9D2;
+  --text: #15181C;
+  --text-muted: #4A525C;
+  --primary: #15181C;
+  --on-primary: #FFFFFF;
+  --primary-hover: #2B3138;
+  --highlight: #FFE45C;
+  --on-highlight: #15181C;
+  --kept: #E6E8EC;
+  --on-kept: #3B424B;
+  --device: #156A38;
+  --device-tint: #E3F3E8;
+  --cloud: #1E5BC6;
+  --cloud-tint: #E4ECFB;
+  --code: #555E69;
+  --code-tint: #ECEEF1;
+  --warning: #8A5300;
+  --warning-tint: #FFF1D6;
+  --conflict: #962A68;
+  --conflict-tint: #F8E7F1;
+  --error: #B3261E;
+  --on-error: #FFFFFF;
+  --focus: #1E5BC6;
+
+  --font-sans: 'Public Sans Variable', system-ui, sans-serif;
+  --font-arabic: 'Cairo Variable', system-ui, sans-serif;
+  --font-mono: 'Atkinson Hyperlegible Mono', ui-monospace, monospace;
+
+  --text-display: clamp(2.2rem, 1.4rem + 3vw, 3.4rem);
+  --text-heading: clamp(1.6rem, 1.2rem + 1.4vw, 2.2rem);
+  --text-answer: 1.35rem;
+  --text-body: 1.125rem;
+  --text-label: 0.875rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --tap: 48px;
+
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --dur-micro: 80ms;
+  --dur-short: 180ms;
+  --dur-medium: 220ms;
+
+  color-scheme: light dark;
+}
+
+/* Dark follows the OS: surfaces step up in lightness, tints become deep versions of the same hue. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121417;
+    --surface: #1B1F24;
+    --surface-quiet: #22272D;
+    --line: #343B44;
+    --text: #EDEFF2;
+    --text-muted: #AEB6C0;
+    --primary: #EDEFF2;
+    --on-primary: #121417;
+    --primary-hover: #C9CED5;
+    --highlight: #4A4210;
+    --on-highlight: #FFF6C2;
+    --kept: #2A3038;
+    --on-kept: #C3CAD3;
+    --device: #6FD49A;
+    --device-tint: #16301F;
+    --cloud: #8DB4FF;
+    --cloud-tint: #17264A;
+    --code: #B5BDC7;
+    --code-tint: #262B31;
+    --warning: #FFC46B;
+    --warning-tint: #3A2A0E;
+    --conflict: #F2A3CF;
+    --conflict-tint: #3A1630;
+    --error: #D9362B;
+    --focus: #8DB4FF;
+  }
+}
+
+html {
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+h1, h2, h3 { margin: 0; font-weight: 800; }
+h1 { font-size: var(--text-display); line-height: 1.05; letter-spacing: -0.01em; }
+h2 { font-size: var(--text-heading); line-height: 1.15; }
+
+/* Arabic: Cairo in every role; headings 700, looser lines, no negative tracking (DESIGN.md Languages). */
+:lang(ar) { font-family: var(--font-arabic); }
+:lang(ar) body, body:lang(ar) { line-height: 1.6; }
+:lang(ar) :is(h1, h2, h3) { font-weight: 700; line-height: 1.35; letter-spacing: 0; }
+
+code, pre, .mono { font-family: var(--font-mono); }
+.tabular { font-variant-numeric: tabular-nums; }
+
+#root {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  min-height: 100svh;
+  box-sizing: border-box;
+}
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

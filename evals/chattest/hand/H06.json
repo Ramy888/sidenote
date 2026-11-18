@@ -1,0 +1,71 @@
+{
+ "id": "H06",
+ "patient": "Margaret",
+ "other": "Sarah",
+ "medicines": [
+  {
+   "name": "sertraline",
+   "strength": "50mg"
+  }
+ ],
+ "reaction": "trouble sleeping",
+ "messages": [
+  {
+   "sender": "Margaret",
+   "date": "2026-04-02",
+   "says": "I started taking sertraline",
+   "mustContain": "yesterday",
+   "text": "I started taking sertraline yesterday. Hoping it helps."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-04-18",
+   "says": "my trouble sleeping started",
+   "mustContain": "for four days",
+   "text": "I've been struggling to sleep for four days. Very frustrating."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-03",
+   "says": "I stopped taking sertraline",
+   "mustContain": "two days ago",
+   "text": "I stopped taking sertraline two days ago. Thought you should know."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-12",
+   "says": "my trouble sleeping has gone",
+   "mustContain": "since Thursday",
+   "text": "I've been sleeping properly since Thursday. What a relief."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-18",
+   "says": "I started taking sertraline again",
+   "mustContain": "for two days",
+   "text": "I've been back on sertraline for two days. Giving it another go."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-05-20",
+   "says": "my trouble sleeping is back",
+   "mustContain": "since Sunday",
+   "text": "Oh dear, the trouble sleeping has been back since Sunday. Wide awake."
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-04-16",
+   "says": "asks Margaret how the trouble sleeping is",
+   "mustContain": "",
+   "text": "Mum, how's your sleep? Are you managing to get any rest?"
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-04-18",
+   "says": "says they read online that sertraline can cause trouble sleeping in general",
+   "mustContain": "",
+   "text": "I read online that sertraline can cause trouble sleeping. Seems to be a possible side effect."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

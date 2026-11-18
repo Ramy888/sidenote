@@ -1,0 +1,4 @@
+{
+  "projects": { "default": "fizzlings-aa5cd" },
+  "targets": { "fizzlings-aa5cd": { "hosting": { "sidenote": ["sidenote-hybrid"] } } }
+}

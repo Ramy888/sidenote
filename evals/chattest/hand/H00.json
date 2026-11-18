@@ -1,0 +1,71 @@
+{
+ "id": "H00",
+ "patient": "Margaret",
+ "other": "Sarah",
+ "medicines": [
+  {
+   "name": "atorvastatin",
+   "strength": "20mg"
+  }
+ ],
+ "reaction": "muscle aches",
+ "messages": [
+  {
+   "sender": "Margaret",
+   "date": "2026-06-26",
+   "says": "I started taking atorvastatin",
+   "mustContain": "tonight",
+   "text": "I've started my atorvastatin tonight. Fingers crossed it suits me."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-07-15",
+   "says": "my muscle aches started",
+   "mustContain": "since Saturday",
+   "text": "My legs have been aching since Saturday. Quite uncomfortable really."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-07-20",
+   "says": "I stopped taking atorvastatin",
+   "mustContain": "since yesterday",
+   "text": "I haven't taken atorvastatin since yesterday. Thought I'd let you know."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-07-29",
+   "says": "my muscle aches has gone",
+   "mustContain": "for five days",
+   "text": "The muscle ache has been gone for five days. Such a relief."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-08-12",
+   "says": "I started taking atorvastatin again",
+   "mustContain": "for three days",
+   "text": "I've been back on atorvastatin for three days. Giving it another try."
+  },
+  {
+   "sender": "Margaret",
+   "date": "2026-08-11",
+   "says": "my muscle aches is back",
+   "mustContain": "this morning",
+   "text": "Oh dear, the aching in my legs came back this morning."
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-07-13",
+   "says": "asks Margaret how the muscle aches is",
+   "mustContain": "",
+   "text": "Mum, how are those muscle aches? Any better? ❤️"
+  },
+  {
+   "sender": "Sarah",
+   "date": "2026-07-15",
+   "says": "says they read online that atorvastatin can cause muscle aches in general",
+   "mustContain": "",
+   "text": "I read online that atorvastatin can cause muscle aches. Apparently it's a known side effect."
+  }
+ ],
+ "writtenBy": "ChatGPT (temporary chat, 2026-11-17), from the template lines in hand/v1-template"
+}

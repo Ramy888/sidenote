@@ -1,0 +1,36 @@
+# secrets
+.env
+.env.*
+# agent files and personal notes (global rule: never pushed)
+CLAUDE.md
+AGENTS.md
+.claude/
+.agents/
+.gstack/
+.vscode/
+skills-lock.json
+# ideation holds CADEC-derived files and personal notes; never public
+ideation/
+brief-medical.md
+brief.md
+buildhybridai-firebase-2026.md
+# T2 real-chat counts stay local
+local/
+# build and tooling output
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+
+# Firebase iOS config (API key inside)
+GoogleService-Info.plist
+
+# Firebase deploy cache and eval run outputs (regenerated)
+.firebase/
+evals/*/results/
+
+# Capacitor regenerates these on `npx cap sync ios`; they hold absolute local paths
+apps/sidenote/ios/App/CapApp-SPM/symlinks/

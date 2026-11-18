@@ -1,0 +1,56 @@
+{
+ "id": "H08",
+ "patient": "Dad",
+ "other": "Tom",
+ "medicines": [
+  {
+   "name": "atorvastatin",
+   "strength": "20mg"
+  }
+ ],
+ "reaction": "muscle aches",
+ "messages": [
+  {
+   "sender": "Dad",
+   "date": "2026-04-10",
+   "says": "I started taking atorvastatin",
+   "mustContain": "tonight",
+   "text": "I started taking atorvastatin tonight."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-04-21",
+   "says": "my muscle aches started",
+   "mustContain": "two days ago",
+   "text": "My muscle aches started two days ago."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-05-02",
+   "says": "I stopped taking atorvastatin",
+   "mustContain": "tonight",
+   "text": "I stopped taking atorvastatin tonight."
+  },
+  {
+   "sender": "Dad",
+   "date": "2026-05-07",
+   "says": "my muscle aches has gone",
+   "mustContain": "two days ago",
+   "text": "My muscle aches has gone two days ago."
+  },
+  {
+   "sender": "Tom",
+   "date": "2026-04-21",
+   "says": "asks Dad how the muscle aches is",
+   "mustContain": "",
+   "text": "How are your muscle aches feelings?"
+  },
+  {
+   "sender": "Tom",
+   "date": "2026-04-23",
+   "says": "says they read online that atorvastatin can cause muscle aches in general",
+   "mustContain": "",
+   "text": "I read online that atorvastatin can cause muscle aches in general."
+  }
+ ]
+}

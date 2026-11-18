@@ -1,0 +1,3522 @@
+{
+ "note": "Reaction terms and label excerpts from public-domain FDA drug labels (openFDA); everyday synonyms written for SideNote.",
+ "built": "2026-11-18",
+ "labels": [
+  {
+   "medicine": "atorvastatin",
+   "generic_name": "ATORVASTATIN CALCIUM",
+   "set_id": "4e06b20d-cc5d-46eb-991b-5972248de3af",
+   "effective_time": "20261106"
+  },
+  {
+   "medicine": "simvastatin",
+   "generic_name": "SIMVASTATIN",
+   "set_id": "c85d6d02-6cf6-4995-a590-cfca302ea0c9",
+   "effective_time": "20261103"
+  },
+  {
+   "medicine": "amlodipine",
+   "generic_name": "AMLODIPINE BESYLATE",
+   "set_id": "47114f60-4151-43d4-ac2d-adc49492a679",
+   "effective_time": "20261105"
+  },
+  {
+   "medicine": "lisinopril",
+   "generic_name": "LISINOPRIL",
+   "set_id": "03a497fe-fb09-4b2c-8ee0-2019600192b8",
+   "effective_time": "20261111"
+  },
+  {
+   "medicine": "ramipril",
+   "generic_name": "RAMIPRIL",
+   "set_id": "245d3580-77c6-4c0f-b324-c8514b792c59",
+   "effective_time": "20261111"
+  },
+  {
+   "medicine": "metformin",
+   "generic_name": "METFORMIN HYDROCHLORIDE",
+   "set_id": "0230a3c3-34cf-478b-88c3-4d96e5300018",
+   "effective_time": "20261109"
+  },
+  {
+   "medicine": "sertraline",
+   "generic_name": "SERTRALINE HYDROCHLORIDE",
+   "set_id": "687ebdc4-6946-454e-8d46-3207488ccf32",
+   "effective_time": "20261105"
+  },
+  {
+   "medicine": "amitriptyline",
+   "generic_name": "AMITRIPTYLINE HYDROCHLORIDE",
+   "set_id": "1523a2b4-f9d6-4d3c-a370-df579ed36911",
+   "effective_time": "20261112"
+  }
+ ],
+ "noLabelFacts": [
+  "vitamin D"
+ ],
+ "terms": [
+  {
+   "id": "SN001",
+   "name": "myalgia",
+   "label": [
+    "myalgia",
+    "muscle pain"
+   ],
+   "everyday": [
+    "muscle ache",
+    "muscle aches",
+    "aching muscles",
+    "sore muscles",
+    "muscles hurt",
+    "muscle soreness",
+    "legs ache",
+    "aching legs",
+    "sore legs",
+    "achy legs",
+    "achy muscles"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin"
+   ]
+  },
+  {
+   "id": "SN002",
+   "name": "muscle spasms",
+   "label": [
+    "muscle spasms",
+    "muscle spasm",
+    "muscle cramps"
+   ],
+   "everyday": [
+    "cramps",
+    "leg cramps",
+    "muscle cramp",
+    "charley horse",
+    "cramp in my leg"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN004",
+   "name": "arthralgia",
+   "label": [
+    "arthralgia",
+    "joint pain"
+   ],
+   "everyday": [
+    "joints ache",
+    "aching joints",
+    "sore joints",
+    "joint ache",
+    "knees hurt",
+    "painful joints"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN005",
+   "name": "back pain",
+   "label": [
+    "back pain"
+   ],
+   "everyday": [
+    "backache",
+    "sore back",
+    "back hurts",
+    "lower back pain",
+    "bad back"
+   ],
+   "medicines": [
+    "amlodipine"
+   ]
+  },
+  {
+   "id": "SN006",
+   "name": "neck pain",
+   "label": [
+    "neck pain"
+   ],
+   "everyday": [
+    "stiff neck",
+    "sore neck",
+    "neck hurts"
+   ],
+   "medicines": [
+    "atorvastatin"
+   ]
+  },
+  {
+   "id": "SN007",
+   "name": "pain in extremity",
+   "label": [
+    "pain in extremity"
+   ],
+   "everyday": [
+    "leg pain",
+    "arm pain",
+    "pain in my legs",
+    "pain in my arms",
+    "feet hurt",
+    "sore feet"
+   ],
+   "medicines": [
+    "atorvastatin"
+   ]
+  },
+  {
+   "id": "SN008",
+   "name": "muscle weakness",
+   "label": [
+    "muscle weakness"
+   ],
+   "everyday": [
+    "weak muscles",
+    "legs feel weak",
+    "arms feel weak",
+    "no strength in my legs"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin"
+   ]
+  },
+  {
+   "id": "SN009",
+   "name": "asthenia",
+   "label": [
+    "asthenia"
+   ],
+   "everyday": [
+    "feeling weak",
+    "weak all over",
+    "weakness"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin"
+   ]
+  },
+  {
+   "id": "SN010",
+   "name": "fatigue",
+   "label": [
+    "fatigue",
+    "tiredness"
+   ],
+   "everyday": [
+    "tired",
+    "exhausted",
+    "worn out",
+    "no energy",
+    "wiped out",
+    "always tired",
+    "knackered"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN011",
+   "name": "malaise",
+   "label": [
+    "malaise"
+   ],
+   "everyday": [
+    "feeling unwell",
+    "under the weather",
+    "feel rough",
+    "feeling off"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "ramipril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN012",
+   "name": "headache",
+   "label": [
+    "headache"
+   ],
+   "everyday": [
+    "head hurts",
+    "head is pounding",
+    "sore head",
+    "headaches",
+    "splitting head"
+   ],
+   "medicines": [
+    "simvastatin",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN013",
+   "name": "dizziness",
+   "label": [
+    "dizziness",
+    "dizzy"
+   ],
+   "everyday": [
+    "lightheaded",
+    "light-headed",
+    "woozy",
+    "head spinning",
+    "unsteady"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN014",
+   "name": "vertigo",
+   "label": [
+    "vertigo"
+   ],
+   "everyday": [
+    "room spinning",
+    "everything spins",
+    "spinning"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril"
+   ]
+  },
+  {
+   "id": "SN015",
+   "name": "syncope",
+   "label": [
+    "syncope",
+    "fainting"
+   ],
+   "everyday": [
+    "fainted",
+    "passed out",
+    "blacked out",
+    "keeled over"
+   ],
+   "medicines": [
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN016",
+   "name": "somnolence",
+   "label": [
+    "somnolence",
+    "drowsiness"
+   ],
+   "everyday": [
+    "drowsy",
+    "sleepy",
+    "can't stay awake",
+    "sleepy all day"
+   ],
+   "medicines": [
+    "amlodipine",
+    "ramipril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN017",
+   "name": "insomnia",
+   "label": [
+    "insomnia"
+   ],
+   "everyday": [
+    "can't sleep",
+    "trouble sleeping",
+    "struggling to sleep",
+    "sleepless nights",
+    "awake all night",
+    "not sleeping",
+    "poor sleep",
+    "sleeping badly"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN018",
+   "name": "abnormal dreams",
+   "label": [
+    "abnormal dreams"
+   ],
+   "everyday": [
+    "weird dreams",
+    "vivid dreams",
+    "nightmares",
+    "strange dreams"
+   ],
+   "medicines": [
+    "amlodipine"
+   ]
+  },
+  {
+   "id": "SN019",
+   "name": "anxiety",
+   "label": [
+    "anxiety"
+   ],
+   "everyday": [
+    "anxious",
+    "nervous",
+    "on edge",
+    "jittery",
+    "panicky",
+    "worried all the time"
+   ],
+   "medicines": [
+    "amlodipine",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN020",
+   "name": "agitation",
+   "label": [
+    "agitation"
+   ],
+   "everyday": [
+    "restless",
+    "agitated",
+    "can't sit still"
+   ],
+   "medicines": [
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN021",
+   "name": "depression",
+   "label": [
+    "depression"
+   ],
+   "everyday": [
+    "low mood",
+    "feeling down",
+    "depressed",
+    "feeling low"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN022",
+   "name": "confusion",
+   "label": [
+    "confusion",
+    "confusional state"
+   ],
+   "everyday": [
+    "confused",
+    "muddled",
+    "mixed up",
+    "disoriented"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "lisinopril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN023",
+   "name": "memory impairment",
+   "label": [
+    "memory impairment",
+    "amnesia",
+    "memory loss"
+   ],
+   "everyday": [
+    "forgetful",
+    "can't remember things",
+    "memory problems",
+    "brain fog",
+    "foggy head"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN024",
+   "name": "tremor",
+   "label": [
+    "tremor"
+   ],
+   "everyday": [
+    "shaky hands",
+    "shaking",
+    "trembling",
+    "the shakes"
+   ],
+   "medicines": [
+    "amlodipine",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN025",
+   "name": "paresthesia",
+   "label": [
+    "paresthesia"
+   ],
+   "everyday": [
+    "pins and needles",
+    "tingling",
+    "numbness",
+    "numb",
+    "tingly feet"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN026",
+   "name": "seizure",
+   "label": [
+    "seizure",
+    "convulsion"
+   ],
+   "everyday": [
+    "fits",
+    "a fit"
+   ],
+   "medicines": [
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN027",
+   "name": "nausea",
+   "label": [
+    "nausea"
+   ],
+   "everyday": [
+    "feel sick",
+    "feeling sick",
+    "queasy",
+    "nauseous",
+    "sick to my stomach"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN028",
+   "name": "vomiting",
+   "label": [
+    "vomiting"
+   ],
+   "everyday": [
+    "throwing up",
+    "threw up",
+    "been sick",
+    "vomited",
+    "being sick"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN029",
+   "name": "diarrhea",
+   "label": [
+    "diarrhea",
+    "diarrhoea"
+   ],
+   "everyday": [
+    "loose stools",
+    "runny tummy",
+    "the runs",
+    "loose bowels",
+    "upset bowels"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN030",
+   "name": "constipation",
+   "label": [
+    "constipation"
+   ],
+   "everyday": [
+    "constipated",
+    "bunged up",
+    "can't go to the loo"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN031",
+   "name": "abdominal pain",
+   "label": [
+    "abdominal pain",
+    "stomach pain"
+   ],
+   "everyday": [
+    "tummy ache",
+    "stomach ache",
+    "belly pain",
+    "sore stomach",
+    "tummy pain",
+    "stomach cramps"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN032",
+   "name": "abdominal discomfort",
+   "label": [
+    "abdominal discomfort"
+   ],
+   "everyday": [
+    "upset stomach",
+    "stomach upset",
+    "tummy upset",
+    "gastric upset",
+    "dodgy stomach",
+    "stomach playing up"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "metformin"
+   ]
+  },
+  {
+   "id": "SN033",
+   "name": "dyspepsia",
+   "label": [
+    "dyspepsia"
+   ],
+   "everyday": [
+    "indigestion",
+    "heartburn",
+    "acid",
+    "acid reflux"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN034",
+   "name": "flatulence",
+   "label": [
+    "flatulence"
+   ],
+   "everyday": [
+    "wind",
+    "gas",
+    "gassy",
+    "farting"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "amlodipine",
+    "lisinopril",
+    "metformin"
+   ]
+  },
+  {
+   "id": "SN036",
+   "name": "decreased appetite",
+   "label": [
+    "decreased appetite",
+    "anorexia"
+   ],
+   "everyday": [
+    "not hungry",
+    "no appetite",
+    "off my food",
+    "lost my appetite"
+   ],
+   "medicines": [
+    "amlodipine",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN037",
+   "name": "dry mouth",
+   "label": [
+    "dry mouth"
+   ],
+   "everyday": [
+    "mouth is dry",
+    "mouth so dry",
+    "parched",
+    "cotton mouth"
+   ],
+   "medicines": [
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN039",
+   "name": "weight increased",
+   "label": [
+    "weight increased",
+    "weight gain"
+   ],
+   "everyday": [
+    "putting on weight",
+    "gained weight",
+    "getting heavier"
+   ],
+   "medicines": [
+    "amlodipine",
+    "ramipril",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN041",
+   "name": "cough",
+   "label": [
+    "cough"
+   ],
+   "everyday": [
+    "dry cough",
+    "tickly cough",
+    "coughing",
+    "hacking cough",
+    "cough that will not go"
+   ],
+   "medicines": [
+    "lisinopril",
+    "ramipril"
+   ]
+  },
+  {
+   "id": "SN042",
+   "name": "dyspnea",
+   "label": [
+    "dyspnea",
+    "shortness of breath"
+   ],
+   "everyday": [
+    "short of breath",
+    "breathless",
+    "can't catch my breath",
+    "out of breath",
+    "puffed out"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "ramipril",
+    "metformin"
+   ]
+  },
+  {
+   "id": "SN043",
+   "name": "nasopharyngitis",
+   "label": [
+    "nasopharyngitis"
+   ],
+   "everyday": [
+    "a cold",
+    "common cold",
+    "sniffles"
+   ],
+   "medicines": [
+    "atorvastatin"
+   ]
+  },
+  {
+   "id": "SN045",
+   "name": "sinusitis",
+   "label": [
+    "sinusitis"
+   ],
+   "everyday": [
+    "sinus trouble",
+    "blocked sinuses",
+    "sinus pain"
+   ],
+   "medicines": [
+    "simvastatin"
+   ]
+  },
+  {
+   "id": "SN049",
+   "name": "epistaxis",
+   "label": [
+    "epistaxis"
+   ],
+   "everyday": [
+    "nosebleed",
+    "nose bleed",
+    "bleeding nose"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "amlodipine",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN050",
+   "name": "angioedema",
+   "label": [
+    "angioedema"
+   ],
+   "everyday": [
+    "swollen lips",
+    "swollen face",
+    "swollen tongue",
+    "face swelling",
+    "lips swelling"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN051",
+   "name": "edema",
+   "label": [
+    "edema",
+    "peripheral edema"
+   ],
+   "everyday": [
+    "swollen ankles",
+    "ankle swelling",
+    "swollen feet",
+    "puffy ankles",
+    "swollen legs",
+    "fluid retention",
+    "ankles swollen",
+    "puffy feet"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN052",
+   "name": "flushing",
+   "label": [
+    "flushing"
+   ],
+   "everyday": [
+    "hot face",
+    "red face",
+    "flushed",
+    "face goes red"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN053",
+   "name": "palpitations",
+   "label": [
+    "palpitations"
+   ],
+   "everyday": [
+    "heart racing",
+    "heart pounding",
+    "fluttering heart",
+    "heart skipping",
+    "heart flutters"
+   ],
+   "medicines": [
+    "amlodipine",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN054",
+   "name": "tachycardia",
+   "label": [
+    "tachycardia"
+   ],
+   "everyday": [
+    "fast heartbeat",
+    "racing pulse"
+   ],
+   "medicines": [
+    "amlodipine",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN055",
+   "name": "bradycardia",
+   "label": [
+    "bradycardia"
+   ],
+   "everyday": [
+    "slow heartbeat",
+    "slow pulse"
+   ],
+   "medicines": [
+    "amlodipine",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN056",
+   "name": "hypotension",
+   "label": [
+    "hypotension"
+   ],
+   "everyday": [
+    "low blood pressure",
+    "blood pressure dropped"
+   ],
+   "medicines": [
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN057",
+   "name": "orthostatic hypotension",
+   "label": [
+    "orthostatic hypotension"
+   ],
+   "everyday": [
+    "dizzy when i stand up",
+    "lightheaded getting up",
+    "head rush when standing"
+   ],
+   "medicines": [
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN058",
+   "name": "chest pain",
+   "label": [
+    "chest pain"
+   ],
+   "everyday": [
+    "chest hurts",
+    "tight chest",
+    "pain in my chest"
+   ],
+   "medicines": [
+    "amlodipine",
+    "lisinopril"
+   ]
+  },
+  {
+   "id": "SN059",
+   "name": "rash",
+   "label": [
+    "rash"
+   ],
+   "everyday": [
+    "skin rash",
+    "red spots",
+    "blotchy skin"
+   ],
+   "medicines": [
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN060",
+   "name": "pruritus",
+   "label": [
+    "pruritus",
+    "itching"
+   ],
+   "everyday": [
+    "itchy",
+    "itchiness",
+    "itchy skin",
+    "scratching all the time"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN061",
+   "name": "urticaria",
+   "label": [
+    "urticaria",
+    "hives"
+   ],
+   "everyday": [
+    "welts",
+    "nettle rash"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN062",
+   "name": "hyperhidrosis",
+   "label": [
+    "hyperhidrosis",
+    "sweating"
+   ],
+   "everyday": [
+    "sweaty",
+    "sweating a lot",
+    "night sweats",
+    "drenched in sweat"
+   ],
+   "medicines": [
+    "amlodipine",
+    "ramipril",
+    "metformin",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN063",
+   "name": "alopecia",
+   "label": [
+    "alopecia",
+    "hair loss"
+   ],
+   "everyday": [
+    "hair falling out",
+    "thinning hair",
+    "losing my hair"
+   ],
+   "medicines": [
+    "simvastatin",
+    "lisinopril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN064",
+   "name": "photosensitivity",
+   "label": [
+    "photosensitivity"
+   ],
+   "everyday": [
+    "burn easily in the sun",
+    "sun sensitive"
+   ],
+   "medicines": [
+    "simvastatin",
+    "lisinopril",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN065",
+   "name": "blurred vision",
+   "label": [
+    "blurred vision",
+    "vision blurred"
+   ],
+   "everyday": [
+    "blurry vision",
+    "can't see clearly",
+    "blurry eyes"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "lisinopril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN066",
+   "name": "tinnitus",
+   "label": [
+    "tinnitus"
+   ],
+   "everyday": [
+    "ringing in my ears",
+    "ears ringing",
+    "buzzing in ears"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN067",
+   "name": "sexual dysfunction",
+   "label": [
+    "sexual dysfunction",
+    "erectile dysfunction",
+    "libido decreased",
+    "decreased libido"
+   ],
+   "everyday": [
+    "low libido",
+    "no sex drive",
+    "impotence"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN068",
+   "name": "urinary retention",
+   "label": [
+    "urinary retention"
+   ],
+   "everyday": [
+    "can't pee",
+    "trouble peeing",
+    "hard to pass water"
+   ],
+   "medicines": [
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN069",
+   "name": "urinary frequency",
+   "label": [
+    "urinary frequency",
+    "pollakiuria"
+   ],
+   "everyday": [
+    "peeing a lot",
+    "weeing all the time",
+    "up at night to pee"
+   ],
+   "medicines": [
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN070",
+   "name": "hypoglycemia",
+   "label": [
+    "hypoglycemia"
+   ],
+   "everyday": [
+    "low blood sugar",
+    "having a hypo",
+    "sugar dropped"
+   ],
+   "medicines": [
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN071",
+   "name": "hyperglycemia",
+   "label": [
+    "hyperglycemia"
+   ],
+   "everyday": [
+    "high blood sugar",
+    "sugar went up"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "amlodipine",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN072",
+   "name": "lactic acidosis",
+   "label": [
+    "lactic acidosis"
+   ],
+   "everyday": [],
+   "medicines": [
+    "metformin"
+   ]
+  },
+  {
+   "id": "SN074",
+   "name": "hyperkalemia",
+   "label": [
+    "hyperkalemia"
+   ],
+   "everyday": [
+    "high potassium"
+   ],
+   "medicines": [
+    "lisinopril",
+    "ramipril"
+   ]
+  },
+  {
+   "id": "SN075",
+   "name": "hyponatremia",
+   "label": [
+    "hyponatremia"
+   ],
+   "everyday": [
+    "low sodium",
+    "low salt in my blood"
+   ],
+   "medicines": [
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN077",
+   "name": "renal impairment",
+   "label": [
+    "renal impairment",
+    "renal failure"
+   ],
+   "everyday": [
+    "kidney problems",
+    "kidneys not working"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "lisinopril",
+    "ramipril",
+    "metformin",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN078",
+   "name": "transaminases increased",
+   "label": [
+    "transaminases increased",
+    "liver enzyme"
+   ],
+   "everyday": [
+    "liver tests up",
+    "raised liver enzymes"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN079",
+   "name": "hepatitis",
+   "label": [
+    "hepatitis"
+   ],
+   "everyday": [
+    "liver inflammation"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN080",
+   "name": "jaundice",
+   "label": [
+    "jaundice"
+   ],
+   "everyday": [
+    "yellow skin",
+    "yellow eyes"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN081",
+   "name": "pancreatitis",
+   "label": [
+    "pancreatitis"
+   ],
+   "everyday": [
+    "inflamed pancreas"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "amlodipine",
+    "lisinopril",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN082",
+   "name": "rhabdomyolysis",
+   "label": [
+    "rhabdomyolysis"
+   ],
+   "everyday": [
+    "muscle breakdown"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN083",
+   "name": "bleeding",
+   "label": [
+    "bleeding",
+    "hemorrhage"
+   ],
+   "everyday": [
+    "bleeding easily"
+   ],
+   "medicines": [
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN084",
+   "name": "ecchymosis",
+   "label": [
+    "ecchymosis",
+    "bruising"
+   ],
+   "everyday": [
+    "bruises easily",
+    "bruising easily",
+    "bruises"
+   ],
+   "medicines": [
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN085",
+   "name": "gingival hyperplasia",
+   "label": [
+    "gingival hyperplasia"
+   ],
+   "everyday": [
+    "swollen gums",
+    "gums growing"
+   ],
+   "medicines": [
+    "amlodipine"
+   ]
+  },
+  {
+   "id": "SN086",
+   "name": "pyrexia",
+   "label": [
+    "pyrexia",
+    "fever"
+   ],
+   "everyday": [
+    "temperature",
+    "feverish",
+    "running a temperature"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "lisinopril",
+    "ramipril",
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN088",
+   "name": "hypersensitivity",
+   "label": [
+    "hypersensitivity",
+    "allergic reaction"
+   ],
+   "everyday": [
+    "allergy",
+    "allergic"
+   ],
+   "medicines": [
+    "simvastatin",
+    "amlodipine",
+    "ramipril",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN089",
+   "name": "anaphylaxis",
+   "label": [
+    "anaphylaxis"
+   ],
+   "everyday": [
+    "anaphylactic"
+   ],
+   "medicines": [
+    "atorvastatin",
+    "simvastatin",
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN090",
+   "name": "yawning",
+   "label": [
+    "yawning"
+   ],
+   "everyday": [
+    "yawning a lot"
+   ],
+   "medicines": [
+    "sertraline"
+   ]
+  },
+  {
+   "id": "SN091",
+   "name": "suicidal ideation",
+   "label": [
+    "suicidal ideation",
+    "suicidal thoughts"
+   ],
+   "everyday": [],
+   "medicines": [
+    "sertraline",
+    "amitriptyline"
+   ]
+  },
+  {
+   "id": "SN092",
+   "name": "serotonin syndrome",
+   "label": [
+    "serotonin syndrome"
+   ],
+   "everyday": [],
+   "medicines": [
+    "sertraline",
+    "amitriptyline"
+   ]
+  }
+ ],
+ "labelFacts": [
+  {
+   "id": "L-ATORVASTATIN-SN001",
+   "medicine": "atorvastatin",
+   "term": "SN001",
+   "text": "in patients treated with atorvastatin calcium tablets that led to treatment discontinuation and occurred at a rate greater than placebo were: myalgia (0.7%), diarrhea (0.5%), nausea (0.4%), alanine aminotransferase increase (0.4%), and hepatic enzyme increase (0.4%)."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN001",
+   "medicine": "simvastatin",
+   "term": "SN001",
+   "text": "The most common adverse reactions that led to discontinuation were: gastrointestinal disorders (0.5%), myalgia (0.1%), and arthralgia (0.1%)."
+  },
+  {
+   "id": "L-AMLODIPINE-SN001",
+   "medicine": "amlodipine",
+   "term": "SN001",
+   "text": "Musculoskeletal System: arthralgia, arthrosis, muscle cramps, 1 myalgia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN001",
+   "medicine": "lisinopril",
+   "term": "SN001",
+   "text": ": A symptom complex has been reported which may include a positive ANA, an elevated erythrocyte sedimentation rate, arthralgia/arthritis, myalgia, fever, vasculitis, eosinophilia, leukocytosis, paresthesia and vertigo."
+  },
+  {
+   "id": "L-RAMIPRIL-SN001",
+   "medicine": "ramipril",
+   "term": "SN001",
+   "text": "inhibitors, a symptom complex has been reported which may include a positive ANA, an elevated erythrocyte sedimentation rate, arthralgia/arthritis, myalgia, fever, vasculitis, eosinophilia, photosensitivity, rash and other dermatologic manifestations."
+  },
+  {
+   "id": "L-METFORMIN-SN001",
+   "medicine": "metformin",
+   "term": "SN001",
+   "text": "metformin hydrochloride treated patients and were more commonly reported with metformin hydrochloride than placebo: abnormal stools, hypoglycemia, myalgia, lightheaded, dyspnea, nail disorder, rash, sweating increased, taste disorder, chest discomfort, chills, flu syndrome, flushing, palpitation."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN002",
+   "medicine": "atorvastatin",
+   "term": "SN002",
+   "text": "infection 5.6 6.9 6.4 8.0 4.1 5.7 Dyspepsia 4.3 5.9 3.2 6.0 3.3 4.7 Nausea 3.5 3.7 3.7 7.1 3.8 4.0 Musculoskeletal pain 3.6 5.2 3.2 5.1 2.3 3.8 Muscle spasms 3.0 4.6 4.8 5.1 2.4 3.6 Myalgia 3.1 3.6 5.9 8.4 2.7 3.5 Insomnia 2.9 2.8 1.1 5.3 2.8 3.0 Pharyngolaryngeal pain 2.1 3.9 1.6 2.8 0.7 2.3 Other adverse"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN002",
+   "medicine": "simvastatin",
+   "term": "SN002",
+   "text": "including: anaphylaxis, angioedema, lupus erythematous-like syndrome, dermatomyositis, vasculitis Musculoskeletal and Connective Tissue Disorders: muscle cramps, immune-mediated necrotizing myopathy, polymyalgia rheumatica, arthritis Nervous System Disorders: dizziness, depression, paresthesia, peripheral"
+  },
+  {
+   "id": "L-AMLODIPINE-SN002",
+   "medicine": "amlodipine",
+   "term": "SN002",
+   "text": "Musculoskeletal System: arthralgia, arthrosis, muscle cramps, 1 myalgia."
+  },
+  {
+   "id": "L-SERTRALINE-SN002",
+   "medicine": "sertraline",
+   "term": "SN002",
+   "text": "disorders - diabetes mellitus, hypercholesterolemia, hypoglycemia, increased appetite Musculoskeletal and connective tissue disorders – arthralgia, muscle spasms, tightness, or twitching Nervous system disorders - ataxia, coma, convulsion, decreased alertness, hypoesthesia, lethargy, psychomotor hyperactivity,"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN004",
+   "medicine": "atorvastatin",
+   "term": "SN004",
+   "text": "in HbA1c and Fasting Serum Glucose Levels [see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are nasopharyngitis, arthralgia, diarrhea, pain in extremity, and urinary tract infection ( 6.1 )."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN004",
+   "medicine": "simvastatin",
+   "term": "SN004",
+   "text": "The most common adverse reactions that led to discontinuation were: gastrointestinal disorders (0.5%), myalgia (0.1%), and arthralgia (0.1%)."
+  },
+  {
+   "id": "L-AMLODIPINE-SN004",
+   "medicine": "amlodipine",
+   "term": "SN004",
+   "text": "Musculoskeletal System: arthralgia, arthrosis, muscle cramps, 1 myalgia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN004",
+   "medicine": "lisinopril",
+   "term": "SN004",
+   "text": "Miscellaneous : A symptom complex has been reported which may include a positive ANA, an elevated erythrocyte sedimentation rate, arthralgia/arthritis, myalgia, fever, vasculitis, eosinophilia, leukocytosis, paresthesia and vertigo."
+  },
+  {
+   "id": "L-RAMIPRIL-SN004",
+   "medicine": "ramipril",
+   "term": "SN004",
+   "text": "As with other ACE inhibitors, a symptom complex has been reported which may include a positive ANA, an elevated erythrocyte sedimentation rate, arthralgia/arthritis, myalgia, fever, vasculitis, eosinophilia, photosensitivity, rash and other dermatologic manifestations."
+  },
+  {
+   "id": "L-SERTRALINE-SN004",
+   "medicine": "sertraline",
+   "term": "SN004",
+   "text": "patients and at a rate of at least twice the placebo rate include fever, hyperkinesia, urinary incontinence, aggression, epistaxis, purpura, arthralgia, decreased weight, muscle twitching, and anxiety."
+  },
+  {
+   "id": "L-AMLODIPINE-SN005",
+   "medicine": "amlodipine",
+   "term": "SN005",
+   "text": "General: allergic reaction, asthenia, 1 back pain, hot flushes, malaise, pain, rigors, weight gain, weight decrease."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN006",
+   "medicine": "atorvastatin",
+   "term": "SN006",
+   "text": "Digestive System: abdominal discomfort, eructation, flatulence, hepatitis, cholestasis Musculoskeletal System: musculoskeletal pain, muscle fatigue, neck pain, joint swelling Metabolic and Nutritional System: transaminases increase, liver function test abnormal, blood alkaline phosphatase increase, creatine"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN007",
+   "medicine": "atorvastatin",
+   "term": "SN007",
+   "text": "Serum Glucose Levels [see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are nasopharyngitis, arthralgia, diarrhea, pain in extremity, and urinary tract infection ( 6.1 )."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN008",
+   "medicine": "atorvastatin",
+   "term": "SN008",
+   "text": "IMNM is characterized by proximal muscle weakness and elevated serum creatine kinase that persists despite discontinuation of statin treatment; positive anti-HMG CoA reductase antibody; muscle biopsy"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN008",
+   "medicine": "simvastatin",
+   "term": "SN008",
+   "text": "with a median follow-up of at least 4 years, in which 24,747 patients received simvastatin, the incidence of myopathy (defined as unexplained muscle weakness, pain, or tenderness accompanied by CK increases greater than 10×ULN) was approximately 0.03%, 0.08%, and 0.61% for the simvastatin 20 mg, 40 mg, and"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN009",
+   "medicine": "simvastatin",
+   "term": "SN009",
+   "text": "Body as whole: fever, chills, malaise, asthenia Blood and Lymphatic System Disorders: anemia, thrombocytopenia, leukopenia, hemolytic anemia, positive ANA, ESR increase, eosinophilia"
+  },
+  {
+   "id": "L-AMLODIPINE-SN009",
+   "medicine": "amlodipine",
+   "term": "SN009",
+   "text": "General: allergic reaction, asthenia, 1 back pain, hot flushes, malaise, pain, rigors, weight gain, weight decrease."
+  },
+  {
+   "id": "L-LISINOPRIL-SN009",
+   "medicine": "lisinopril",
+   "term": "SN009",
+   "text": "treated with lisinopril in controlled clinical trials and do not appear in other sections of labeling are listed below: Body as a whole : Fatigue, asthenia, orthostatic effects."
+  },
+  {
+   "id": "L-RAMIPRIL-SN009",
+   "medicine": "ramipril",
+   "term": "SN009",
+   "text": "related to study drug) reported by patients receiving ramipril in placebo-controlled trials were: headache (5.4%), dizziness (2.2%), and fatigue or asthenia (2%), but only the last one was more common in ramipril patients than in patients given placebo."
+  },
+  {
+   "id": "L-METFORMIN-SN009",
+   "medicine": "metformin",
+   "term": "SN009",
+   "text": "and Precautions (5.3) ] For metformin hydrochloride tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting, flatulence, asthenia, indigestion, abdominal discomfort, and headache."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN010",
+   "medicine": "atorvastatin",
+   "term": "SN010",
+   "text": "pyrexia Digestive System: abdominal discomfort, eructation, flatulence, hepatitis, cholestasis Musculoskeletal System: musculoskeletal pain, muscle fatigue, neck pain, joint swelling Metabolic and Nutritional System: transaminases increase, liver function test abnormal, blood alkaline phosphatase"
+  },
+  {
+   "id": "L-AMLODIPINE-SN010",
+   "medicine": "amlodipine",
+   "term": "SN010",
+   "text": "Other adverse experiences not dose related but reported with an incidence >1.0% are fatigue, nausea, abdominal pain, and somnolence."
+  },
+  {
+   "id": "L-LISINOPRIL-SN010",
+   "medicine": "lisinopril",
+   "term": "SN010",
+   "text": "failure treated with lisinopril in controlled clinical trials and do not appear in other sections of labeling are listed below: Body as a whole : Fatigue, asthenia, orthostatic effects."
+  },
+  {
+   "id": "L-RAMIPRIL-SN010",
+   "medicine": "ramipril",
+   "term": "SN010",
+   "text": "ADVERSE REACTIONS The most common adverse reactions in patients with hypertension included headache, dizziness, fatigue, and cough (6.1) ."
+  },
+  {
+   "id": "L-SERTRALINE-SN010",
+   "medicine": "sertraline",
+   "term": "SN010",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia, dizziness, fatigue, dry mouth, malaise."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN010",
+   "medicine": "amitriptyline",
+   "term": "SN010",
+   "text": "tardive dyskinesia; dysarthria; disturbed concentration; excitement; anxiety; insomnia; restlessness; nightmares; drowsiness; dizziness; weakness; fatigue; headache; syndrome of inappropriate ADH (antidiuretic hormone) secretion; tinnitus; alteration in EEG patterns."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN011",
+   "medicine": "atorvastatin",
+   "term": "SN011",
+   "text": "5.3 2.8 3.0 Pharyngolaryngeal pain 2.1 3.9 1.6 2.8 0.7 2.3 Other adverse reactions reported in placebo-controlled trials include: Body as a Whole: malaise, pyrexia Digestive System: abdominal discomfort, eructation, flatulence, hepatitis, cholestasis Musculoskeletal System: musculoskeletal pain, muscle"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN011",
+   "medicine": "simvastatin",
+   "term": "SN011",
+   "text": "Body as whole: fever, chills, malaise, asthenia Blood and Lymphatic System Disorders: anemia, thrombocytopenia, leukopenia, hemolytic anemia, positive ANA, ESR increase, eosinophilia"
+  },
+  {
+   "id": "L-AMLODIPINE-SN011",
+   "medicine": "amlodipine",
+   "term": "SN011",
+   "text": "General: allergic reaction, asthenia, 1 back pain, hot flushes, malaise, pain, rigors, weight gain, weight decrease."
+  },
+  {
+   "id": "L-RAMIPRIL-SN011",
+   "medicine": "ramipril",
+   "term": "SN011",
+   "text": "Other: Arthralgia, arthritis, dyspnea, edema, epistaxis, impotence, increased sweating, malaise, myalgia, and weight gain."
+  },
+  {
+   "id": "L-METFORMIN-SN011",
+   "medicine": "metformin",
+   "term": "SN011",
+   "text": "These cases had a subtle onset and were accompanied by nonspecific symptoms such as malaise, myalgias, abdominal pain, respiratory distress, or increased somnolence; however, hypotension and resistant bradyarrhythmias have occurred with"
+  },
+  {
+   "id": "L-SERTRALINE-SN011",
+   "medicine": "sertraline",
+   "term": "SN011",
+   "text": "agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia, dizziness, fatigue, dry mouth, malaise."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN011",
+   "medicine": "amitriptyline",
+   "term": "SN011",
+   "text": "Withdrawal Symptoms After prolonged administration, abrupt cessation of treatment may produce nausea, headache, and malaise."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN012",
+   "medicine": "simvastatin",
+   "term": "SN012",
+   "text": "Fasting Serum Glucose Levels [see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are upper respiratory infection, headache, abdominal pain, constipation, and nausea."
+  },
+  {
+   "id": "L-LISINOPRIL-SN012",
+   "medicine": "lisinopril",
+   "term": "SN012",
+   "text": "ADVERSE REACTIONS Common adverse reactions (events 2% greater than placebo) by use: Hypertension: headache, dizziness and cough (6.1) Heart Failure: hypotension and chest pain (6.1) Acute Myocardial Infarction: hypotension (6.1) To report SUSPECTED ADVERSE"
+  },
+  {
+   "id": "L-RAMIPRIL-SN012",
+   "medicine": "ramipril",
+   "term": "SN012",
+   "text": "ADVERSE REACTIONS The most common adverse reactions in patients with hypertension included headache, dizziness, fatigue, and cough (6.1) ."
+  },
+  {
+   "id": "L-METFORMIN-SN012",
+   "medicine": "metformin",
+   "term": "SN012",
+   "text": "tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting, flatulence, asthenia, indigestion, abdominal discomfort, and headache."
+  },
+  {
+   "id": "L-SERTRALINE-SN012",
+   "medicine": "sertraline",
+   "term": "SN012",
+   "text": "MDD (>2% and twice placebo): decreased appetite, dizziness, fatigue, headache, somnolence, tremor, and vomiting."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN012",
+   "medicine": "amitriptyline",
+   "term": "SN012",
+   "text": "dyskinesia; dysarthria; disturbed concentration; excitement; anxiety; insomnia; restlessness; nightmares; drowsiness; dizziness; weakness; fatigue; headache; syndrome of inappropriate ADH (antidiuretic hormone) secretion; tinnitus; alteration in EEG patterns."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN013",
+   "medicine": "atorvastatin",
+   "term": "SN013",
+   "text": "Nervous System Disorders: dizziness, peripheral neuropathy."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN013",
+   "medicine": "simvastatin",
+   "term": "SN013",
+   "text": "and Connective Tissue Disorders: muscle cramps, immune-mediated necrotizing myopathy, polymyalgia rheumatica, arthritis Nervous System Disorders: dizziness, depression, paresthesia, peripheral neuropathy, Rare reports of cognitive impairment (e.g., memory loss, forgetfulness, amnesia, memory impairment,"
+  },
+  {
+   "id": "L-AMLODIPINE-SN013",
+   "medicine": "amlodipine",
+   "term": "SN013",
+   "text": "side effects that occurred in a dose related manner are as follows: 2.5mg N=275 Amlodipine 5mg N=296 10mg N=268 Placebo N=520 Edema 1.8 3.0 10.8 0.6 Dizziness 1.1 3.4 3.4 1.5 Flushing 0.7 1.4 2.6 0.0 Palpitation 0.7 1.4 4.5 0.6 Other adverse reactions that were not clearly dose related but were reported"
+  },
+  {
+   "id": "L-LISINOPRIL-SN013",
+   "medicine": "lisinopril",
+   "term": "SN013",
+   "text": "ADVERSE REACTIONS Common adverse reactions (events 2% greater than placebo) by use: Hypertension: headache, dizziness and cough (6.1) Heart Failure: hypotension and chest pain (6.1) Acute Myocardial Infarction: hypotension (6.1) To report SUSPECTED ADVERSE REACTIONS,"
+  },
+  {
+   "id": "L-RAMIPRIL-SN013",
+   "medicine": "ramipril",
+   "term": "SN013",
+   "text": "ADVERSE REACTIONS The most common adverse reactions in patients with hypertension included headache, dizziness, fatigue, and cough (6.1) ."
+  },
+  {
+   "id": "L-SERTRALINE-SN013",
+   "medicine": "sertraline",
+   "term": "SN013",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia, dizziness, fatigue, dry mouth, malaise."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN013",
+   "medicine": "amitriptyline",
+   "term": "SN013",
+   "text": "movements and tardive dyskinesia; dysarthria; disturbed concentration; excitement; anxiety; insomnia; restlessness; nightmares; drowsiness; dizziness; weakness; fatigue; headache; syndrome of inappropriate ADH (antidiuretic hormone) secretion; tinnitus; alteration in EEG patterns."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN014",
+   "medicine": "simvastatin",
+   "term": "SN014",
+   "text": "4S %Placebo (N=2,223) %Simvastatin (N=2,221) Bronchitis 6.3 6.6 Abdominal pain 5.8 5.9 Atrial fibrillation 5.1 5.7 Gastritis 3.9 4.9 Eczema 3.0 4.5 Vertigo 4.2 4.5 Diabetes mellitus 3.6 4.2 Insomnia 3.8 4.0 Myalgia 3.2 3.7 Urinary tract infection 3.1 3.2 Edema/swelling 2.3 2.7 Headache 2.1 2.5 Sinusitis"
+  },
+  {
+   "id": "L-AMLODIPINE-SN014",
+   "medicine": "amlodipine",
+   "term": "SN014",
+   "text": "Central and Peripheral Nervous System: hypoesthesia, neuropathy peripheral, paresthesia, tremor, vertigo."
+  },
+  {
+   "id": "L-LISINOPRIL-SN014",
+   "medicine": "lisinopril",
+   "term": "SN014",
+   "text": "ANA, an elevated erythrocyte sedimentation rate, arthralgia/arthritis, myalgia, fever, vasculitis, eosinophilia, leukocytosis, paresthesia and vertigo."
+  },
+  {
+   "id": "L-RAMIPRIL-SN014",
+   "medicine": "ramipril",
+   "term": "SN014",
+   "text": "5% 11% Cough increased 4% 8% Dizziness 3% 4% Angina pectoris 2% 3% Nausea 1% 2% Postural hypotension 1% 2% Syncope 1% 2% Vomiting 0.5% 2% Vertigo 0.7% 2% Abnormal kidney function 0.5% 1% Diarrhea 0.4% 1% Other Adverse Reactions Other adverse reactions reported in controlled clinical trials (in"
+  },
+  {
+   "id": "L-AMLODIPINE-SN015",
+   "medicine": "amlodipine",
+   "term": "SN015",
+   "text": "relationship: Cardiovascular: arrhythmia (including ventricular tachycardia and atrial fibrillation), bradycardia, chest pain, peripheral ischemia, syncope, tachycardia, vasculitis."
+  },
+  {
+   "id": "L-LISINOPRIL-SN015",
+   "medicine": "lisinopril",
+   "term": "SN015",
+   "text": "Drug Reactions: ATLAS trial High Dose (n=1568) Low Dose (n=1596) Dizziness 19% 12% Hypotension 11% 7% Creatinine increased 10% 7% Hyperkalemia 6% 4% Syncope 7% 5% Acute Myocardial Infarction Patients treated with lisinopril had a higher incidence of hypotension (by 5.3%) and renal dysfunction (by 1.3%)"
+  },
+  {
+   "id": "L-RAMIPRIL-SN015",
+   "medicine": "ramipril",
+   "term": "SN015",
+   "text": "(N=982) Ramipril (N=1004) Hypotension 5% 11% Cough increased 4% 8% Dizziness 3% 4% Angina pectoris 2% 3% Nausea 1% 2% Postural hypotension 1% 2% Syncope 1% 2% Vomiting 0.5% 2% Vertigo 0.7% 2% Abnormal kidney function 0.5% 1% Diarrhea 0.4% 1% Other Adverse Reactions Other adverse reactions reported in"
+  },
+  {
+   "id": "L-SERTRALINE-SN015",
+   "medicine": "sertraline",
+   "term": "SN015",
+   "text": "tightness, or twitching Nervous system disorders - ataxia, coma, convulsion, decreased alertness, hypoesthesia, lethargy, psychomotor hyperactivity, syncope Psychiatric disorders - aggression, bruxism, confusional state, euphoric mood, hallucination Renal and urinary disorders - hematuria Reproductive"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN015",
+   "medicine": "amitriptyline",
+   "term": "SN015",
+   "text": "stroke; nonspecific ECG changes and changes in AV conduction; heart block; arrhythmias; hypotension, particularly orthostatic hypotension; syncope; hypertension; tachycardia; palpitation."
+  },
+  {
+   "id": "L-AMLODIPINE-SN016",
+   "medicine": "amlodipine",
+   "term": "SN016",
+   "text": "Other adverse experiences not dose related but reported with an incidence >1.0% are fatigue, nausea, abdominal pain, and somnolence."
+  },
+  {
+   "id": "L-RAMIPRIL-SN016",
+   "medicine": "ramipril",
+   "term": "SN016",
+   "text": "Neurologic and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision disturbances."
+  },
+  {
+   "id": "L-METFORMIN-SN016",
+   "medicine": "metformin",
+   "term": "SN016",
+   "text": "cases had a subtle onset and were accompanied by nonspecific symptoms such as malaise, myalgias, abdominal pain, respiratory distress, or increased somnolence; however, hypotension and resistant bradyarrhythmias have occurred with severe acidosis."
+  },
+  {
+   "id": "L-SERTRALINE-SN016",
+   "medicine": "sertraline",
+   "term": "SN016",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD:"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN016",
+   "medicine": "amitriptyline",
+   "term": "SN016",
+   "text": "abnormal involuntary movements and tardive dyskinesia; dysarthria; disturbed concentration; excitement; anxiety; insomnia; restlessness; nightmares; drowsiness; dizziness; weakness; fatigue; headache; syndrome of inappropriate ADH (antidiuretic hormone) secretion; tinnitus; alteration in EEG patterns."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN017",
+   "medicine": "atorvastatin",
+   "term": "SN017",
+   "text": "Nausea 3.5 3.7 3.7 7.1 3.8 4.0 Musculoskeletal pain 3.6 5.2 3.2 5.1 2.3 3.8 Muscle spasms 3.0 4.6 4.8 5.1 2.4 3.6 Myalgia 3.1 3.6 5.9 8.4 2.7 3.5 Insomnia 2.9 2.8 1.1 5.3 2.8 3.0 Pharyngolaryngeal pain 2.1 3.9 1.6 2.8 0.7 2.3 Other adverse reactions reported in placebo-controlled trials include: Body as"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN017",
+   "medicine": "simvastatin",
+   "term": "SN017",
+   "text": "Bronchitis 6.3 6.6 Abdominal pain 5.8 5.9 Atrial fibrillation 5.1 5.7 Gastritis 3.9 4.9 Eczema 3.0 4.5 Vertigo 4.2 4.5 Diabetes mellitus 3.6 4.2 Insomnia 3.8 4.0 Myalgia 3.2 3.7 Urinary tract infection 3.1 3.2 Edema/swelling 2.3 2.7 Headache 2.1 2.5 Sinusitis 1.8 2.3 Constipation 1.6 2.2"
+  },
+  {
+   "id": "L-AMLODIPINE-SN017",
+   "medicine": "amlodipine",
+   "term": "SN017",
+   "text": "Psychiatric: sexual dysfunction (male 1 and female), insomnia, nervousness, depression, abnormal dreams, anxiety, depersonalization."
+  },
+  {
+   "id": "L-RAMIPRIL-SN017",
+   "medicine": "ramipril",
+   "term": "SN017",
+   "text": "Neurologic and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision disturbances."
+  },
+  {
+   "id": "L-SERTRALINE-SN017",
+   "medicine": "sertraline",
+   "term": "SN017",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia,"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN017",
+   "medicine": "amitriptyline",
+   "term": "SN017",
+   "text": "extrapyramidal symptoms including abnormal involuntary movements and tardive dyskinesia; dysarthria; disturbed concentration; excitement; anxiety; insomnia; restlessness; nightmares; drowsiness; dizziness; weakness; fatigue; headache; syndrome of inappropriate ADH (antidiuretic hormone) secretion;"
+  },
+  {
+   "id": "L-AMLODIPINE-SN018",
+   "medicine": "amlodipine",
+   "term": "SN018",
+   "text": "Psychiatric: sexual dysfunction (male 1 and female), insomnia, nervousness, depression, abnormal dreams, anxiety, depersonalization."
+  },
+  {
+   "id": "L-AMLODIPINE-SN019",
+   "medicine": "amlodipine",
+   "term": "SN019",
+   "text": "Psychiatric: sexual dysfunction (male 1 and female), insomnia, nervousness, depression, abnormal dreams, anxiety, depersonalization."
+  },
+  {
+   "id": "L-RAMIPRIL-SN019",
+   "medicine": "ramipril",
+   "term": "SN019",
+   "text": "Neurologic and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo,"
+  },
+  {
+   "id": "L-SERTRALINE-SN019",
+   "medicine": "sertraline",
+   "term": "SN019",
+   "text": "placebo rate include fever, hyperkinesia, urinary incontinence, aggression, epistaxis, purpura, arthralgia, decreased weight, muscle twitching, and anxiety."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN019",
+   "medicine": "amitriptyline",
+   "term": "SN019",
+   "text": "extrapyramidal symptoms including abnormal involuntary movements and tardive dyskinesia; dysarthria; disturbed concentration; excitement; anxiety; insomnia; restlessness; nightmares; drowsiness; dizziness; weakness; fatigue; headache; syndrome of inappropriate ADH (antidiuretic hormone)"
+  },
+  {
+   "id": "L-SERTRALINE-SN020",
+   "medicine": "sertraline",
+   "term": "SN020",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia, dizziness, fatigue,"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN020",
+   "medicine": "amitriptyline",
+   "term": "SN020",
+   "text": "The following symptoms, anxiety, agitation, panic attacks, insomnia, irritability, hostility, aggressiveness, impulsivity, akathisia (psychomotor restlessness), hypomania, and mania, have been"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN021",
+   "medicine": "atorvastatin",
+   "term": "SN021",
+   "text": "Psychiatric Disorders: depression Respiratory Disorders: interstitial lung disease Skin and Subcutaneous Tissue Disorders: angioneurotic edema, bullous rashes (including erythema"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN021",
+   "medicine": "simvastatin",
+   "term": "SN021",
+   "text": "Tissue Disorders: muscle cramps, immune-mediated necrotizing myopathy, polymyalgia rheumatica, arthritis Nervous System Disorders: dizziness, depression, paresthesia, peripheral neuropathy, Rare reports of cognitive impairment (e.g., memory loss, forgetfulness, amnesia, memory impairment, confusion)"
+  },
+  {
+   "id": "L-AMLODIPINE-SN021",
+   "medicine": "amlodipine",
+   "term": "SN021",
+   "text": "Psychiatric: sexual dysfunction (male 1 and female), insomnia, nervousness, depression, abnormal dreams, anxiety, depersonalization."
+  },
+  {
+   "id": "L-LISINOPRIL-SN021",
+   "medicine": "lisinopril",
+   "term": "SN021",
+   "text": "Hematologic : Rare cases of bone marrow depression, hemolytic anemia, leukopenia/neutropenia and thrombocytopenia."
+  },
+  {
+   "id": "L-RAMIPRIL-SN021",
+   "medicine": "ramipril",
+   "term": "SN021",
+   "text": "Neurologic and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision disturbances."
+  },
+  {
+   "id": "L-SERTRALINE-SN021",
+   "medicine": "sertraline",
+   "term": "SN021",
+   "text": "However, there is substantial evidence from placebo-controlled maintenance trials in adults with MDD that antidepressants delay the recurrence of depression."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN021",
+   "medicine": "amitriptyline",
+   "term": "SN021",
+   "text": "Hematologic Bone marrow depression including agranulocytosis, leukopenia, thrombocytopenia; purpura; eosinophilia."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN022",
+   "medicine": "atorvastatin",
+   "term": "SN022",
+   "text": "There have been rare reports of cognitive impairment (e.g., memory loss, forgetfulness, amnesia, memory impairment, confusion) associated with the use of all statins."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN022",
+   "medicine": "simvastatin",
+   "term": "SN022",
+   "text": "depression, paresthesia, peripheral neuropathy, Rare reports of cognitive impairment (e.g., memory loss, forgetfulness, amnesia, memory impairment, confusion) associated with statin use."
+  },
+  {
+   "id": "L-LISINOPRIL-SN022",
+   "medicine": "lisinopril",
+   "term": "SN022",
+   "text": "agents or insulin [see Drug Interactions (7.2) ] Nervous system and psychiatric disorders Mood alterations (including depressive symptoms), mental confusion, hallucinations Skin and subcutaneous tissue disorders Psoriasis 5 WARNINGS AND PRECAUTIONS Angioedema: Discontinue lisinopril, provide appropriate"
+  },
+  {
+   "id": "L-SERTRALINE-SN022",
+   "medicine": "sertraline",
+   "term": "SN022",
+   "text": "dysphoric mood, irritability, agitation, dizziness, sensory disturbances (e.g., paresthesia, such as electric shock sensations), tremor, anxiety, confusion, headache, lethargy, emotional lability, insomnia, hypomania, tinnitus, and seizures."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN022",
+   "medicine": "amitriptyline",
+   "term": "SN022",
+   "text": "Signs and symptoms of hyponatremia include headache, difficulty concentrating memory impairment, confusion, weakness, and unsteadiness, which may lead to falls."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN023",
+   "medicine": "atorvastatin",
+   "term": "SN023",
+   "text": "There have been rare reports of cognitive impairment (e.g., memory loss, forgetfulness, amnesia, memory impairment, confusion) associated with the use of all statins."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN023",
+   "medicine": "simvastatin",
+   "term": "SN023",
+   "text": "dizziness, depression, paresthesia, peripheral neuropathy, Rare reports of cognitive impairment (e.g., memory loss, forgetfulness, amnesia, memory impairment, confusion) associated with statin use."
+  },
+  {
+   "id": "L-RAMIPRIL-SN023",
+   "medicine": "ramipril",
+   "term": "SN023",
+   "text": "Neurologic and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision"
+  },
+  {
+   "id": "L-SERTRALINE-SN023",
+   "medicine": "sertraline",
+   "term": "SN023",
+   "text": "Signs and symptoms of hyponatremia include headache, difficulty concentrating, memory impairment, confusion, weakness, and unsteadiness, which may lead to falls."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN023",
+   "medicine": "amitriptyline",
+   "term": "SN023",
+   "text": "Signs and symptoms of hyponatremia include headache, difficulty concentrating memory impairment, confusion, weakness, and unsteadiness, which may lead to falls."
+  },
+  {
+   "id": "L-AMLODIPINE-SN024",
+   "medicine": "amlodipine",
+   "term": "SN024",
+   "text": "Central and Peripheral Nervous System: hypoesthesia, neuropathy peripheral, paresthesia, tremor, vertigo."
+  },
+  {
+   "id": "L-RAMIPRIL-SN024",
+   "medicine": "ramipril",
+   "term": "SN024",
+   "text": "Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision disturbances."
+  },
+  {
+   "id": "L-SERTRALINE-SN024",
+   "medicine": "sertraline",
+   "term": "SN024",
+   "text": "reactions (≥5% and twice placebo) in pooled placebo-controlled MDD, OCD, PD, PTSD, SAD and PMDD clinical trials were nausea, diarrhea/loose stool, tremor, dyspepsia, decreased appetite, hyperhidrosis, ejaculation failure, and decreased libido ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Cipla"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN024",
+   "medicine": "amitriptyline",
+   "term": "SN024",
+   "text": "CNS and Neuromuscular Coma; seizures; hallucinations; delusions; confusional states; disorientation; incoordination; ataxia; tremors; peripheral neuropathy; numbness, tingling and paresthesias of the extremities; extrapyramidal symptoms including abnormal involuntary movements and"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN025",
+   "medicine": "simvastatin",
+   "term": "SN025",
+   "text": "Disorders: muscle cramps, immune-mediated necrotizing myopathy, polymyalgia rheumatica, arthritis Nervous System Disorders: dizziness, depression, paresthesia, peripheral neuropathy, Rare reports of cognitive impairment (e.g., memory loss, forgetfulness, amnesia, memory impairment, confusion) associated"
+  },
+  {
+   "id": "L-AMLODIPINE-SN025",
+   "medicine": "amlodipine",
+   "term": "SN025",
+   "text": "Central and Peripheral Nervous System: hypoesthesia, neuropathy peripheral, paresthesia, tremor, vertigo."
+  },
+  {
+   "id": "L-LISINOPRIL-SN025",
+   "medicine": "lisinopril",
+   "term": "SN025",
+   "text": "include a positive ANA, an elevated erythrocyte sedimentation rate, arthralgia/arthritis, myalgia, fever, vasculitis, eosinophilia, leukocytosis, paresthesia and vertigo."
+  },
+  {
+   "id": "L-RAMIPRIL-SN025",
+   "medicine": "ramipril",
+   "term": "SN025",
+   "text": "Neurologic and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision disturbances."
+  },
+  {
+   "id": "L-SERTRALINE-SN025",
+   "medicine": "sertraline",
+   "term": "SN025",
+   "text": "after abrupt discontinuation, include: nausea, sweating, dysphoric mood, irritability, agitation, dizziness, sensory disturbances (e.g., paresthesia, such as electric shock sensations), tremor, anxiety, confusion, headache, lethargy, emotional lability, insomnia, hypomania, tinnitus, and seizures."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN025",
+   "medicine": "amitriptyline",
+   "term": "SN025",
+   "text": "hallucinations; delusions; confusional states; disorientation; incoordination; ataxia; tremors; peripheral neuropathy; numbness, tingling and paresthesias of the extremities; extrapyramidal symptoms including abnormal involuntary movements and tardive dyskinesia; dysarthria; disturbed concentration;"
+  },
+  {
+   "id": "L-RAMIPRIL-SN026",
+   "medicine": "ramipril",
+   "term": "SN026",
+   "text": "Neurologic and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision disturbances."
+  },
+  {
+   "id": "L-SERTRALINE-SN026",
+   "medicine": "sertraline",
+   "term": "SN026",
+   "text": "(5.3) ] Activation of mania/hypomania [See Warnings and Precautions (5.4) ] Discontinuation syndrome [See Warnings and Precautions (5.5) ] Seizures [See Warnings and Precautions (5.6) ] Angle-closure glaucoma [See Warnings and Precautions (5.7) ] Hyponatremia [See Warnings and Precautions (5.8) ]"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN026",
+   "medicine": "amitriptyline",
+   "term": "SN026",
+   "text": "CNS and Neuromuscular Coma; seizures; hallucinations; delusions; confusional states; disorientation; incoordination; ataxia; tremors; peripheral neuropathy; numbness, tingling and"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN027",
+   "medicine": "atorvastatin",
+   "term": "SN027",
+   "text": "calcium tablets that led to treatment discontinuation and occurred at a rate greater than placebo were: myalgia (0.7%), diarrhea (0.5%), nausea (0.4%), alanine aminotransferase increase (0.4%), and hepatic enzyme increase (0.4%)."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN027",
+   "medicine": "simvastatin",
+   "term": "SN027",
+   "text": "and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are upper respiratory infection, headache, abdominal pain, constipation, and nausea."
+  },
+  {
+   "id": "L-AMLODIPINE-SN027",
+   "medicine": "amlodipine",
+   "term": "SN027",
+   "text": "Other adverse experiences not dose related but reported with an incidence >1.0% are fatigue, nausea, abdominal pain, and somnolence."
+  },
+  {
+   "id": "L-LISINOPRIL-SN027",
+   "medicine": "lisinopril",
+   "term": "SN027",
+   "text": "These patients presented with abdominal pain (with or without nausea or vomiting); in some cases there was no prior history of facial angioedema and C-1 esterase levels were normal."
+  },
+  {
+   "id": "L-RAMIPRIL-SN027",
+   "medicine": "ramipril",
+   "term": "SN027",
+   "text": "Mortality Study Adverse Event Placebo (N=982) Ramipril (N=1004) Hypotension 5% 11% Cough increased 4% 8% Dizziness 3% 4% Angina pectoris 2% 3% Nausea 1% 2% Postural hypotension 1% 2% Syncope 1% 2% Vomiting 0.5% 2% Vertigo 0.7% 2% Abnormal kidney function 0.5% 1% Diarrhea 0.4% 1% Other Adverse"
+  },
+  {
+   "id": "L-METFORMIN-SN027",
+   "medicine": "metformin",
+   "term": "SN027",
+   "text": "] Hypoglycemia [see Warnings and Precautions (5.3) ] For metformin hydrochloride tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting, flatulence, asthenia, indigestion, abdominal discomfort, and headache."
+  },
+  {
+   "id": "L-SERTRALINE-SN027",
+   "medicine": "sertraline",
+   "term": "SN027",
+   "text": "(5.11) ] Most common adverse reactions (≥5% and twice placebo) in pooled placebo-controlled MDD, OCD, PD, PTSD, SAD and PMDD clinical trials were nausea, diarrhea/loose stool, tremor, dyspepsia, decreased appetite, hyperhidrosis, ejaculation failure, and decreased libido ( 6.1 ) To report SUSPECTED"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN027",
+   "medicine": "amitriptyline",
+   "term": "SN027",
+   "text": "Gastrointestinal Rarely hepatitis (including altered liver function and jaundice); nausea; epigastric distress; vomiting; anorexia; stomatitis; peculiar taste; diarrhea; parotid swelling; black tongue."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN028",
+   "medicine": "simvastatin",
+   "term": "SN028",
+   "text": "anemia, thrombocytopenia, leukopenia, hemolytic anemia, positive ANA, ESR increase, eosinophilia Gastrointestinal Disorders: pancreatitis, vomiting Hepatic and Pancreatic Disorders: hepatitis/jaundice, fatal and non-fatal hepatic failure Immune System Disorders: hypersensitivity syndrome"
+  },
+  {
+   "id": "L-AMLODIPINE-SN028",
+   "medicine": "amlodipine",
+   "term": "SN028",
+   "text": "Gastrointestinal: anorexia, constipation, dysphagia, diarrhea, flatulence, pancreatitis, vomiting, gingival hyperplasia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN028",
+   "medicine": "lisinopril",
+   "term": "SN028",
+   "text": "These patients presented with abdominal pain (with or without nausea or vomiting); in some cases there was no prior history of facial angioedema and C-1 esterase levels were normal."
+  },
+  {
+   "id": "L-RAMIPRIL-SN028",
+   "medicine": "ramipril",
+   "term": "SN028",
+   "text": "(N=1004) Hypotension 5% 11% Cough increased 4% 8% Dizziness 3% 4% Angina pectoris 2% 3% Nausea 1% 2% Postural hypotension 1% 2% Syncope 1% 2% Vomiting 0.5% 2% Vertigo 0.7% 2% Abnormal kidney function 0.5% 1% Diarrhea 0.4% 1% Other Adverse Reactions Other adverse reactions reported in controlled"
+  },
+  {
+   "id": "L-METFORMIN-SN028",
+   "medicine": "metformin",
+   "term": "SN028",
+   "text": "[see Warnings and Precautions (5.3) ] For metformin hydrochloride tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting, flatulence, asthenia, indigestion, abdominal discomfort, and headache."
+  },
+  {
+   "id": "L-SERTRALINE-SN028",
+   "medicine": "sertraline",
+   "term": "SN028",
+   "text": "Visual impairment 4% 2% Gastrointestinal Disorders Nausea 26% 12% Diarrhea/Loose Stools 20% 10% Dry mouth 14% 9% Dyspepsia 8% 4% Constipation 6% 4% Vomiting 4% 1% General disorders and administration site conditions Fatigue 12% 8% Metabolism and nutrition disorders Decreased appetite 7% 2% Nervous system"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN028",
+   "medicine": "amitriptyline",
+   "term": "SN028",
+   "text": "Gastrointestinal Rarely hepatitis (including altered liver function and jaundice); nausea; epigastric distress; vomiting; anorexia; stomatitis; peculiar taste; diarrhea; parotid swelling; black tongue."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN029",
+   "medicine": "atorvastatin",
+   "term": "SN029",
+   "text": "Fasting Serum Glucose Levels [see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are nasopharyngitis, arthralgia, diarrhea, pain in extremity, and urinary tract infection ( 6.1 )."
+  },
+  {
+   "id": "L-AMLODIPINE-SN029",
+   "medicine": "amlodipine",
+   "term": "SN029",
+   "text": "Gastrointestinal: anorexia, constipation, dysphagia, diarrhea, flatulence, pancreatitis, vomiting, gingival hyperplasia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN029",
+   "medicine": "lisinopril",
+   "term": "SN029",
+   "text": "Digestive : Pancreatitis, constipation, flatulence, dry mouth, diarrhea."
+  },
+  {
+   "id": "L-RAMIPRIL-SN029",
+   "medicine": "ramipril",
+   "term": "SN029",
+   "text": "3% 4% Angina pectoris 2% 3% Nausea 1% 2% Postural hypotension 1% 2% Syncope 1% 2% Vomiting 0.5% 2% Vertigo 0.7% 2% Abnormal kidney function 0.5% 1% Diarrhea 0.4% 1% Other Adverse Reactions Other adverse reactions reported in controlled clinical trials (in less than 1% of ramipril patients), or rarer"
+  },
+  {
+   "id": "L-METFORMIN-SN029",
+   "medicine": "metformin",
+   "term": "SN029",
+   "text": "(5.2) ] Hypoglycemia [see Warnings and Precautions (5.3) ] For metformin hydrochloride tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting, flatulence, asthenia, indigestion, abdominal discomfort, and headache."
+  },
+  {
+   "id": "L-SERTRALINE-SN029",
+   "medicine": "sertraline",
+   "term": "SN029",
+   "text": "] Most common adverse reactions (≥5% and twice placebo) in pooled placebo-controlled MDD, OCD, PD, PTSD, SAD and PMDD clinical trials were nausea, diarrhea/loose stool, tremor, dyspepsia, decreased appetite, hyperhidrosis, ejaculation failure, and decreased libido ( 6.1 ) To report SUSPECTED ADVERSE"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN029",
+   "medicine": "amitriptyline",
+   "term": "SN029",
+   "text": "Rarely hepatitis (including altered liver function and jaundice); nausea; epigastric distress; vomiting; anorexia; stomatitis; peculiar taste; diarrhea; parotid swelling; black tongue."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN030",
+   "medicine": "simvastatin",
+   "term": "SN030",
+   "text": "[see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are upper respiratory infection, headache, abdominal pain, constipation, and nausea."
+  },
+  {
+   "id": "L-AMLODIPINE-SN030",
+   "medicine": "amlodipine",
+   "term": "SN030",
+   "text": "Gastrointestinal: anorexia, constipation, dysphagia, diarrhea, flatulence, pancreatitis, vomiting, gingival hyperplasia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN030",
+   "medicine": "lisinopril",
+   "term": "SN030",
+   "text": "Digestive : Pancreatitis, constipation, flatulence, dry mouth, diarrhea."
+  },
+  {
+   "id": "L-RAMIPRIL-SN030",
+   "medicine": "ramipril",
+   "term": "SN030",
+   "text": "Hepatic failure, hepatitis, jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth, dyspepsia, dysphagia, gastroenteritis, increased salivation, and taste disturbance."
+  },
+  {
+   "id": "L-SERTRALINE-SN030",
+   "medicine": "sertraline",
+   "term": "SN030",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia, dizziness, fatigue, dry mouth,"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN030",
+   "medicine": "amitriptyline",
+   "term": "SN030",
+   "text": "Anticholinergic Paralytic ileus, hyperpyrexia; urinary retention, dilatation of the urinary tract; constipation; blurred vision, disturbance of accommodation, increased ocular pressure, mydriasis; dry mouth."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN031",
+   "medicine": "simvastatin",
+   "term": "SN031",
+   "text": "Serum Glucose Levels [see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are upper respiratory infection, headache, abdominal pain, constipation, and nausea."
+  },
+  {
+   "id": "L-AMLODIPINE-SN031",
+   "medicine": "amlodipine",
+   "term": "SN031",
+   "text": "Other adverse experiences not dose related but reported with an incidence >1.0% are fatigue, nausea, abdominal pain, and somnolence."
+  },
+  {
+   "id": "L-LISINOPRIL-SN031",
+   "medicine": "lisinopril",
+   "term": "SN031",
+   "text": "These patients presented with abdominal pain (with or without nausea or vomiting); in some cases there was no prior history of facial angioedema and C-1 esterase levels were normal."
+  },
+  {
+   "id": "L-RAMIPRIL-SN031",
+   "medicine": "ramipril",
+   "term": "SN031",
+   "text": "Gastrointestinal: Hepatic failure, hepatitis, jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth, dyspepsia, dysphagia, gastroenteritis,"
+  },
+  {
+   "id": "L-METFORMIN-SN031",
+   "medicine": "metformin",
+   "term": "SN031",
+   "text": "These cases had a subtle onset and were accompanied by nonspecific symptoms such as malaise, myalgias, abdominal pain, respiratory distress, or increased somnolence; however, hypotension and resistant bradyarrhythmias have occurred with severe acidosis."
+  },
+  {
+   "id": "L-SERTRALINE-SN031",
+   "medicine": "sertraline",
+   "term": "SN031",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia, dizziness, fatigue, dry mouth, malaise."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN032",
+   "medicine": "atorvastatin",
+   "term": "SN032",
+   "text": "2.1 3.9 1.6 2.8 0.7 2.3 Other adverse reactions reported in placebo-controlled trials include: Body as a Whole: malaise, pyrexia Digestive System: abdominal discomfort, eructation, flatulence, hepatitis, cholestasis Musculoskeletal System: musculoskeletal pain, muscle fatigue, neck pain, joint swelling Metabolic and"
+  },
+  {
+   "id": "L-METFORMIN-SN032",
+   "medicine": "metformin",
+   "term": "SN032",
+   "text": "] For metformin hydrochloride tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting, flatulence, asthenia, indigestion, abdominal discomfort, and headache."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN033",
+   "medicine": "atorvastatin",
+   "term": "SN033",
+   "text": "8.9 11.7 10.6 4.3 6.9 Diarrhea 6.3 7.3 6.4 14.1 5.2 6.8 Pain in extremity 5.9 8.5 3.7 9.3 3.1 6.0 Urinary tract infection 5.6 6.9 6.4 8.0 4.1 5.7 Dyspepsia 4.3 5.9 3.2 6.0 3.3 4.7 Nausea 3.5 3.7 3.7 7.1 3.8 4.0 Musculoskeletal pain 3.6 5.2 3.2 5.1 2.3 3.8 Muscle spasms 3.0 4.6 4.8 5.1 2.4 3.6 Myalgia 3.1"
+  },
+  {
+   "id": "L-RAMIPRIL-SN033",
+   "medicine": "ramipril",
+   "term": "SN033",
+   "text": "jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth, dyspepsia, dysphagia, gastroenteritis, increased salivation, and taste disturbance."
+  },
+  {
+   "id": "L-SERTRALINE-SN033",
+   "medicine": "sertraline",
+   "term": "SN033",
+   "text": "(≥5% and twice placebo) in pooled placebo-controlled MDD, OCD, PD, PTSD, SAD and PMDD clinical trials were nausea, diarrhea/loose stool, tremor, dyspepsia, decreased appetite, hyperhidrosis, ejaculation failure, and decreased libido ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Cipla Ltd."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN034",
+   "medicine": "atorvastatin",
+   "term": "SN034",
+   "text": "reactions reported in placebo-controlled trials include: Body as a Whole: malaise, pyrexia Digestive System: abdominal discomfort, eructation, flatulence, hepatitis, cholestasis Musculoskeletal System: musculoskeletal pain, muscle fatigue, neck pain, joint swelling Metabolic and Nutritional System:"
+  },
+  {
+   "id": "L-AMLODIPINE-SN034",
+   "medicine": "amlodipine",
+   "term": "SN034",
+   "text": "Gastrointestinal: anorexia, constipation, dysphagia, diarrhea, flatulence, pancreatitis, vomiting, gingival hyperplasia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN034",
+   "medicine": "lisinopril",
+   "term": "SN034",
+   "text": "Digestive : Pancreatitis, constipation, flatulence, dry mouth, diarrhea."
+  },
+  {
+   "id": "L-METFORMIN-SN034",
+   "medicine": "metformin",
+   "term": "SN034",
+   "text": "[see Warnings and Precautions (5.3) ] For metformin hydrochloride tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting, flatulence, asthenia, indigestion, abdominal discomfort, and headache."
+  },
+  {
+   "id": "L-AMLODIPINE-SN036",
+   "medicine": "amlodipine",
+   "term": "SN036",
+   "text": "Gastrointestinal: anorexia, constipation, dysphagia, diarrhea, flatulence, pancreatitis, vomiting, gingival hyperplasia."
+  },
+  {
+   "id": "L-RAMIPRIL-SN036",
+   "medicine": "ramipril",
+   "term": "SN036",
+   "text": "Gastrointestinal: Hepatic failure, hepatitis, jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth, dyspepsia, dysphagia, gastroenteritis, increased salivation, and taste disturbance."
+  },
+  {
+   "id": "L-SERTRALINE-SN036",
+   "medicine": "sertraline",
+   "term": "SN036",
+   "text": "twice placebo) in pooled placebo-controlled MDD, OCD, PD, PTSD, SAD and PMDD clinical trials were nausea, diarrhea/loose stool, tremor, dyspepsia, decreased appetite, hyperhidrosis, ejaculation failure, and decreased libido ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Cipla Ltd."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN036",
+   "medicine": "amitriptyline",
+   "term": "SN036",
+   "text": "Gastrointestinal Rarely hepatitis (including altered liver function and jaundice); nausea; epigastric distress; vomiting; anorexia; stomatitis; peculiar taste; diarrhea; parotid swelling; black tongue."
+  },
+  {
+   "id": "L-AMLODIPINE-SN037",
+   "medicine": "amlodipine",
+   "term": "SN037",
+   "text": "Autonomic Nervous System: dry mouth, sweating increased."
+  },
+  {
+   "id": "L-LISINOPRIL-SN037",
+   "medicine": "lisinopril",
+   "term": "SN037",
+   "text": "Digestive : Pancreatitis, constipation, flatulence, dry mouth, diarrhea."
+  },
+  {
+   "id": "L-RAMIPRIL-SN037",
+   "medicine": "ramipril",
+   "term": "SN037",
+   "text": "hepatitis, jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth, dyspepsia, dysphagia, gastroenteritis, increased salivation, and taste disturbance."
+  },
+  {
+   "id": "L-SERTRALINE-SN037",
+   "medicine": "sertraline",
+   "term": "SN037",
+   "text": "MDD: somnolence; OCD: insomnia, agitation; PD: constipation, agitation; PTSD: fatigue; PMDD: somnolence, dry mouth, dizziness, fatigue, and abdominal pain; SAD: insomnia, dizziness, fatigue, dry mouth, malaise."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN037",
+   "medicine": "amitriptyline",
+   "term": "SN037",
+   "text": "retention, dilatation of the urinary tract; constipation; blurred vision, disturbance of accommodation, increased ocular pressure, mydriasis; dry mouth."
+  },
+  {
+   "id": "L-AMLODIPINE-SN039",
+   "medicine": "amlodipine",
+   "term": "SN039",
+   "text": "General: allergic reaction, asthenia, 1 back pain, hot flushes, malaise, pain, rigors, weight gain, weight decrease."
+  },
+  {
+   "id": "L-RAMIPRIL-SN039",
+   "medicine": "ramipril",
+   "term": "SN039",
+   "text": "Other: Arthralgia, arthritis, dyspnea, edema, epistaxis, impotence, increased sweating, malaise, myalgia, and weight gain."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN039",
+   "medicine": "amitriptyline",
+   "term": "SN039",
+   "text": "Other Alopecia; edema; weight gain or loss; urinary frequency; increased perspiration, hyponatremia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN041",
+   "medicine": "lisinopril",
+   "term": "SN041",
+   "text": "ADVERSE REACTIONS Common adverse reactions (events 2% greater than placebo) by use: Hypertension: headache, dizziness and cough (6.1) Heart Failure: hypotension and chest pain (6.1) Acute Myocardial Infarction: hypotension (6.1) To report SUSPECTED ADVERSE REACTIONS, contact"
+  },
+  {
+   "id": "L-RAMIPRIL-SN041",
+   "medicine": "ramipril",
+   "term": "SN041",
+   "text": "ADVERSE REACTIONS The most common adverse reactions in patients with hypertension included headache, dizziness, fatigue, and cough (6.1) ."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN042",
+   "medicine": "simvastatin",
+   "term": "SN042",
+   "text": "flushing, toxic epidermal necrolysis, erythema multiforme, including Stevens-Johnson syndrome Respiratory and Thoracic: interstitial lung disease, dyspnea Reproductive System Disorders: erectile dysfunction 5 WARNINGS AND PRECAUTIONS Myopathy and Rhabdomyolysis: Risk factors include age 65 years or"
+  },
+  {
+   "id": "L-AMLODIPINE-SN042",
+   "medicine": "amlodipine",
+   "term": "SN042",
+   "text": "Respiratory System: dyspnea, 1 epistaxis."
+  },
+  {
+   "id": "L-RAMIPRIL-SN042",
+   "medicine": "ramipril",
+   "term": "SN042",
+   "text": "Other: Arthralgia, arthritis, dyspnea, edema, epistaxis, impotence, increased sweating, malaise, myalgia, and weight gain."
+  },
+  {
+   "id": "L-METFORMIN-SN042",
+   "medicine": "metformin",
+   "term": "SN042",
+   "text": "treated patients and were more commonly reported with metformin hydrochloride than placebo: abnormal stools, hypoglycemia, myalgia, lightheaded, dyspnea, nail disorder, rash, sweating increased, taste disorder, chest discomfort, chills, flu syndrome, flushing, palpitation."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN043",
+   "medicine": "atorvastatin",
+   "term": "SN043",
+   "text": "(5.3) ] Increases in HbA1c and Fasting Serum Glucose Levels [see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence ≥5%) are nasopharyngitis, arthralgia, diarrhea, pain in extremity, and urinary tract infection ( 6.1 )."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN045",
+   "medicine": "simvastatin",
+   "term": "SN045",
+   "text": "Vertigo 4.2 4.5 Diabetes mellitus 3.6 4.2 Insomnia 3.8 4.0 Myalgia 3.2 3.7 Urinary tract infection 3.1 3.2 Edema/swelling 2.3 2.7 Headache 2.1 2.5 Sinusitis 1.8 2.3 Constipation 1.6 2.2 Myopathy/Rhabdomyolysi In clinical studies with a median follow-up of at least 4 years, in which 24,747 patients"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN049",
+   "medicine": "atorvastatin",
+   "term": "SN049",
+   "text": "test abnormal, blood alkaline phosphatase increase, creatine phosphokinase increase, hyperglycemia Nervous System : nightmare Respiratory System : epistaxis Skin and Appendages : urticaria Special Senses: vision blurred, tinnitus Urogenital System: white blood cells urine positive Elevations in Liver"
+  },
+  {
+   "id": "L-AMLODIPINE-SN049",
+   "medicine": "amlodipine",
+   "term": "SN049",
+   "text": "Respiratory System: dyspnea, 1 epistaxis."
+  },
+  {
+   "id": "L-RAMIPRIL-SN049",
+   "medicine": "ramipril",
+   "term": "SN049",
+   "text": "Other: Arthralgia, arthritis, dyspnea, edema, epistaxis, impotence, increased sweating, malaise, myalgia, and weight gain."
+  },
+  {
+   "id": "L-SERTRALINE-SN049",
+   "medicine": "sertraline",
+   "term": "SN049",
+   "text": "in at least 2% of pediatric patients and at a rate of at least twice the placebo rate include fever, hyperkinesia, urinary incontinence, aggression, epistaxis, purpura, arthralgia, decreased weight, muscle twitching, and anxiety."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN050",
+   "medicine": "simvastatin",
+   "term": "SN050",
+   "text": "Disorders: hepatitis/jaundice, fatal and non-fatal hepatic failure Immune System Disorders: hypersensitivity syndrome including: anaphylaxis, angioedema, lupus erythematous-like syndrome, dermatomyositis, vasculitis Musculoskeletal and Connective Tissue Disorders: muscle cramps, immune-mediated"
+  },
+  {
+   "id": "L-AMLODIPINE-SN050",
+   "medicine": "amlodipine",
+   "term": "SN050",
+   "text": "Skin and Appendages: angioedema, erythema multiforme, pruritus, 1 rash, 1 rash erythematous, rash maculopapular."
+  },
+  {
+   "id": "L-LISINOPRIL-SN050",
+   "medicine": "lisinopril",
+   "term": "SN050",
+   "text": "(including depressive symptoms), mental confusion, hallucinations Skin and subcutaneous tissue disorders Psoriasis 5 WARNINGS AND PRECAUTIONS Angioedema: Discontinue lisinopril, provide appropriate therapy and monitor until resolved (5.2) Renal impairment: Monitor renal function periodically (5.3)"
+  },
+  {
+   "id": "L-RAMIPRIL-SN050",
+   "medicine": "ramipril",
+   "term": "SN050",
+   "text": "The rate of angioedema was the same as in previous clinical trials [see Warnings and Precautions (5.1) ]."
+  },
+  {
+   "id": "L-SERTRALINE-SN050",
+   "medicine": "sertraline",
+   "term": "SN050",
+   "text": "– agranulocytosis, aplastic anemia and pancytopenia, leukopenia, thrombocytopenia, lupus-like syndrome, serum sickness Immune system disorders - angioedema Metabolism and nutrition disorders – hyponatremia, hyperglycemia Musculoskeletal and connective tissue disorders – rhabdomyolysis, trismus Nervous"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN051",
+   "medicine": "atorvastatin",
+   "term": "SN051",
+   "text": "Psychiatric Disorders: depression Respiratory Disorders: interstitial lung disease Skin and Subcutaneous Tissue Disorders: angioneurotic edema, bullous rashes (including erythema multiforme, Stevens-Johnson syndrome, and toxic epidermal necrolysis) 5 WARNINGS AND PRECAUTIONS Myopathy and"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN051",
+   "medicine": "simvastatin",
+   "term": "SN051",
+   "text": "5.1 5.7 Gastritis 3.9 4.9 Eczema 3.0 4.5 Vertigo 4.2 4.5 Diabetes mellitus 3.6 4.2 Insomnia 3.8 4.0 Myalgia 3.2 3.7 Urinary tract infection 3.1 3.2 Edema/swelling 2.3 2.7 Headache 2.1 2.5 Sinusitis 1.8 2.3 Constipation 1.6 2.2 Myopathy/Rhabdomyolysi In clinical studies with a median follow-up of at"
+  },
+  {
+   "id": "L-AMLODIPINE-SN051",
+   "medicine": "amlodipine",
+   "term": "SN051",
+   "text": "ADVERSE REACTIONS Most common adverse reaction to amlodipine is edema which occurred in a dose related manner."
+  },
+  {
+   "id": "L-RAMIPRIL-SN051",
+   "medicine": "ramipril",
+   "term": "SN051",
+   "text": "Angioneurotic Edema: Angioneurotic edema has been reported in 0.3% of patients in U.S."
+  },
+  {
+   "id": "L-SERTRALINE-SN051",
+   "medicine": "sertraline",
+   "term": "SN051",
+   "text": "blurred vision Gastrointestinal disorders - hematochezia, melena, rectal hemorrhage General disorders and administration site conditions - edema, gait disturbance, irritability, pyrexia Hepatobiliary disorders - elevated liver enzymes Immune system disorders - anaphylaxis Metabolism and"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN051",
+   "medicine": "amitriptyline",
+   "term": "SN051",
+   "text": "Allergic Skin rash; urticaria; photosensitization; edema of face and tongue."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN052",
+   "medicine": "simvastatin",
+   "term": "SN052",
+   "text": "(e.g., nodules, discoloration, dryness of skin/mucous membranes, changes to hair/nails), purpura, lichen planus, urticaria, photosensitivity, flushing, toxic epidermal necrolysis, erythema multiforme, including Stevens-Johnson syndrome Respiratory and Thoracic: interstitial lung disease, dyspnea"
+  },
+  {
+   "id": "L-AMLODIPINE-SN052",
+   "medicine": "amlodipine",
+   "term": "SN052",
+   "text": "in a dose related manner are as follows: 2.5mg N=275 Amlodipine 5mg N=296 10mg N=268 Placebo N=520 Edema 1.8 3.0 10.8 0.6 Dizziness 1.1 3.4 3.4 1.5 Flushing 0.7 1.4 2.6 0.0 Palpitation 0.7 1.4 4.5 0.6 Other adverse reactions that were not clearly dose related but were reported with an incidence greater"
+  },
+  {
+   "id": "L-LISINOPRIL-SN052",
+   "medicine": "lisinopril",
+   "term": "SN052",
+   "text": "Skin : Urticaria, alopecia, photosensitivity, erythema, flushing, diaphoresis, cutaneous pseudolymphoma, toxic epidermal necrolysis, Stevens-Johnson syndrome, and pruritus."
+  },
+  {
+   "id": "L-METFORMIN-SN052",
+   "medicine": "metformin",
+   "term": "SN052",
+   "text": "hypoglycemia, myalgia, lightheaded, dyspnea, nail disorder, rash, sweating increased, taste disorder, chest discomfort, chills, flu syndrome, flushing, palpitation."
+  },
+  {
+   "id": "L-SERTRALINE-SN052",
+   "medicine": "sertraline",
+   "term": "SN052",
+   "text": "(e.g., agitation, hallucinations, delirium, and coma), autonomic instability (e.g., tachycardia, labile blood pressure, dizziness, diaphoresis, flushing, hyperthermia), neuromuscular symptoms (e.g., tremor, rigidity, myoclonus, hyperreflexia, incoordination), seizures, and gastrointestinal symptoms"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN052",
+   "medicine": "amitriptyline",
+   "term": "SN052",
+   "text": "(e.g., agitation, hallucinations, delirium, and coma), autonomic instability (e.g., tachycardia, labile blood pressure, dizziness, diaphoresis, flushing, hyperthermia), neuromuscular changes (e.g., tremor, rigidity, myoclonus, hyperreflexia, incoordination), seizures, and/or gastrointestinal symptoms"
+  },
+  {
+   "id": "L-AMLODIPINE-SN053",
+   "medicine": "amlodipine",
+   "term": "SN053",
+   "text": "following table: Amlodipine Placebo Male=% (N=1218) Female=% (N=512) Male=% (N=914) Female=% (N=336) Edema 5.6 14.6 1.4 5.1 Flushing 1.5 4.5 0.3 0.9 Palpitations 1.4 3.3 0.9 0.9 Somnolence 1.3 1.6 0.8 0.3 The following events occurred in <1% but >0.1% of patients in controlled clinical trials or under"
+  },
+  {
+   "id": "L-RAMIPRIL-SN053",
+   "medicine": "ramipril",
+   "term": "SN053",
+   "text": "trials) [see Warnings and Precautions (5.5) ] , syncope, and palpitations."
+  },
+  {
+   "id": "L-SERTRALINE-SN053",
+   "medicine": "sertraline",
+   "term": "SN053",
+   "text": "Placebo-Controlled Trials in Adults with MDD, OCD, PD, PTSD, SAD, and PMDD* Sertraline Hydrochloride (N=3066) Placebo (N=2293) Cardiac disorders Palpitations 4% 2% Eye disorders Visual impairment 4% 2% Gastrointestinal Disorders Nausea 26% 12% Diarrhea/Loose Stools 20% 10% Dry mouth 14% 9% Dyspepsia 8% 4%"
+  },
+  {
+   "id": "L-AMLODIPINE-SN054",
+   "medicine": "amlodipine",
+   "term": "SN054",
+   "text": "relationship is uncertain; they are listed to alert the physician to a possible relationship: Cardiovascular: arrhythmia (including ventricular tachycardia and atrial fibrillation), bradycardia, chest pain, peripheral ischemia, syncope, tachycardia, vasculitis."
+  },
+  {
+   "id": "L-SERTRALINE-SN054",
+   "medicine": "sertraline",
+   "term": "SN054",
+   "text": "in the prescribing information, occurring at an incidence of < 2% in patients treated with sertraline hydrochloride were: Cardiac disorders – tachycardia Ear and labyrinth disorders – tinnitus Endocrine disorders - hypothyroidism Eye disorders -mydriasis, blurred vision Gastrointestinal disorders -"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN054",
+   "medicine": "amitriptyline",
+   "term": "SN054",
+   "text": "ECG changes and changes in AV conduction; heart block; arrhythmias; hypotension, particularly orthostatic hypotension; syncope; hypertension; tachycardia; palpitation."
+  },
+  {
+   "id": "L-AMLODIPINE-SN055",
+   "medicine": "amlodipine",
+   "term": "SN055",
+   "text": "listed to alert the physician to a possible relationship: Cardiovascular: arrhythmia (including ventricular tachycardia and atrial fibrillation), bradycardia, chest pain, peripheral ischemia, syncope, tachycardia, vasculitis."
+  },
+  {
+   "id": "L-SERTRALINE-SN055",
+   "medicine": "sertraline",
+   "term": "SN055",
+   "text": "Bleeding or clotting disorders - increased coagulation times (altered platelet function) Cardiac disorders – AV block, bradycardia, atrial arrhythmias, QTc-interval prolongation, ventricular tachycardia (including Torsade de Pointes) [See Clinical Pharmacology (12.2) ] Endocrine"
+  },
+  {
+   "id": "L-AMLODIPINE-SN056",
+   "medicine": "amlodipine",
+   "term": "SN056",
+   "text": "5 WARNINGS AND PRECAUTIONS • Symptomatic hypotension is possible, particularly in patients with severe aortic stenosis."
+  },
+  {
+   "id": "L-LISINOPRIL-SN056",
+   "medicine": "lisinopril",
+   "term": "SN056",
+   "text": "ADVERSE REACTIONS Common adverse reactions (events 2% greater than placebo) by use: Hypertension: headache, dizziness and cough (6.1) Heart Failure: hypotension and chest pain (6.1) Acute Myocardial Infarction: hypotension (6.1) To report SUSPECTED ADVERSE REACTIONS, contact Solco Healthcare US, LLC at"
+  },
+  {
+   "id": "L-RAMIPRIL-SN056",
+   "medicine": "ramipril",
+   "term": "SN056",
+   "text": "Study Placebo (N=4652) Ramipril (N=4645) Discontinuation at any time 32% 34% Permanent discontinuation 28% 29% Reasons for stopping Cough 2% 7% Hypotension or dizziness 1.5% 1.9% Angioedema 0.1% 0.3% Heart Failure Post-Myocardial Infarction AIRE Study Adverse reactions (except laboratory abnormalities)"
+  },
+  {
+   "id": "L-METFORMIN-SN056",
+   "medicine": "metformin",
+   "term": "SN056",
+   "text": "and were accompanied by nonspecific symptoms such as malaise, myalgias, abdominal pain, respiratory distress, or increased somnolence; however, hypotension and resistant bradyarrhythmias have occurred with severe acidosis."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN056",
+   "medicine": "amitriptyline",
+   "term": "SN056",
+   "text": "Cardiovascular Myocardial infarction; stroke; nonspecific ECG changes and changes in AV conduction; heart block; arrhythmias; hypotension, particularly orthostatic hypotension; syncope; hypertension; tachycardia; palpitation."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN057",
+   "medicine": "amitriptyline",
+   "term": "SN057",
+   "text": "Myocardial infarction; stroke; nonspecific ECG changes and changes in AV conduction; heart block; arrhythmias; hypotension, particularly orthostatic hypotension; syncope; hypertension; tachycardia; palpitation."
+  },
+  {
+   "id": "L-AMLODIPINE-SN058",
+   "medicine": "amlodipine",
+   "term": "SN058",
+   "text": "alert the physician to a possible relationship: Cardiovascular: arrhythmia (including ventricular tachycardia and atrial fibrillation), bradycardia, chest pain, peripheral ischemia, syncope, tachycardia, vasculitis."
+  },
+  {
+   "id": "L-LISINOPRIL-SN058",
+   "medicine": "lisinopril",
+   "term": "SN058",
+   "text": "Common adverse reactions (events 2% greater than placebo) by use: Hypertension: headache, dizziness and cough (6.1) Heart Failure: hypotension and chest pain (6.1) Acute Myocardial Infarction: hypotension (6.1) To report SUSPECTED ADVERSE REACTIONS, contact Solco Healthcare US, LLC at 1-866-257-2597 or FDA"
+  },
+  {
+   "id": "L-AMLODIPINE-SN059",
+   "medicine": "amlodipine",
+   "term": "SN059",
+   "text": "Skin and Appendages: angioedema, erythema multiforme, pruritus, 1 rash, 1 rash erythematous, rash maculopapular."
+  },
+  {
+   "id": "L-LISINOPRIL-SN059",
+   "medicine": "lisinopril",
+   "term": "SN059",
+   "text": "Rash, photosensitivity or other dermatological manifestations may occur alone or in combination with these symptoms."
+  },
+  {
+   "id": "L-RAMIPRIL-SN059",
+   "medicine": "ramipril",
+   "term": "SN059",
+   "text": "Dermatologic: Apparent hypersensitivity reactions (manifested by urticaria, pruritus, or rash, with or without fever), photosensitivity, purpura, onycholysis, pemphigus, pemphigoid, erythema multiforme, toxic epidermal necrolysis, and"
+  },
+  {
+   "id": "L-METFORMIN-SN059",
+   "medicine": "metformin",
+   "term": "SN059",
+   "text": "were more commonly reported with metformin hydrochloride than placebo: abnormal stools, hypoglycemia, myalgia, lightheaded, dyspnea, nail disorder, rash, sweating increased, taste disorder, chest discomfort, chills, flu syndrome, flushing, palpitation."
+  },
+  {
+   "id": "L-SERTRALINE-SN059",
+   "medicine": "sertraline",
+   "term": "SN059",
+   "text": "subcutaneous tissue disorders - alopecia; cold sweat; dermatitis; dermatitis bullous; pruritus; purpura; erythematous, follicular, or maculopapular rash; urticaria Vascular disorders - hemorrhage, hypertension, vasodilation 6.2 Post-marketing Experience The following adverse reactions have been"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN059",
+   "medicine": "amitriptyline",
+   "term": "SN059",
+   "text": "Allergic Skin rash; urticaria; photosensitization; edema of face and tongue."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN060",
+   "medicine": "simvastatin",
+   "term": "SN060",
+   "text": "Skin and Subcutaneous Tissue Disorders: pruritus, alopecia, a variety of skin changes (e.g., nodules, discoloration, dryness of skin/mucous membranes, changes to hair/nails), purpura, lichen planus,"
+  },
+  {
+   "id": "L-AMLODIPINE-SN060",
+   "medicine": "amlodipine",
+   "term": "SN060",
+   "text": "Skin and Appendages: angioedema, erythema multiforme, pruritus, 1 rash, 1 rash erythematous, rash maculopapular."
+  },
+  {
+   "id": "L-LISINOPRIL-SN060",
+   "medicine": "lisinopril",
+   "term": "SN060",
+   "text": "alopecia, photosensitivity, erythema, flushing, diaphoresis, cutaneous pseudolymphoma, toxic epidermal necrolysis, Stevens-Johnson syndrome, and pruritus."
+  },
+  {
+   "id": "L-RAMIPRIL-SN060",
+   "medicine": "ramipril",
+   "term": "SN060",
+   "text": "Dermatologic: Apparent hypersensitivity reactions (manifested by urticaria, pruritus, or rash, with or without fever), photosensitivity, purpura, onycholysis, pemphigus, pemphigoid, erythema multiforme, toxic epidermal necrolysis, and"
+  },
+  {
+   "id": "L-SERTRALINE-SN060",
+   "medicine": "sertraline",
+   "term": "SN060",
+   "text": "disorders - bronchospasm, epistaxis, yawning Skin and subcutaneous tissue disorders - alopecia; cold sweat; dermatitis; dermatitis bullous; pruritus; purpura; erythematous, follicular, or maculopapular rash; urticaria Vascular disorders - hemorrhage, hypertension, vasodilation 6.2 Post-marketing"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN061",
+   "medicine": "atorvastatin",
+   "term": "SN061",
+   "text": "phosphatase increase, creatine phosphokinase increase, hyperglycemia Nervous System : nightmare Respiratory System : epistaxis Skin and Appendages : urticaria Special Senses: vision blurred, tinnitus Urogenital System: white blood cells urine positive Elevations in Liver Enzyme Tests Persistent elevations"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN061",
+   "medicine": "simvastatin",
+   "term": "SN061",
+   "text": "alopecia, a variety of skin changes (e.g., nodules, discoloration, dryness of skin/mucous membranes, changes to hair/nails), purpura, lichen planus, urticaria, photosensitivity, flushing, toxic epidermal necrolysis, erythema multiforme, including Stevens-Johnson syndrome Respiratory and Thoracic:"
+  },
+  {
+   "id": "L-LISINOPRIL-SN061",
+   "medicine": "lisinopril",
+   "term": "SN061",
+   "text": "Skin : Urticaria, alopecia, photosensitivity, erythema, flushing, diaphoresis, cutaneous pseudolymphoma, toxic epidermal necrolysis, Stevens-Johnson syndrome, and"
+  },
+  {
+   "id": "L-RAMIPRIL-SN061",
+   "medicine": "ramipril",
+   "term": "SN061",
+   "text": "Dermatologic: Apparent hypersensitivity reactions (manifested by urticaria, pruritus, or rash, with or without fever), photosensitivity, purpura, onycholysis, pemphigus, pemphigoid, erythema multiforme, toxic epidermal"
+  },
+  {
+   "id": "L-SERTRALINE-SN061",
+   "medicine": "sertraline",
+   "term": "SN061",
+   "text": "tissue disorders - alopecia; cold sweat; dermatitis; dermatitis bullous; pruritus; purpura; erythematous, follicular, or maculopapular rash; urticaria Vascular disorders - hemorrhage, hypertension, vasodilation 6.2 Post-marketing Experience The following adverse reactions have been identified during"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN061",
+   "medicine": "amitriptyline",
+   "term": "SN061",
+   "text": "Allergic Skin rash; urticaria; photosensitization; edema of face and tongue."
+  },
+  {
+   "id": "L-AMLODIPINE-SN062",
+   "medicine": "amlodipine",
+   "term": "SN062",
+   "text": "Autonomic Nervous System: dry mouth, sweating increased."
+  },
+  {
+   "id": "L-RAMIPRIL-SN062",
+   "medicine": "ramipril",
+   "term": "SN062",
+   "text": "Other: Arthralgia, arthritis, dyspnea, edema, epistaxis, impotence, increased sweating, malaise, myalgia, and weight gain."
+  },
+  {
+   "id": "L-METFORMIN-SN062",
+   "medicine": "metformin",
+   "term": "SN062",
+   "text": "more commonly reported with metformin hydrochloride than placebo: abnormal stools, hypoglycemia, myalgia, lightheaded, dyspnea, nail disorder, rash, sweating increased, taste disorder, chest discomfort, chills, flu syndrome, flushing, palpitation."
+  },
+  {
+   "id": "L-SERTRALINE-SN062",
+   "medicine": "sertraline",
+   "term": "SN062",
+   "text": "pooled placebo-controlled MDD, OCD, PD, PTSD, SAD and PMDD clinical trials were nausea, diarrhea/loose stool, tremor, dyspepsia, decreased appetite, hyperhidrosis, ejaculation failure, and decreased libido ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Cipla Ltd."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN063",
+   "medicine": "simvastatin",
+   "term": "SN063",
+   "text": "Skin and Subcutaneous Tissue Disorders: pruritus, alopecia, a variety of skin changes (e.g., nodules, discoloration, dryness of skin/mucous membranes, changes to hair/nails), purpura, lichen planus,"
+  },
+  {
+   "id": "L-LISINOPRIL-SN063",
+   "medicine": "lisinopril",
+   "term": "SN063",
+   "text": "Skin : Urticaria, alopecia, photosensitivity, erythema, flushing, diaphoresis, cutaneous pseudolymphoma, toxic epidermal necrolysis, Stevens-Johnson syndrome, and pruritus."
+  },
+  {
+   "id": "L-SERTRALINE-SN063",
+   "medicine": "sertraline",
+   "term": "SN063",
+   "text": "vaginal hemorrhage Respiratory, thoracic and mediastinal disorders - bronchospasm, epistaxis, yawning Skin and subcutaneous tissue disorders - alopecia; cold sweat; dermatitis; dermatitis bullous; pruritus; purpura; erythematous, follicular, or maculopapular rash; urticaria Vascular disorders -"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN063",
+   "medicine": "amitriptyline",
+   "term": "SN063",
+   "text": "Other Alopecia; edema; weight gain or loss; urinary frequency; increased perspiration, hyponatremia."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN064",
+   "medicine": "simvastatin",
+   "term": "SN064",
+   "text": "variety of skin changes (e.g., nodules, discoloration, dryness of skin/mucous membranes, changes to hair/nails), purpura, lichen planus, urticaria, photosensitivity, flushing, toxic epidermal necrolysis, erythema multiforme, including Stevens-Johnson syndrome Respiratory and Thoracic: interstitial lung disease,"
+  },
+  {
+   "id": "L-LISINOPRIL-SN064",
+   "medicine": "lisinopril",
+   "term": "SN064",
+   "text": "Skin : Urticaria, alopecia, photosensitivity, erythema, flushing, diaphoresis, cutaneous pseudolymphoma, toxic epidermal necrolysis, Stevens-Johnson syndrome, and pruritus."
+  },
+  {
+   "id": "L-RAMIPRIL-SN064",
+   "medicine": "ramipril",
+   "term": "SN064",
+   "text": "Dermatologic: Apparent hypersensitivity reactions (manifested by urticaria, pruritus, or rash, with or without fever), photosensitivity, purpura, onycholysis, pemphigus, pemphigoid, erythema multiforme, toxic epidermal necrolysis, and Stevens-Johnson syndrome."
+  },
+  {
+   "id": "L-SERTRALINE-SN064",
+   "medicine": "sertraline",
+   "term": "SN064",
+   "text": "thoracic and mediastinal disorders - pulmonary hypertension eosinophilic pneumonia, anosmia, hyposmia Skin and subcutaneous tissue disorders - photosensitivity skin reaction and other severe cutaneous reactions, which potentially can be fatal, such as Stevens-Johnson Syndrome (SJS) and toxic epidermal"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN065",
+   "medicine": "atorvastatin",
+   "term": "SN065",
+   "text": "phosphokinase increase, hyperglycemia Nervous System : nightmare Respiratory System : epistaxis Skin and Appendages : urticaria Special Senses: vision blurred, tinnitus Urogenital System: white blood cells urine positive Elevations in Liver Enzyme Tests Persistent elevations in serum transaminases, defined"
+  },
+  {
+   "id": "L-LISINOPRIL-SN065",
+   "medicine": "lisinopril",
+   "term": "SN065",
+   "text": "Special Senses : Visual loss, diplopia, blurred vision, tinnitus, photophobia, taste disturbances, olfactory disturbance."
+  },
+  {
+   "id": "L-SERTRALINE-SN065",
+   "medicine": "sertraline",
+   "term": "SN065",
+   "text": "were: Cardiac disorders – tachycardia Ear and labyrinth disorders – tinnitus Endocrine disorders - hypothyroidism Eye disorders -mydriasis, blurred vision Gastrointestinal disorders - hematochezia, melena, rectal hemorrhage General disorders and administration site conditions - edema, gait disturbance,"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN065",
+   "medicine": "amitriptyline",
+   "term": "SN065",
+   "text": "Anticholinergic Paralytic ileus, hyperpyrexia; urinary retention, dilatation of the urinary tract; constipation; blurred vision, disturbance of accommodation, increased ocular pressure, mydriasis; dry mouth."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN066",
+   "medicine": "atorvastatin",
+   "term": "SN066",
+   "text": "increase, hyperglycemia Nervous System : nightmare Respiratory System : epistaxis Skin and Appendages : urticaria Special Senses: vision blurred, tinnitus Urogenital System: white blood cells urine positive Elevations in Liver Enzyme Tests Persistent elevations in serum transaminases, defined as more"
+  },
+  {
+   "id": "L-AMLODIPINE-SN066",
+   "medicine": "amlodipine",
+   "term": "SN066",
+   "text": "Special Senses: abnormal vision, conjunctivitis, diplopia, eye pain, tinnitus."
+  },
+  {
+   "id": "L-LISINOPRIL-SN066",
+   "medicine": "lisinopril",
+   "term": "SN066",
+   "text": "Special Senses : Visual loss, diplopia, blurred vision, tinnitus, photophobia, taste disturbances, olfactory disturbance."
+  },
+  {
+   "id": "L-RAMIPRIL-SN066",
+   "medicine": "ramipril",
+   "term": "SN066",
+   "text": "and Psychiatric: Anxiety, amnesia, convulsions, depression, hearing loss, insomnia, nervousness, neuralgia, neuropathy, paresthesia, somnolence, tinnitus, tremor, vertigo, and vision disturbances."
+  },
+  {
+   "id": "L-SERTRALINE-SN066",
+   "medicine": "sertraline",
+   "term": "SN066",
+   "text": "at an incidence of < 2% in patients treated with sertraline hydrochloride were: Cardiac disorders – tachycardia Ear and labyrinth disorders – tinnitus Endocrine disorders - hypothyroidism Eye disorders -mydriasis, blurred vision Gastrointestinal disorders - hematochezia, melena, rectal hemorrhage"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN066",
+   "medicine": "amitriptyline",
+   "term": "SN066",
+   "text": "restlessness; nightmares; drowsiness; dizziness; weakness; fatigue; headache; syndrome of inappropriate ADH (antidiuretic hormone) secretion; tinnitus; alteration in EEG patterns."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN067",
+   "medicine": "simvastatin",
+   "term": "SN067",
+   "text": "erythema multiforme, including Stevens-Johnson syndrome Respiratory and Thoracic: interstitial lung disease, dyspnea Reproductive System Disorders: erectile dysfunction 5 WARNINGS AND PRECAUTIONS Myopathy and Rhabdomyolysis: Risk factors include age 65 years or greater, uncontrolled hypothyroidism, renal impairment,"
+  },
+  {
+   "id": "L-AMLODIPINE-SN067",
+   "medicine": "amlodipine",
+   "term": "SN067",
+   "text": "Psychiatric: sexual dysfunction (male 1 and female), insomnia, nervousness, depression, abnormal dreams, anxiety, depersonalization."
+  },
+  {
+   "id": "L-SERTRALINE-SN067",
+   "medicine": "sertraline",
+   "term": "SN067",
+   "text": "Warnings and Precautions (5.6) ] Angle-closure glaucoma [See Warnings and Precautions (5.7) ] Hyponatremia [See Warnings and Precautions (5.8) ] Sexual Dysfunction [See Warnings and Precautions (5.11) ] Most common adverse reactions (≥5% and twice placebo) in pooled placebo-controlled MDD, OCD, PD, PTSD, SAD and"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN067",
+   "medicine": "amitriptyline",
+   "term": "SN067",
+   "text": "Endocrine Testicular swelling and gynecomastia in the male; breast enlargement and galactorrhea in the female; increased or decreased libido; impotence; elevation and lowering of blood sugar levels."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN068",
+   "medicine": "amitriptyline",
+   "term": "SN068",
+   "text": "Anticholinergic Paralytic ileus, hyperpyrexia; urinary retention, dilatation of the urinary tract; constipation; blurred vision, disturbance of accommodation, increased ocular pressure, mydriasis; dry mouth."
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN069",
+   "medicine": "amitriptyline",
+   "term": "SN069",
+   "text": "Other Alopecia; edema; weight gain or loss; urinary frequency; increased perspiration, hyponatremia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN070",
+   "medicine": "lisinopril",
+   "term": "SN070",
+   "text": "Other reactions include: Metabolism and nutrition disorders Hyponatremia [see Warnings and Precautions (5.4) ] , cases of hypoglycemia in diabetic patients on oral antidiabetic agents or insulin [see Drug Interactions (7.2) ] Nervous system and psychiatric disorders Mood alterations"
+  },
+  {
+   "id": "L-RAMIPRIL-SN070",
+   "medicine": "ramipril",
+   "term": "SN070",
+   "text": "6.2 Post-Marketing Experience In addition to adverse reactions reported from clinical trials, there have been rare reports of hypoglycemia reported during ramipril therapy when given to patients concomitantly taking oral hypoglycemic agents or insulin."
+  },
+  {
+   "id": "L-METFORMIN-SN070",
+   "medicine": "metformin",
+   "term": "SN070",
+   "text": "the labeling: Lactic Acidosis [see Boxed Warning and Warnings and Precautions (5.1) ] Vitamin B 12 Deficiency [see Warnings and Precautions (5.2) ] Hypoglycemia [see Warnings and Precautions (5.3) ] For metformin hydrochloride tablets, the most common adverse reactions (> 5.0%) are diarrhea, nausea/vomiting,"
+  },
+  {
+   "id": "L-SERTRALINE-SN070",
+   "medicine": "sertraline",
+   "term": "SN070",
+   "text": "- elevated liver enzymes Immune system disorders - anaphylaxis Metabolism and nutrition disorders - diabetes mellitus, hypercholesterolemia, hypoglycemia, increased appetite Musculoskeletal and connective tissue disorders – arthralgia, muscle spasms, tightness, or twitching Nervous system disorders -"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN071",
+   "medicine": "atorvastatin",
+   "term": "SN071",
+   "text": "and Nutritional System: transaminases increase, liver function test abnormal, blood alkaline phosphatase increase, creatine phosphokinase increase, hyperglycemia Nervous System : nightmare Respiratory System : epistaxis Skin and Appendages : urticaria Special Senses: vision blurred, tinnitus Urogenital System:"
+  },
+  {
+   "id": "L-AMLODIPINE-SN071",
+   "medicine": "amlodipine",
+   "term": "SN071",
+   "text": "Metabolic and Nutritional: hyperglycemia, thirst."
+  },
+  {
+   "id": "L-SERTRALINE-SN071",
+   "medicine": "sertraline",
+   "term": "SN071",
+   "text": "thrombocytopenia, lupus-like syndrome, serum sickness Immune system disorders - angioedema Metabolism and nutrition disorders – hyponatremia, hyperglycemia Musculoskeletal and connective tissue disorders – rhabdomyolysis, trismus Nervous system disorders -serotonin syndrome, extrapyramidal symptoms"
+  },
+  {
+   "id": "L-METFORMIN-SN072",
+   "medicine": "metformin",
+   "term": "SN072",
+   "text": "ADVERSE REACTIONS The following adverse reactions are also discussed elsewhere in the labeling: Lactic Acidosis [see Boxed Warning and Warnings and Precautions (5.1) ] Vitamin B 12 Deficiency [see Warnings and Precautions (5.2) ] Hypoglycemia [see Warnings and"
+  },
+  {
+   "id": "L-LISINOPRIL-SN074",
+   "medicine": "lisinopril",
+   "term": "SN074",
+   "text": "Adverse Drug Reactions: ATLAS trial High Dose (n=1568) Low Dose (n=1596) Dizziness 19% 12% Hypotension 11% 7% Creatinine increased 10% 7% Hyperkalemia 6% 4% Syncope 7% 5% Acute Myocardial Infarction Patients treated with lisinopril had a higher incidence of hypotension (by 5.3%) and renal"
+  },
+  {
+   "id": "L-RAMIPRIL-SN074",
+   "medicine": "ramipril",
+   "term": "SN074",
+   "text": "5 WARNINGS AND PRECAUTIONS Angioedema, increased risk in patients with a prior history (5.1) Hypotension and hyperkalemia (5.5, 5.8) Renal impairment: monitor renal function during therapy (5.3) Avoid concomitant use of an ACE inhibitor and angiotensin blocker (5.7) Rare"
+  },
+  {
+   "id": "L-LISINOPRIL-SN075",
+   "medicine": "lisinopril",
+   "term": "SN075",
+   "text": "Other reactions include: Metabolism and nutrition disorders Hyponatremia [see Warnings and Precautions (5.4) ] , cases of hypoglycemia in diabetic patients on oral antidiabetic agents or insulin [see Drug Interactions"
+  },
+  {
+   "id": "L-RAMIPRIL-SN075",
+   "medicine": "ramipril",
+   "term": "SN075",
+   "text": "Elevations of liver enzymes, serum bilirubin, uric acid, and blood glucose have been reported, as have cases of hyponatremia and scattered incidents of leucopenia, eosinophilia, and proteinuria."
+  },
+  {
+   "id": "L-SERTRALINE-SN075",
+   "medicine": "sertraline",
+   "term": "SN075",
+   "text": "[See Warnings and Precautions (5.5) ] Seizures [See Warnings and Precautions (5.6) ] Angle-closure glaucoma [See Warnings and Precautions (5.7) ] Hyponatremia [See Warnings and Precautions (5.8) ] Sexual Dysfunction [See Warnings and Precautions (5.11) ] Most common adverse reactions (≥5% and twice placebo)"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN075",
+   "medicine": "amitriptyline",
+   "term": "SN075",
+   "text": "Other Alopecia; edema; weight gain or loss; urinary frequency; increased perspiration, hyponatremia."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN077",
+   "medicine": "atorvastatin",
+   "term": "SN077",
+   "text": "necrolysis) 5 WARNINGS AND PRECAUTIONS Myopathy and Rhabdomyolysis: Risk factors include age 65 years or greater, uncontrolled hypothyroidism, renal impairment, concomitant use with certain other drugs, and higher atorvastatin calcium tablets dosage."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN077",
+   "medicine": "simvastatin",
+   "term": "SN077",
+   "text": "dysfunction 5 WARNINGS AND PRECAUTIONS Myopathy and Rhabdomyolysis: Risk factors include age 65 years or greater, uncontrolled hypothyroidism, renal impairment, concomitant use with certain other drugs, and higher simvastatin dosage."
+  },
+  {
+   "id": "L-LISINOPRIL-SN077",
+   "medicine": "lisinopril",
+   "term": "SN077",
+   "text": "disorders Psoriasis 5 WARNINGS AND PRECAUTIONS Angioedema: Discontinue lisinopril, provide appropriate therapy and monitor until resolved (5.2) Renal impairment: Monitor renal function periodically (5.3) Hypotension: Patients with other heart or renal diseases have increased risk, monitor blood pressure after"
+  },
+  {
+   "id": "L-RAMIPRIL-SN077",
+   "medicine": "ramipril",
+   "term": "SN077",
+   "text": "5 WARNINGS AND PRECAUTIONS Angioedema, increased risk in patients with a prior history (5.1) Hypotension and hyperkalemia (5.5, 5.8) Renal impairment: monitor renal function during therapy (5.3) Avoid concomitant use of an ACE inhibitor and angiotensin blocker (5.7) Rare cholestatic jaundice and"
+  },
+  {
+   "id": "L-METFORMIN-SN077",
+   "medicine": "metformin",
+   "term": "SN077",
+   "text": "for metformin-associated lactic acidosis, recommendations to reduce the risk of and manage metformin-associated lactic acidosis are provided below: Renal impairment —The postmarketing metformin-associated lactic acidosis cases primarily occurred in patients with significant renal impairment."
+  },
+  {
+   "id": "L-SERTRALINE-SN077",
+   "medicine": "sertraline",
+   "term": "SN077",
+   "text": "(including akathisia and dystonia), oculogyric crisis Psychiatric disorders – psychosis, enuresis, paroniria Renal and urinary disorders - acute renal failure Respiratory, thoracic and mediastinal disorders - pulmonary hypertension eosinophilic pneumonia, anosmia, hyposmia Skin and subcutaneous tissue"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN078",
+   "medicine": "atorvastatin",
+   "term": "SN078",
+   "text": "epistaxis Skin and Appendages : urticaria Special Senses: vision blurred, tinnitus Urogenital System: white blood cells urine positive Elevations in Liver Enzyme Tests Persistent elevations in serum transaminases, defined as more than 3 times the ULN and occurring on 2 or more occasions, occurred in 0.7% of"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN078",
+   "medicine": "simvastatin",
+   "term": "SN078",
+   "text": "Elevations in Liver Enzyme Tests Moderate (less than 3×ULN) elevations of serum transaminases have been reported with use of simvastatin."
+  },
+  {
+   "id": "L-RAMIPRIL-SN078",
+   "medicine": "ramipril",
+   "term": "SN078",
+   "text": "Elevations of liver enzymes, serum bilirubin, uric acid, and blood glucose have been reported, as have cases of hyponatremia and scattered incidents of leucopenia, eosinophilia,"
+  },
+  {
+   "id": "L-SERTRALINE-SN078",
+   "medicine": "sertraline",
+   "term": "SN078",
+   "text": "hemorrhage General disorders and administration site conditions - edema, gait disturbance, irritability, pyrexia Hepatobiliary disorders - elevated liver enzymes Immune system disorders - anaphylaxis Metabolism and nutrition disorders - diabetes mellitus, hypercholesterolemia, hypoglycemia, increased appetite"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN079",
+   "medicine": "atorvastatin",
+   "term": "SN079",
+   "text": "reported in placebo-controlled trials include: Body as a Whole: malaise, pyrexia Digestive System: abdominal discomfort, eructation, flatulence, hepatitis, cholestasis Musculoskeletal System: musculoskeletal pain, muscle fatigue, neck pain, joint swelling Metabolic and Nutritional System: transaminases"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN079",
+   "medicine": "simvastatin",
+   "term": "SN079",
+   "text": "hemolytic anemia, positive ANA, ESR increase, eosinophilia Gastrointestinal Disorders: pancreatitis, vomiting Hepatic and Pancreatic Disorders: hepatitis/jaundice, fatal and non-fatal hepatic failure Immune System Disorders: hypersensitivity syndrome including: anaphylaxis, angioedema, lupus"
+  },
+  {
+   "id": "L-AMLODIPINE-SN079",
+   "medicine": "amlodipine",
+   "term": "SN079",
+   "text": "In postmarketing experience, jaundice and hepatic enzyme elevations (mostly consistent with cholestasis or hepatitis), in some cases severe enough to require hospitalization, have been reported in association with use of amlodipine."
+  },
+  {
+   "id": "L-LISINOPRIL-SN079",
+   "medicine": "lisinopril",
+   "term": "SN079",
+   "text": "5.6 Hepatic Failure ACE inhibitors have been associated with a syndrome that starts with cholestatic jaundice or hepatitis and progresses to fulminant hepatic necrosis and sometimes death."
+  },
+  {
+   "id": "L-RAMIPRIL-SN079",
+   "medicine": "ramipril",
+   "term": "SN079",
+   "text": "Gastrointestinal: Hepatic failure, hepatitis, jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth,"
+  },
+  {
+   "id": "L-SERTRALINE-SN079",
+   "medicine": "sertraline",
+   "term": "SN079",
+   "text": "menstrual irregularities, SIADH Eye disorders - blindness, optic neuritis, cataract Hepatobiliary disorders – severe liver events (including hepatitis, jaundice, liver failure with some fatal outcomes), pancreatitis Hemic and lymphatic disorders – agranulocytosis, aplastic anemia and pancytopenia,"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN079",
+   "medicine": "amitriptyline",
+   "term": "SN079",
+   "text": "Gastrointestinal Rarely hepatitis (including altered liver function and jaundice); nausea; epigastric distress; vomiting; anorexia; stomatitis; peculiar taste; diarrhea; parotid"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN080",
+   "medicine": "atorvastatin",
+   "term": "SN080",
+   "text": "One patient in clinical trials developed jaundice."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN080",
+   "medicine": "simvastatin",
+   "term": "SN080",
+   "text": "anemia, positive ANA, ESR increase, eosinophilia Gastrointestinal Disorders: pancreatitis, vomiting Hepatic and Pancreatic Disorders: hepatitis/jaundice, fatal and non-fatal hepatic failure Immune System Disorders: hypersensitivity syndrome including: anaphylaxis, angioedema, lupus erythematous-like"
+  },
+  {
+   "id": "L-AMLODIPINE-SN080",
+   "medicine": "amlodipine",
+   "term": "SN080",
+   "text": "In postmarketing experience, jaundice and hepatic enzyme elevations (mostly consistent with cholestasis or hepatitis), in some cases severe enough to require hospitalization, have been"
+  },
+  {
+   "id": "L-LISINOPRIL-SN080",
+   "medicine": "lisinopril",
+   "term": "SN080",
+   "text": "diseases have increased risk, monitor blood pressure after initiation (5.4) Hyperkalemia: Monitor serum potassium periodically (5.5) Cholestatic jaundice and hepatic failure: Monitor for jaundice or signs of liver failure (5.6) 5.1 Fetal Toxicity Lisinopril can cause fetal harm when administered to a"
+  },
+  {
+   "id": "L-RAMIPRIL-SN080",
+   "medicine": "ramipril",
+   "term": "SN080",
+   "text": "Gastrointestinal: Hepatic failure, hepatitis, jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth, dyspepsia,"
+  },
+  {
+   "id": "L-SERTRALINE-SN080",
+   "medicine": "sertraline",
+   "term": "SN080",
+   "text": "irregularities, SIADH Eye disorders - blindness, optic neuritis, cataract Hepatobiliary disorders – severe liver events (including hepatitis, jaundice, liver failure with some fatal outcomes), pancreatitis Hemic and lymphatic disorders – agranulocytosis, aplastic anemia and pancytopenia, leukopenia,"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN080",
+   "medicine": "amitriptyline",
+   "term": "SN080",
+   "text": "Gastrointestinal Rarely hepatitis (including altered liver function and jaundice); nausea; epigastric distress; vomiting; anorexia; stomatitis; peculiar taste; diarrhea; parotid swelling; black tongue."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN081",
+   "medicine": "atorvastatin",
+   "term": "SN081",
+   "text": "Gastrointestinal Disorders: pancreatitis General Disorders: fatigue Hepatobiliary Disorders: fatal and non-fatal hepatic failure Immune System Disorders: anaphylaxis Injury: tendon rupture"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN081",
+   "medicine": "simvastatin",
+   "term": "SN081",
+   "text": "System Disorders: anemia, thrombocytopenia, leukopenia, hemolytic anemia, positive ANA, ESR increase, eosinophilia Gastrointestinal Disorders: pancreatitis, vomiting Hepatic and Pancreatic Disorders: hepatitis/jaundice, fatal and non-fatal hepatic failure Immune System Disorders: hypersensitivity"
+  },
+  {
+   "id": "L-AMLODIPINE-SN081",
+   "medicine": "amlodipine",
+   "term": "SN081",
+   "text": "Gastrointestinal: anorexia, constipation, dysphagia, diarrhea, flatulence, pancreatitis, vomiting, gingival hyperplasia."
+  },
+  {
+   "id": "L-LISINOPRIL-SN081",
+   "medicine": "lisinopril",
+   "term": "SN081",
+   "text": "Digestive : Pancreatitis, constipation, flatulence, dry mouth, diarrhea."
+  },
+  {
+   "id": "L-RAMIPRIL-SN081",
+   "medicine": "ramipril",
+   "term": "SN081",
+   "text": "Gastrointestinal: Hepatic failure, hepatitis, jaundice, pancreatitis, abdominal pain (sometimes with enzyme changes suggesting pancreatitis), anorexia, constipation, diarrhea, dry mouth, dyspepsia, dysphagia,"
+  },
+  {
+   "id": "L-SERTRALINE-SN081",
+   "medicine": "sertraline",
+   "term": "SN081",
+   "text": "optic neuritis, cataract Hepatobiliary disorders – severe liver events (including hepatitis, jaundice, liver failure with some fatal outcomes), pancreatitis Hemic and lymphatic disorders – agranulocytosis, aplastic anemia and pancytopenia, leukopenia, thrombocytopenia, lupus-like syndrome, serum sickness"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN082",
+   "medicine": "atorvastatin",
+   "term": "SN082",
+   "text": "ADVERSE REACTIONS The following important adverse reactions are described below and elsewhere in the labeling: Myopathy and Rhabdomyolysis [see Warnings and Precautions (5.1) ] Immune-Mediated Necrotizing Myopathy [see Warnings and Precautions (5.2) ] Hepatic Dysfunction [see Warnings"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN082",
+   "medicine": "simvastatin",
+   "term": "SN082",
+   "text": "ADVERSE REACTIONS The following important adverse reactions are described below and elsewhere in the labeling: Myopathy and Rhabdomyolysis [see Warnings and Precautions (5.1) ] Immune-Mediated Necrotizing Myopathy [see Warnings and Precautions (5.2) ] Hepatic Dysfunction [see Warnings"
+  },
+  {
+   "id": "L-SERTRALINE-SN082",
+   "medicine": "sertraline",
+   "term": "SN082",
+   "text": "system disorders - angioedema Metabolism and nutrition disorders – hyponatremia, hyperglycemia Musculoskeletal and connective tissue disorders – rhabdomyolysis, trismus Nervous system disorders -serotonin syndrome, extrapyramidal symptoms (including akathisia and dystonia), oculogyric crisis Psychiatric"
+  },
+  {
+   "id": "L-SERTRALINE-SN083",
+   "medicine": "sertraline",
+   "term": "SN083",
+   "text": "and Precautions (5.1) ] Serotonin syndrome [See Contraindications (4) , Warnings and Precautions (5.2) , Drug Interactions (7.1) ] Increased risk of bleeding [See Warnings and Precautions (5.3) ] Activation of mania/hypomania [See Warnings and Precautions (5.4) ] Discontinuation syndrome [See Warnings and"
+  },
+  {
+   "id": "L-SERTRALINE-SN084",
+   "medicine": "sertraline",
+   "term": "SN084",
+   "text": "Bleeding events related to drugs that interfere with serotonin reuptake have ranged from ecchymosis, hematoma, epistaxis, and petechiae to life-threatening hemorrhages."
+  },
+  {
+   "id": "L-AMLODIPINE-SN085",
+   "medicine": "amlodipine",
+   "term": "SN085",
+   "text": "Gastrointestinal: anorexia, constipation, dysphagia, diarrhea, flatulence, pancreatitis, vomiting, gingival hyperplasia."
+  },
+  {
+   "id": "L-ATORVASTATIN-SN086",
+   "medicine": "atorvastatin",
+   "term": "SN086",
+   "text": "3.0 Pharyngolaryngeal pain 2.1 3.9 1.6 2.8 0.7 2.3 Other adverse reactions reported in placebo-controlled trials include: Body as a Whole: malaise, pyrexia Digestive System: abdominal discomfort, eructation, flatulence, hepatitis, cholestasis Musculoskeletal System: musculoskeletal pain, muscle fatigue,"
+  },
+  {
+   "id": "L-SIMVASTATIN-SN086",
+   "medicine": "simvastatin",
+   "term": "SN086",
+   "text": "Body as whole: fever, chills, malaise, asthenia Blood and Lymphatic System Disorders: anemia, thrombocytopenia, leukopenia, hemolytic anemia, positive ANA, ESR increase,"
+  },
+  {
+   "id": "L-LISINOPRIL-SN086",
+   "medicine": "lisinopril",
+   "term": "SN086",
+   "text": ": A symptom complex has been reported which may include a positive ANA, an elevated erythrocyte sedimentation rate, arthralgia/arthritis, myalgia, fever, vasculitis, eosinophilia, leukocytosis, paresthesia and vertigo."
+  },
+  {
+   "id": "L-RAMIPRIL-SN086",
+   "medicine": "ramipril",
+   "term": "SN086",
+   "text": "Dermatologic: Apparent hypersensitivity reactions (manifested by urticaria, pruritus, or rash, with or without fever), photosensitivity, purpura, onycholysis, pemphigus, pemphigoid, erythema multiforme, toxic epidermal necrolysis, and Stevens-Johnson syndrome."
+  },
+  {
+   "id": "L-SERTRALINE-SN086",
+   "medicine": "sertraline",
+   "term": "SN086",
+   "text": "disorders - hematochezia, melena, rectal hemorrhage General disorders and administration site conditions - edema, gait disturbance, irritability, pyrexia Hepatobiliary disorders - elevated liver enzymes Immune system disorders - anaphylaxis Metabolism and nutrition disorders - diabetes mellitus,"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN086",
+   "medicine": "amitriptyline",
+   "term": "SN086",
+   "text": "Symptoms have included muscle rigidity, fever, mental status changes, diaphoresis, tachycardia, and tremor."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN088",
+   "medicine": "simvastatin",
+   "term": "SN088",
+   "text": "Disorders: pancreatitis, vomiting Hepatic and Pancreatic Disorders: hepatitis/jaundice, fatal and non-fatal hepatic failure Immune System Disorders: hypersensitivity syndrome including: anaphylaxis, angioedema, lupus erythematous-like syndrome, dermatomyositis, vasculitis Musculoskeletal and Connective Tissue"
+  },
+  {
+   "id": "L-AMLODIPINE-SN088",
+   "medicine": "amlodipine",
+   "term": "SN088",
+   "text": "General: allergic reaction, asthenia, 1 back pain, hot flushes, malaise, pain, rigors, weight gain, weight decrease."
+  },
+  {
+   "id": "L-RAMIPRIL-SN088",
+   "medicine": "ramipril",
+   "term": "SN088",
+   "text": "Dermatologic: Apparent hypersensitivity reactions (manifested by urticaria, pruritus, or rash, with or without fever), photosensitivity, purpura, onycholysis, pemphigus, pemphigoid,"
+  },
+  {
+   "id": "L-SERTRALINE-SN088",
+   "medicine": "sertraline",
+   "term": "SN088",
+   "text": "ADVERSE REACTIONS The following adverse reactions are described in more detail in other sections of the prescribing information: Hypersensitivity reactions to sertraline [See Contraindications (4) ] QTc prolongation and ventricular arrhythmias when taken with pimozide [See Contraindications (4)"
+  },
+  {
+   "id": "L-ATORVASTATIN-SN089",
+   "medicine": "atorvastatin",
+   "term": "SN089",
+   "text": "Disorders: pancreatitis General Disorders: fatigue Hepatobiliary Disorders: fatal and non-fatal hepatic failure Immune System Disorders: anaphylaxis Injury: tendon rupture Musculoskeletal and Connective Tissue Disorders: rhabdomyolysis, myositis."
+  },
+  {
+   "id": "L-SIMVASTATIN-SN089",
+   "medicine": "simvastatin",
+   "term": "SN089",
+   "text": "and Pancreatic Disorders: hepatitis/jaundice, fatal and non-fatal hepatic failure Immune System Disorders: hypersensitivity syndrome including: anaphylaxis, angioedema, lupus erythematous-like syndrome, dermatomyositis, vasculitis Musculoskeletal and Connective Tissue Disorders: muscle cramps,"
+  },
+  {
+   "id": "L-SERTRALINE-SN089",
+   "medicine": "sertraline",
+   "term": "SN089",
+   "text": "site conditions - edema, gait disturbance, irritability, pyrexia Hepatobiliary disorders - elevated liver enzymes Immune system disorders - anaphylaxis Metabolism and nutrition disorders - diabetes mellitus, hypercholesterolemia, hypoglycemia, increased appetite Musculoskeletal and connective tissue"
+  },
+  {
+   "id": "L-SERTRALINE-SN090",
+   "medicine": "sertraline",
+   "term": "SN090",
+   "text": "system and breast disorders - galactorrhea, priapism, vaginal hemorrhage Respiratory, thoracic and mediastinal disorders - bronchospasm, epistaxis, yawning Skin and subcutaneous tissue disorders - alopecia; cold sweat; dermatitis; dermatitis bullous; pruritus; purpura; erythematous, follicular, or"
+  },
+  {
+   "id": "L-SERTRALINE-SN091",
+   "medicine": "sertraline",
+   "term": "SN091",
+   "text": "(4) ] QTc prolongation and ventricular arrhythmias when taken with pimozide [See Contraindications (4) , Clinical Pharmacology (12.2) ] Suicidal thoughts and behaviors [See Warnings and Precautions (5.1) ] Serotonin syndrome [See Contraindications (4) , Warnings and Precautions (5.2) , Drug"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN091",
+   "medicine": "amitriptyline",
+   "term": "SN091",
+   "text": "Risk Patients with major depressive disorder (MDD), both adult and pediatric, may experience worsening of their depression and/or the emergence of suicidal ideation and behavior (suicidality) or unusual changes in behavior, whether or not they are taking antidepressant medications, and this risk may persist until"
+  },
+  {
+   "id": "L-SERTRALINE-SN092",
+   "medicine": "sertraline",
+   "term": "SN092",
+   "text": "with pimozide [See Contraindications (4) , Clinical Pharmacology (12.2) ] Suicidal thoughts and behaviors [See Warnings and Precautions (5.1) ] Serotonin syndrome [See Contraindications (4) , Warnings and Precautions (5.2) , Drug Interactions (7.1) ] Increased risk of bleeding [See Warnings and Precautions"
+  },
+  {
+   "id": "L-AMITRIPTYLINE-SN092",
+   "medicine": "amitriptyline",
+   "term": "SN092",
+   "text": "Very rare cases of serotonin syndrome (SS) have been reported with amitriptyline hydrochloride in combination with other drugs that have a recognized association with SS."
+  }
+ ]
+}

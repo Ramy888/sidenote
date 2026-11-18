@@ -2,6 +2,7 @@
 import { firebaseModels } from '../ai/firebase';
 import { createRouter, approve } from '../ai/route';
 import { coderPayload } from '../ai/payload';
+import { coderTerms } from '../vocab/index.ts';
 import { READER_SCHEMA, READER_SYSTEM, readerPrompt, parseReaderOutput, type WindowMessage } from '../pipeline/reader';
 
 const router = createRouter(firebaseModels);
@@ -17,10 +18,14 @@ const onDeviceParams = { createOptions: { initialPrompts: [{ role: 'system', con
   }
 };
 
-// Dev probe for the coder route (PREFER_ON_DEVICE): one approved phrase against a stand-in term list.
+// Dev probe for the coder route (PREFER_ON_DEVICE): one approved phrase against the shipped term list.
+const TERM_LIST = coderTerms();
 (window as any).codeOnce = async (phrase: string) => {
   const t0 = performance.now();
-  const terms = new Map([['R1', 'muscle pain'], ['R2', 'ankle swelling'], ['R3', 'dry cough']]);
-  const r = await router.generate('coder', approve(coderPayload(phrase, { sender: 'Me', text: phrase }, new Set(['Me']), terms)));
-  return { ms: Math.round(performance.now() - t0), source: r.inferenceSource, answer: r.text().trim(), ledger: router.ledger.at(-1) };
+  try {
+    const r = await router.generate('coder', approve(coderPayload(phrase, { sender: 'Me', text: phrase }, new Set(['Me']), TERM_LIST)));
+    return { ms: Math.round(performance.now() - t0), source: r.inferenceSource, answer: r.text().trim() };
+  } catch (e) {
+    return { ms: Math.round(performance.now() - t0), error: String((e as Error).message ?? e) };
+  }
 };

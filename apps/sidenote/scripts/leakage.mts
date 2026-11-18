@@ -6,6 +6,8 @@ import { parseWhatsApp, locateQuote } from '@sidenote/private-evidence';
 import { buildTimeline } from '../src/pipeline/timeline.ts';
 import { coderPayload, ownWordsPayload, rankerPayload, CODER_INSTRUCTION } from '../src/ai/payload.ts';
 import { leaks } from '../src/ai/leakage.ts';
+import { coderTerms, TERMS, LABEL_FACTS } from '../src/vocab/index.ts';
+import { lookupTerm } from '../src/pipeline/lookup.ts';
 
 const evals = new URL('../../../evals/chattest/', import.meta.url);
 const specs = JSON.parse(readFileSync(new URL('specs.json', evals), 'utf8'));
@@ -26,8 +28,10 @@ for (const c of specs.cases) {
   const ownText = messages.filter(m => own.has(m.sender)).flatMap(m => [m.text, `${m.sender}: ${m.text}`]);
   const otherText = messages.filter(m => !own.has(m.sender)).map(m => m.text);
   const medicines = c.medicines.map((m: any) => m.name);
-  const terms = new Map([['R1', c.reaction.label]]); // stand-in vocabulary until the shipped one exists
-  const allow = [...terms.values(), ...medicines, CODER_INSTRUCTION];
+  const terms = coderTerms();
+  // Public text the app adds itself: vocabulary wordings, medicine names, the fixed coder prompt, label excerpts.
+  const allow = [...terms.values(), ...TERMS.flatMap(t => [...t.label, ...t.everyday]), ...medicines, CODER_INSTRUCTION,
+    'NONE: no term below names this reaction', ...LABEL_FACTS.map(l => l.text)];
   const out: string[] = [ownWordsPayload(messages, own).text];
   for (const e of rc.readerEvents.filter((e: any) => e.symptom)) {
     const loc = locateQuote(e.quote, messages);
@@ -40,10 +44,11 @@ for (const c of specs.cases) {
   out.push(rankerPayload({
     anchor: 'report_date',
     medicines: medicines.map((m: string) => ({ name: m, start_kind: start(m) ? 'exact' : 'unknown', start: start(m) ? days(start(m)!.date, c.chatEnd) : null })),
-    facts: tl.filter(f => f.kind.startsWith('symptom')).map(f => ({ term: 'R1', kind: f.kind, day: days(f.date, c.chatEnd), sender: 'own', confirmed: true })),
-    pairs: medicines.map((m: string) => ({ medicine: m, term: 'R1', dechallenge: 'unknown', rechallenge: 'unknown' })),
-    labelFacts: [],
-  }, { medicines, terms, labelFacts: new Map() }).text);
+    facts: tl.filter(f => f.kind.startsWith('symptom') && lookupTerm(f.entity).id)
+      .map(f => ({ term: lookupTerm(f.entity).id!, kind: f.kind, day: days(f.date, c.chatEnd), sender: 'own', confirmed: true })),
+    pairs: medicines.flatMap((m: string) => [...new Set(tl.map(f => lookupTerm(f.entity).id).filter(Boolean))].map(t => ({ medicine: m, term: t!, dechallenge: 'unknown', rechallenge: 'unknown' }))),
+    labelFacts: LABEL_FACTS.filter(l => medicines.includes(l.medicine)).slice(0, 5).map(l => ({ id: l.id, text: l.text })),
+  }, { medicines, terms, labelFacts: new Map(LABEL_FACTS.map(l => [l.id, l.text])) }).text);
   payloads += out.length;
   for (const p of out) for (const l of leaks(p, otherText, ownText, allow)) found.push(`${c.id}: "${l}"`);
 }

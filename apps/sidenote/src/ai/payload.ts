@@ -14,7 +14,7 @@ export type OwnSenders = ReadonlySet<string>;
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, ' ').trim();
 
 /** Fixed wording of the coder prompt (allowlisted in the leakage test). */
-export const CODER_INSTRUCTION = 'Match the phrase to the one term below that means the same reaction. Answer with the term id only, or NONE.';
+export const CODER_INSTRUCTION = 'A patient described a side effect in their own words. Pick the one term below that names the same reaction. If no term names that reaction (a different body part, a different problem, or too vague), answer NONE. A related or nearby term is not the same reaction. Answer with the term id only, or NONE.';
 
 /** Cloud coder: one phrase of at most 8 words, from the patient's or reporter's own message, plus the public term list. */
 export function coderPayload(phrase: string, message: { sender: string; text: string }, own: OwnSenders, terms: ReadonlyMap<string, string>): Payload {
@@ -22,7 +22,7 @@ export function coderPayload(phrase: string, message: { sender: string; text: st
   if (!p || p.split(' ').length > 8) throw new Error('coder: the phrase must be 1 to 8 words');
   if (!own.has(message.sender)) throw new Error("coder: only the patient's or reporter's own words may be sent");
   if (!norm(message.text).includes(p)) throw new Error('coder: the phrase is not in the message');
-  const list = [...terms].map(([id, label]) => `${id}: ${label}`).join('\n');
+  const list = ['NONE: no term below names this reaction', ...[...terms].map(([id, label]) => `${id}: ${label}`)].join('\n');
   return seal('coder', `${CODER_INSTRUCTION}\nPhrase: ${JSON.stringify(p)}\nTerms:\n${list}`);
 }
 

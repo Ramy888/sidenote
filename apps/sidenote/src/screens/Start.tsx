@@ -12,9 +12,10 @@ interface Props {
   model: ReturnType<typeof useModelState>;
   onImport: (r: Exclude<ImportResult, { kind: 'notAChat' }>) => void;
   onTyped: (text: string) => void;
+  onQuestions: () => void; onDemo: () => void; onHow: () => void;
 }
 
-export function Start({ region, setRegion, forSomeone, setForSomeone, model, onImport, onTyped }: Props) {
+export function Start({ region, setRegion, forSomeone, setForSomeone, model, onImport, onTyped, onQuestions, onDemo, onHow }: Props) {
   const { t } = useI18n();
   const file = useRef<HTMLInputElement>(null);
   const [text, setText] = useState('');
@@ -44,6 +45,9 @@ export function Start({ region, setRegion, forSomeone, setForSomeone, model, onI
       <h1>{t('startTitle')}</h1>
       <p className="lead">{t('startLead')}</p>
       <ModelStatus model={model} />
+      {model.state === 'unavailable' && <div className="actions">
+        <button type="button" className="btn btn-primary" onClick={onQuestions}>{t('fiveQuestions')}</button>
+        <button type="button" className="btn btn-secondary" onClick={onDemo}>{t('loadDemo')}</button></div>}
 
       <h2 className="section-title">{t('waysIn')}</h2>
       <div className="card way">
@@ -60,6 +64,10 @@ export function Start({ region, setRegion, forSomeone, setForSomeone, model, onI
       </div>
 
       <label className="check"><input type="checkbox" checked={forSomeone} onChange={e => setForSomeone(e.target.checked)} /> {t('forSomeone')}</label>
+      <div className="actions">
+        <button type="button" className="btn btn-quiet" onClick={onHow}>{t('howLink')}</button>
+        {model.state !== 'unavailable' && <button type="button" className="btn btn-quiet" onClick={onDemo}>{t('loadDemo')}</button>}
+      </div>
     </section>
   );
 }

@@ -1,0 +1,113 @@
+{
+ "note": "Synthetic chat G11; facts found by Gemini Nano on a laptop (chat test run-2026-11-17T22-00-24-197Z.json).",
+ "dateOrder": "dmy",
+ "patient": "Grandpa Joe",
+ "reporter": "Grandpa Joe",
+ "medicines": [
+  {
+   "name": "lisinopril",
+   "strength": "10mg",
+   "startKind": "unknown",
+   "start": ""
+  },
+  {
+   "name": "aspirin",
+   "strength": "",
+   "startKind": "unknown",
+   "start": ""
+  }
+ ],
+ "events": [
+  {
+   "kind": "medicine_started",
+   "symptom": "",
+   "medicine": "lisinopril",
+   "quote": "Just letting you all know I started taking my lisinopril 10mg pills yesterday.",
+   "date": "2026-07-04",
+   "messageId": 26,
+   "sender": "Grandpa Joe",
+   "own": true,
+   "min": "2026-07-04",
+   "max": "2026-07-04",
+   "basis": "phrase"
+  },
+  {
+   "kind": "medicine_started",
+   "symptom": "",
+   "medicine": "aspirin",
+   "quote": "I also started taking aspirin three days ago.",
+   "date": "2026-07-12",
+   "messageId": 96,
+   "sender": "Grandpa Joe",
+   "own": true,
+   "min": "2026-07-12",
+   "max": "2026-07-12",
+   "basis": "phrase"
+  },
+  {
+   "kind": "symptom_started",
+   "symptom": "dry cough",
+   "medicine": "",
+   "quote": "I noticed that a dry cough has started for me.",
+   "date": "2026-07-15",
+   "messageId": 97,
+   "sender": "Grandpa Joe",
+   "own": true,
+   "min": "2026-07-15",
+   "max": "2026-07-15",
+   "basis": "phrase"
+  },
+  {
+   "kind": "medicine_stopped",
+   "symptom": "",
+   "medicine": "lisinopril",
+   "quote": "Grandpa Joe has stopped taking lisinopril since Thursday.",
+   "date": "2026-07-23",
+   "messageId": 153,
+   "sender": "Ellie",
+   "own": false,
+   "min": "2026-07-23",
+   "max": "2026-07-23",
+   "basis": "phrase"
+  },
+  {
+   "kind": "symptom_gone",
+   "symptom": "dry cough",
+   "medicine": "",
+   "quote": "my dry cough finally cleared up yesterday",
+   "date": "2026-07-28",
+   "messageId": 186,
+   "sender": "Grandpa Joe",
+   "own": true,
+   "min": "2026-07-28",
+   "max": "2026-07-28",
+   "basis": "phrase"
+  },
+  {
+   "kind": "medicine_restarted",
+   "symptom": "",
+   "medicine": "lisinopril",
+   "quote": "I have been back to taking lisinopril for three days.",
+   "date": "2026-08-13",
+   "messageId": 314,
+   "sender": "Grandpa Joe",
+   "own": true,
+   "min": "2026-08-13",
+   "max": "2026-08-13",
+   "basis": "phrase"
+  },
+  {
+   "kind": "symptom_started",
+   "symptom": "dry cough",
+   "medicine": "",
+   "quote": "Grandpa Joe mentioned that his dry cough came back five days ago.",
+   "date": "2026-08-14",
+   "messageId": 330,
+   "sender": "Ellie",
+   "own": false,
+   "min": "2026-08-14",
+   "max": "2026-08-14",
+   "basis": "phrase"
+  }
+ ]
+}

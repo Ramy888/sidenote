@@ -30,7 +30,7 @@ export function TimelineChart({ facts }: { facts: Reviewed[] }) {
 
   return (
     <figure className="chart card">
-      <svg viewBox={`0 0 ${W} ${H}`} dir="ltr" aria-hidden="true" preserveAspectRatio="xMinYMin meet">
+      <svg viewBox={`0 0 ${W} ${H}`} aria-hidden="true" preserveAspectRatio="xMinYMin meet">
         {rows.map((r, i) => {
           const y = 34 + i * 44;
           return (

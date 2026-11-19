@@ -11,7 +11,7 @@ import { Fact } from './Fact.tsx';
 
 export interface ReadResult { events: DatedEvent[]; timeline: TimelineFact[] }
 
-export function Reading({ chat, medicines, own, onBack, onDone }: { chat: ParsedChat; medicines: string[]; own: string[]; onBack: () => void; onDone: (r: ReadResult) => void }) {
+export function Reading({ chat, medicines, own, onBack, onQuestions, onDone }: { chat: ParsedChat; medicines: string[]; own: string[]; onBack: () => void; onQuestions: () => void; onDone: (r: ReadResult) => void }) {
   const { t } = useI18n();
   const [progress, setProgress] = useState({ done: 0, total: 0 });
   const [found, setFound] = useState<DatedEvent[]>([]);
@@ -34,7 +34,8 @@ export function Reading({ chat, medicines, own, onBack, onDone }: { chat: Parsed
       <button type="button" className="btn btn-secondary" onClick={onBack}>{t('back')}</button></section>);
   if (state === 'failClosed') return (
     <section className="screen"><h1>{t('failClosedTitle')}</h1><p className="alert alert-warning">{t('failClosedBody')}</p>
-      <button type="button" className="btn btn-secondary" onClick={onBack}>{t('back')}</button></section>);
+      <div className="actions"><button type="button" className="btn btn-secondary" onClick={onBack}>{t('back')}</button>
+        <button type="button" className="btn btn-primary" onClick={onQuestions}>{t('fiveQuestions')}</button></div></section>);
 
   return (
     <section className="screen">
@@ -47,7 +48,7 @@ export function Reading({ chat, medicines, own, onBack, onDone }: { chat: Parsed
         ? <><p className="lead">{t('readingDone', { count: result.timeline.length })}</p>
             <div className="actions"><button type="button" className="btn btn-secondary" onClick={onBack}>{t('back')}</button>
               <button type="button" className="btn btn-primary" onClick={() => onDone(result)}>{t('continue')}</button></div></>
-        : <p className="alert alert-warning">{t('readingNothing')}</p>)}
+        : <><p className="alert alert-warning">{t('readingNothing')}</p><button type="button" className="btn btn-primary" onClick={onQuestions}>{t('fiveQuestions')}</button></>)}
     </section>
   );
 }

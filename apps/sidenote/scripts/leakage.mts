@@ -8,6 +8,8 @@ import { coderPayload, ownWordsPayload, rankerPayload, rankerInstruction, CODER_
 import { leaks } from '../src/ai/leakage.ts';
 import { coderTerms, TERMS, LABEL_FACTS } from '../src/vocab/index.ts';
 import { lookupTerm } from '../src/pipeline/lookup.ts';
+import { buildDraft, draftText } from '../src/app/report.ts';
+import { startReview } from '../src/app/review.ts';
 
 const evals = new URL('../../../evals/chattest/', import.meta.url);
 const specs = JSON.parse(readFileSync(new URL('specs.json', evals), 'utf8'));
@@ -49,6 +51,10 @@ for (const c of specs.cases) {
     pairs: medicines.flatMap((m: string) => [...new Set(tl.map(f => lookupTerm(f.entity).id).filter(Boolean))].map(t => ({ medicine: m, term: t!, dechallenge: 'unknown', rechallenge: 'unknown' }))),
     labelFacts: LABEL_FACTS.filter(l => medicines.includes(l.medicine)).slice(0, 5).map(l => ({ id: l.id, text: l.text })),
   }, { medicines, terms, labelFacts: new Map(LABEL_FACTS.map(l => [l.id, l.text])) }).text);
+  // The report export: every fact confirmed (worst case), coded by the lookup; other people's quotes must not appear.
+  const review = startReview(tl, []).map(f => ({ ...f, status: 'confirmed' as const }));
+  out.push(draftText(buildDraft({ review, meds: medicines.map((name: string) => ({ name, strength: '', startKind: 'unknown' as const, start: '' })),
+    coding: [...new Set(tl.filter(f => f.kind.startsWith('symptom')).map(f => f.entity))].map(entity => ({ entity, term: lookupTerm(entity).id })), ranking: null, region: 'US' })));
   payloads += out.length;
   for (const p of out) for (const l of leaks(p, otherText, ownText, allow)) found.push(`${c.id}: "${l}"`);
 }

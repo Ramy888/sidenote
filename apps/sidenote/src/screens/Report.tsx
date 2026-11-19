@@ -1,0 +1,46 @@
+// Screen 8, Report draft: the form filled from confirmed facts; missing fields listed; Copy, Print/PDF,
+// Open the official form, Delete this report. The draft's text is English, the forms' language.
+import { useState } from 'react';
+import { useI18n } from '../i18n.ts';
+import type { StringKey } from '../strings.ts';
+import { draftText, type Draft } from '../app/report.ts';
+
+export function Report({ draft, onDelete }: { draft: Draft; onDelete: () => void }) {
+  const { t, date } = useI18n();
+  const [copied, setCopied] = useState(false);
+  const d = (iso: string | null, note = '') => (iso ? date(iso) : note || '—');
+  const copy = async () => { try { await navigator.clipboard.writeText(draftText(draft)); setCopied(true); } catch { setCopied(false); } };
+  return (
+    <section className="screen report">
+      <h1>{t('reportTitle')}</h1>
+      <p className="lead">{t('reportLead')}</p>
+      <article className="card draft" lang="en" dir="ltr">
+        <h2 className="section-title">{draft.form.name}</h2>
+        <dl>
+          <dt>Suspected reaction</dt><dd>{[...draft.reaction.terms, ...draft.reaction.uncoded].join('; ') || '—'}</dd>
+          <dt>Date it started</dt><dd className="tabular">{d(draft.reaction.onset)}</dd>
+        </dl>
+        {draft.products.map(p => (
+          <dl key={p.name} className="product">
+            <dt>Medicine</dt><dd>{p.name}{p.strength && ` ${p.strength}`}{p.suspected && ' (suspected)'}</dd>
+            <dt>Started</dt><dd className="tabular">{d(p.started, p.startNote)}</dd>
+            <dt>Stopped</dt><dd className="tabular">{d(p.stopped, 'not stopped / not known')}</dd>
+            <dt>Did the problem stop after stopping?</dt><dd>{p.dechallenge}</dd>
+            <dt>Did it return after starting again?</dt><dd>{p.rechallenge}</dd>
+          </dl>
+        ))}
+        <h3>What happened</h3>
+        <ul className="narrative">{draft.narrative.map(l => <li key={l}>{l}</li>)}</ul>
+        <p className="sug-not">This is a suspected side effect, not a diagnosis.</p>
+      </article>
+      <div className="card"><h2 className="section-title">{t('rptMissing')}</h2>
+        <ul>{draft.missing.map(m => <li key={m}>{t(`miss_${m}` as StringKey)}</li>)}</ul></div>
+      <div className="actions no-print">
+        <button type="button" className="btn btn-primary" onClick={copy}>{copied ? t('rptCopied') : t('rptCopy')}</button>
+        <button type="button" className="btn btn-secondary" onClick={() => window.print()}>{t('rptPrint')}</button>
+        <a className="btn btn-secondary" href={draft.form.url} target="_blank" rel="noreferrer">{t('rptOpenForm')}</a>
+        <button type="button" className="btn btn-quiet" onClick={onDelete}>{t('rptDelete')}</button>
+      </div>
+    </section>
+  );
+}

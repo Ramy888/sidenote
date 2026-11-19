@@ -18,6 +18,10 @@ import { Timeline } from './screens/Timeline.tsx';
 import { Urgent } from './screens/Urgent.tsx';
 import { CloudSteps, type CloudResult } from './screens/CloudSteps.tsx';
 import { urgentHelp } from './pipeline/safety.ts';
+import { router } from './app/session.ts';
+import { Report } from './screens/Report.tsx';
+import { Ledger } from './screens/Ledger.tsx';
+import { buildDraft } from './app/report.ts';
 import './App.css';
 
 type Step = { at: 'start' } | { at: 'who'; chat: ParsedChat } | { at: 'arabic'; chat: ParsedChat } | { at: 'typed'; text: string }
@@ -36,14 +40,19 @@ function Flow() {
   const [region, setRegion] = useState<Region>(defaultRegion);
   const [forSomeone, setForSomeone] = useState(false);
   const [step, setStep] = useState<Step>({ at: 'start' });
-  const restart = () => setStep({ at: 'start' });
+  const [ledger, setLedger] = useState(false);
+  const [deleted, setDeleted] = useState(false);
+  const restart = () => { setDeleted(false); setStep({ at: 'start' }); };
 
   return (
     <IonPage>
       <IonHeader className="ion-no-border">
         <IonToolbar>
           <IonTitle><button type="button" className="brand" onClick={restart}>{t('appName')}</button></IonTitle>
-          <div slot="end"><LanguageSwitch className="header-only" /></div>
+          <div slot="end" className="toolbar-end">
+            <button type="button" className="btn btn-secondary btn-small" onClick={() => setLedger(true)}>{t('ledgerOpen')}</button>
+            <LanguageSwitch className="header-only" />
+          </div>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -66,10 +75,14 @@ function Flow() {
             onDone={review => setStep({ at: 'cloud', chat: step.chat, roles: step.roles, meds: step.meds, review })} />}
           {step.at === 'cloud' && <CloudSteps review={step.review} meds={step.meds} own={ownSenders(step.roles.patient, step.roles.reporter)} messageCount={step.chat.messages.length}
             onDone={cloud => setStep({ at: 'report', chat: step.chat, roles: step.roles, meds: step.meds, review: step.review, cloud })} />}
-          {(step.at === 'typed' || step.at === 'report') && <section className="screen"><p className="alert alert-device">{t('nextStepSoon')}</p><button type="button" className="btn btn-secondary" onClick={restart}>{t('back')}</button></section>}
+          {step.at === 'report' && <Report draft={buildDraft({ review: step.review, meds: step.meds, coding: step.cloud.coding, ranking: step.cloud.ranking, region })}
+            onDelete={() => { router.ledger.length = 0; setStep({ at: 'start' }); setDeleted(true); }} />}
+          {deleted && step.at === 'start' && <p className="alert alert-device" role="status">{t('rptDeleted')}</p>}
+          {step.at === 'typed' && <section className="screen"><p className="alert alert-device">{t('nextStepSoon')}</p><button type="button" className="btn btn-secondary" onClick={restart}>{t('back')}</button></section>}
           <footer className="not-advice">{t('notAdvice')}</footer>
         </main>
       </IonContent>
+      {ledger && <Ledger onClose={() => setLedger(false)} />}
     </IonPage>
   );
 }

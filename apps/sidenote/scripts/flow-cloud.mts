@@ -40,4 +40,10 @@ try {
   await page.screenshot({ path: `${out}/7-suggestion.png`, fullPage: true });
   console.log(`cloud requests in total: ${cloud.length}`);
   console.log((await page.locator('.suspect-panel').innerText()).replace(/\s+/g, ' '));
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await page.getByRole('heading', { name: 'Your report draft' }).waitFor();
+  await page.screenshot({ path: `${out}/8-report.png`, fullPage: true });
+  await page.getByRole('button', { name: 'Ledger' }).click();
+  await page.screenshot({ path: `${out}/9-ledger.png` });
+  console.log('ledger rows:', await page.locator('.ledger-rows > li').count(), '| draft:', (await page.locator('.draft').innerText()).replace(/\s+/g, ' ').slice(0, 400));
 } finally { await nano.close(); }

@@ -144,3 +144,4 @@ details summary { cursor: pointer; font-weight: 700; min-height: 32px; }
   ion-header, .no-print, .not-advice, .ledger { display: none !important; }
   ion-content { --overflow: visible; }
 }
+.unranked { list-style: none; padding-inline-start: 0; }

@@ -113,9 +113,12 @@ export function CloudSteps({ review, meds, own, messageCount, onDone }: { review
               <>
                 {stage.by && <Badge kind={stage.by} />}
                 {stage.by === 'code' && <p className="hint">{t('sugWhatWeKnow')}</p>}
-                <ol className="ranked">{stage.ranking.map(x => (
-                  <li key={x.medicine}><p className="answer-a">{x.medicine}</p>
-                    <ul>{x.reasons.slice(0, 3).map(r => <li key={r}>{t(`r${r}` as StringKey, { medicine: x.medicine })}</li>)}</ul></li>))}</ol>
+                {(() => {
+                  const items = stage.ranking.map(x => (
+                    <li key={x.medicine}><p className="answer-a">{x.medicine}</p>
+                      <ul>{x.reasons.slice(0, 3).map(r => <li key={r}>{t(`r${r}` as StringKey, { medicine: x.medicine })}</li>)}</ul></li>));
+                  return stage.by === 'code' ? <ul className="ranked unranked">{items}</ul> : <ol className="ranked">{items}</ol>; // code-only reasons are not a rank
+                })()}
                 <p className="sug-not">{t('sugNot')}</p>
               </>
             ) : <p>{t('sugNone')}</p>}

@@ -25,9 +25,10 @@ try {
   await page.getByRole('heading', { name: /What leaves this device|Which medicine/ }).waitFor();
   if (await page.getByRole('button', { name: 'Keep it on my phone' }).isVisible()) {
     console.log('approval asked for:', (await page.locator('.out-items').innerText()).replace(/\s+/g, ' ').slice(0, 160));
-    await page.getByRole('button', { name: 'Keep it on my phone' }).click();
+    await page.getByRole('button', { name: 'Send these to Google' }).click(); // the coder: no on-device model here, so the SDK falls back to the cloud
   }
-  await page.getByRole('heading', { name: 'Which medicine is more likely?' }).waitFor();
+  await page.getByRole('heading', { name: 'Which medicine is more likely?' }).waitFor({ timeout: 60000 });
+  console.log('coded:', (await page.locator('.coding').innerText()).replace(/\s+/g, ' '));
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('heading', { name: 'Your report draft' }).waitFor();
   await page.screenshot({ path: `${out}/q-report.png`, fullPage: true });

@@ -27,6 +27,21 @@ for (const lang of ['en', 'ar']) for (const width of [360, 402, 744, 1512]) {
   await page.waitForSelector('fieldset');
   await page.locator('.choice').first().click();
   await check('2-who');
+  // The demo case runs the rest of the flow without on-device AI: timeline, approval, suggestion, report.
+  await page.locator('.brand').click();
+  await page.locator('.start .actions button').filter({ hasText: /demo|التجريبية/ }).first().click();
+  await page.waitForSelector('.answers');
+  await check('3-timeline');
+  for (let b = page.locator('.facts .fact-actions .btn-primary'); await b.count(); ) await b.first().click();
+  await page.locator('.sticky-actions .btn-primary').click();
+  await page.waitForSelector('.out-items, .suspect-panel');
+  await check('4-outbound');
+  if (await page.locator('.out-items').count()) await page.locator('.actions .btn-secondary').last().click(); // keep it on my phone
+  await page.waitForSelector('.suspect-panel');
+  await check('5-suggestion');
+  await page.locator('.screen > .btn-primary').click();
+  await page.waitForSelector('.draft');
+  await check('6-report');
   await ctx.close();
 }
 await browser.close();

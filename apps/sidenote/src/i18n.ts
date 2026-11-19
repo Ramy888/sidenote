@@ -16,7 +16,10 @@ export function makeT(lang: Lang) {
   const date = (iso: string) => new Intl.DateTimeFormat(locale(lang), { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(iso.slice(0, 10)));
   const t = (key: StringKey, vars: Record<string, string | number> = {}) =>
     STRINGS[key][lang].replace(/\{(\w+)\}/g, (_, k) => (typeof vars[k] === 'number' ? num(vars[k] as number) : String(vars[k] ?? '')));
-  return { lang, t, num, date };
+  /** A date, or "between A and B" for a range; day counts as "6–47" when they span a range. */
+  const span = (x: { min: string; max: string }) => (x.min === x.max ? date(x.min) : t('between', { a: date(x.min), b: date(x.max) }));
+  const daySpan = (d: { lo: number; hi: number }) => (d.lo === d.hi ? num(d.lo) : `${num(d.lo)}–${num(d.hi)}`);
+  return { lang, t, num, date, span, daySpan };
 }
 
 export type I18n = ReturnType<typeof makeT> & { setLang: (l: Lang) => void };

@@ -80,7 +80,12 @@ function Flow() {
       <IonContent>
         <main id="main">
           {step.at === 'start' && <Start region={region} setRegion={setRegion} forSomeone={forSomeone} setForSomeone={setForSomeone} model={model}
-            onImport={r => setStep(r.kind === 'arabic' ? { at: 'arabic', chat: r.chat } : { at: 'who', chat: r.chat })}
+            onImport={r => {
+              const next: Step = r.kind === 'arabic' ? { at: 'arabic', chat: r.chat } : { at: 'who', chat: r.chat };
+              // Red flags anywhere in the chat (anyone's message, on-device code) open urgent help before anything else.
+              const u = urgentHelp(r.chat.messages, region);
+              setStep(u.show ? { at: 'urgent', flags: u.matches, then: next } : next);
+            }}
             onTyped={text => questions(text)} onQuestions={() => questions('')} onDemo={loadDemo} onHow={() => setStep({ at: 'how' })} />}
           {step.at === 'how' && <HowWeKnow onBack={restart} />}
           {step.at === 'who' && <WhosWho chat={step.chat} forSomeone={forSomeone} onBack={restart} onDone={roles => setStep({ at: 'medicines', chat: step.chat, roles, mode: 'read', prefill: '' })} />}
@@ -93,12 +98,7 @@ function Flow() {
               : { at: 'questions', roles: step.roles, meds, prefill: step.prefill })} />}
           {step.at === 'reading' && <Reading chat={step.chat} medicines={step.names} own={step.own} onBack={() => setStep({ at: 'medicines', chat: step.chat, roles: step.roles, mode: 'read', prefill: '' })}
             onQuestions={() => setStep({ at: 'questions', roles: step.roles, meds: step.meds, prefill: '' })}
-            onDone={read => {
-              const next: Step = { at: 'timeline', chat: step.chat, roles: step.roles, meds: step.meds, review: startReview(read.timeline, step.meds) };
-              // Red flags in the patient's or reporter's own messages open urgent help before the case continues.
-              const u = urgentHelp(step.chat.messages.filter(m => step.own.includes(m.sender)), region);
-              setStep(u.show ? { at: 'urgent', flags: u.matches, then: next } : next);
-            }} />}
+            onDone={read => setStep({ at: 'timeline', chat: step.chat, roles: step.roles, meds: step.meds, review: startReview(read.timeline, step.meds) })} />}
           {step.at === 'questions' && <Questions medicine={step.meds[0]?.name ?? ''} prefill={step.prefill} onBack={() => setStep({ at: 'medicines', chat: null, roles: step.roles, mode: 'questions', prefill: step.prefill })}
             onDone={a => {
               const review = [...startReview([], step.meds), ...questionsToFacts(a, step.meds[0]?.name ?? '', '', today())].sort((x, y) => x.date.localeCompare(y.date));
@@ -111,7 +111,8 @@ function Flow() {
             onDone={review => setStep({ ...caseOf(step), at: 'cloud', review })} />}
           {step.at === 'cloud' && <CloudSteps review={step.review} meds={step.meds} own={step.chat ? ownSenders(step.roles.patient, step.roles.reporter) : new Set([''])} messageCount={step.chat?.messages.length ?? 0}
             onDone={cloud => setStep({ ...caseOf(step), at: 'report', review: step.review, cloud })} />}
-          {step.at === 'report' && <Report draft={buildDraft({ review: step.review, meds: step.meds, coding: step.cloud.coding, ranking: step.cloud.ranking, region })}
+          {step.at === 'report' && <Report draft={buildDraft({ review: step.review, meds: step.meds, coding: step.cloud.coding, region,
+              ranking: step.cloud.rankedBy === 'cloud' || step.cloud.rankedBy === 'device' ? step.cloud.ranking : null /* code-only reasons are not a rank */ })}
             onDelete={() => { router.ledger.length = 0; setStep({ at: 'start' }); setDeleted(true); }} />}
           {deleted && step.at === 'start' && <p className="alert alert-device" role="status">{t('rptDeleted')}</p>}
           <footer className="not-advice">{t('notAdvice')}</footer>

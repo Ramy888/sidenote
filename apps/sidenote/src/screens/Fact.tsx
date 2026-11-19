@@ -8,13 +8,12 @@ const LABEL = { medicine_started: 'factStarted', medicine_stopped: 'factStopped'
   symptom_started: 'factSymptomStarted', symptom_ongoing: 'factSymptomOngoing', symptom_gone: 'factSymptomGone' } as const;
 
 export function Fact({ e, index = 0 }: { e: DatedEvent; index?: number }) {
-  const { t, date } = useI18n();
+  const { t, span } = useI18n();
   const name = e.kind.startsWith('medicine') ? e.medicine : e.symptom;
-  const fuzzy = e.basis === 'message' || e.min !== e.max;
   return (
     <li className="fact" style={{ animationDelay: `${index * 140}ms` }}>
       <p className="fact-what">{t(LABEL[e.kind], { name })}</p>
-      <p className="fact-when tabular">{fuzzy ? t('factAround', { date: date(e.date) }) : date(e.date)}</p>
+      <p className="fact-when tabular">{e.basis === 'message' && e.min === e.max ? t('factAround', { date: span(e) }) : span(e)}</p>
       <Quote e={e} />
     </li>
   );

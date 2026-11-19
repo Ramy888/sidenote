@@ -1,7 +1,7 @@
 // Report draft (screen 8): the regulator's form filled from confirmed facts only. The narrative uses fixed
 // "suspected" wording plus the patient's or reporter's own words; other people's words are never placed here.
 import { termName } from '../vocab/index.ts';
-import { answers } from './answers.ts';
+import { answers, type Span } from './answers.ts';
 import type { Reviewed } from './review.ts';
 import type { Medicine } from './medicines.ts';
 import type { Ranked } from './ranker.ts';
@@ -15,8 +15,8 @@ export const FORMS: Record<Region, { name: string; url: string }> = {
 
 export interface Draft {
   form: { name: string; url: string };
-  reaction: { onset: string | null; terms: string[]; uncoded: string[] };
-  products: { name: string; strength: string; suspected: boolean; started: string | null; startNote: string; stopped: string | null; dechallenge: string; rechallenge: string }[];
+  reaction: { onset: Span | null; terms: string[]; uncoded: string[] };
+  products: { name: string; strength: string; suspected: boolean; started: Span | null; startNote: string; stopped: Span | null; dechallenge: string; rechallenge: string }[];
   narrative: string[];
   /** Fields the person fills on the official form (they are not in a chat). */
   missing: string[];
@@ -32,9 +32,9 @@ export function buildDraft({ review, meds, coding, ranking, region }: { review: 
     const stop = ok.find(f => f.kind === 'medicine_stopped' && f.entity === m.name);
     return {
       name: m.name, strength: m.strength, suspected: !top || top === m.name,
-      started: start?.date ?? (m.startKind === 'exact' ? m.start : null),
+      started: start ? { min: start.min, max: start.max } : m.startKind === 'exact' ? { min: m.start, max: m.start } : null,
       startNote: start ? '' : m.startKind === 'month' ? `in ${m.start}` : m.startKind === 'before' ? 'before the period covered' : m.startKind === 'unknown' ? 'unknown' : '',
-      stopped: stop?.date ?? null,
+      stopped: stop ? { min: stop.min, max: stop.max } : null,
       dechallenge: a.dechallenge.answer === 'yes' ? 'Yes' : a.dechallenge.answer === 'notStopped' ? "Doesn't apply" : 'Unknown',
       rechallenge: a.rechallenge.answer === 'yes' ? 'Yes' : a.rechallenge.answer === 'notRestarted' ? "Didn't restart" : 'Unknown',
     };
@@ -51,24 +51,27 @@ export function buildDraft({ review, meds, coding, ranking, region }: { review: 
     const what = { medicine_started: `Medicine started: ${s}`, medicine_stopped: `Medicine stopped: ${s}`, medicine_restarted: `Medicine restarted: ${s}`,
       symptom_started: `Suspected reaction began: ${s}`, symptom_gone: `Reaction resolved: ${s}`, symptom_returned: `Reaction recurred: ${s}` }[f.kind];
     const own = f.evidence.own && f.evidence.quote ? ` In their own words: "${f.evidence.quote}"` : '';
-    return `${f.date}: ${what}.${own}`;
+    return `${spanText({ min: f.min, max: f.max })}: ${what}.${own}`;
   });
   return {
     form: FORMS[region],
-    reaction: { onset: ok.find(f => f.kind === 'symptom_started' && f.entity === sym)?.date ?? null, terms: coded.map(c => termName(c.term)!), uncoded: coding.filter(c => !c.term).map(c => symptomName(c.entity)) },
+    reaction: { onset: (o => (o ? { min: o.min, max: o.max } : null))(ok.find(f => f.kind === 'symptom_started' && f.entity === sym)), terms: coded.map(c => termName(c.term)!), uncoded: coding.filter(c => !c.term).map(c => symptomName(c.entity)) },
     products, narrative,
     missing: ['outcome', 'seriousness', 'age', 'sex', 'weight', 'reporterContact'],
   };
 }
+
+/** A date, or "between A and B" when only a range is known (never a made-up exact day). */
+export const spanText = (s: Span) => (s.min === s.max ? s.min : `between ${s.min} and ${s.max}`);
 
 /** Plain text for Copy and print: English, the language of the forms. */
 export function draftText(d: Draft): string {
   return [
     `${d.form.name}: draft of a suspected side-effect report`, '',
     `Reaction (suspected): ${[...d.reaction.terms, ...d.reaction.uncoded].join('; ') || 'not coded'}`,
-    `Date it started: ${d.reaction.onset ?? 'not known'}`, '',
+    `Date it started: ${d.reaction.onset ? spanText(d.reaction.onset) : 'not known'}`, '',
     ...d.products.flatMap(p => [`Medicine: ${p.name}${p.strength ? ` ${p.strength}` : ''}${p.suspected ? ' (suspected)' : ''}`,
-      `  Started: ${p.started ?? p.startNote}  Stopped: ${p.stopped ?? 'not stopped / not known'}`,
+      `  Started: ${p.started ? spanText(p.started) : p.startNote}  Stopped: ${p.stopped ? spanText(p.stopped) : 'not stopped / not known'}`,
       `  Did the problem stop after stopping? ${p.dechallenge}`, `  Did it return after starting again? ${p.rechallenge}`]),
     '', 'What happened:', ...d.narrative.map(l => `  ${l}`), '',
     `Still to fill in on the official form: ${d.missing.join(', ')}`,

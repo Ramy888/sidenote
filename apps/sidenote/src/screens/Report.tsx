@@ -1,14 +1,15 @@
 // Screen 8, Report draft: the form filled from confirmed facts; missing fields listed; Copy, Print/PDF,
 // Open the official form, Delete this report. The draft's text is English, the forms' language.
 import { useState } from 'react';
-import { useI18n } from '../i18n.ts';
+import { useI18n, makeT } from '../i18n.ts';
 import type { StringKey } from '../strings.ts';
 import { draftText, type Draft } from '../app/report.ts';
 
 export function Report({ draft, onDelete }: { draft: Draft; onDelete: () => void }) {
-  const { t, date } = useI18n();
+  const { t } = useI18n();
+  const { span } = makeT('en'); // the draft is the form's language, whatever the interface language
   const [copied, setCopied] = useState(false);
-  const d = (iso: string | null, note = '') => (iso ? date(iso) : note || '—');
+  const d = (x: { min: string; max: string } | null, note = '') => (x ? span(x) : note || '—');
   const copy = async () => { try { await navigator.clipboard.writeText(draftText(draft)); setCopied(true); } catch { setCopied(false); } };
   return (
     <section className="screen report">

@@ -19,7 +19,7 @@ function StatusChip({ s }: { s: Status }) {
 }
 
 export function Timeline({ initial, onBack, onDone }: { initial: Reviewed[]; onBack: () => void; onDone: (r: Reviewed[]) => void }) {
-  const { t, date } = useI18n();
+  const { t, date, span, daySpan } = useI18n();
   const [review, setReview] = useState(initial);
   const [editing, setEditing] = useState<number | null>(null);
   const active = review.filter(f => f.status !== 'rejected');
@@ -28,18 +28,18 @@ export function Timeline({ initial, onBack, onDone }: { initial: Reviewed[]; onB
   const [med, setMed] = useState(meds[0] ?? '');
   const [sym, setSym] = useState(syms[0] ?? '');
   const a = answers(active, med, sym);
-  const find = (kind: Reviewed['kind'], entity: string, d?: string) => active.find(f => f.kind === kind && f.entity === entity && f.date === d);
+  const find = (kind: Reviewed['kind'], entity: string, w?: { min: string; max: string }) => active.find(f => f.kind === kind && f.entity === entity && f.min === w?.min && f.max === w?.max);
 
   const rows: { q: StringKey; text: string; facts: (Reviewed | undefined)[] }[] = [
-    { q: 'qOnset', facts: [a.onset ? find('symptom_started', sym, a.onset.date) : undefined],
-      text: !a.onset ? t('aOnsetNone') : a.onset.daysAfterStart === null ? t('aOnsetNoStart', { date: date(a.onset.date) })
-        : t('aOnset', { date: date(a.onset.date), days: a.onset.daysAfterStart, medicine: med }) },
+    { q: 'qOnset', facts: [a.onset ? find('symptom_started', sym, a.onset.when) : undefined],
+      text: !a.onset ? t('aOnsetNone') : a.onset.daysAfterStart === null ? t('aOnsetNoStart', { date: span(a.onset.when) })
+        : t('aOnset', { date: span(a.onset.when), days: daySpan(a.onset.daysAfterStart), medicine: med }) },
     { q: 'qDechallenge', facts: a.dechallenge.answer === 'notStopped' ? [] : [find('medicine_stopped', med, a.dechallenge.stopped), a.dechallenge.answer === 'yes' ? find('symptom_gone', sym, a.dechallenge.gone) : undefined],
-      text: a.dechallenge.answer === 'yes' ? t('aDeYes', { days: a.dechallenge.days, date: date(a.dechallenge.stopped) })
-        : a.dechallenge.answer === 'unknown' ? t('aDeUnknown', { date: date(a.dechallenge.stopped) }) : t('aDeNotStopped', { medicine: med }) },
+      text: a.dechallenge.answer === 'yes' ? t('aDeYes', { days: daySpan(a.dechallenge.days), date: span(a.dechallenge.stopped) })
+        : a.dechallenge.answer === 'unknown' ? t('aDeUnknown', { date: span(a.dechallenge.stopped) }) : t('aDeNotStopped', { medicine: med }) },
     { q: 'qRechallenge', facts: a.rechallenge.answer === 'notRestarted' ? [] : [find('medicine_restarted', med, a.rechallenge.restarted), a.rechallenge.answer === 'yes' ? find('symptom_returned', sym, a.rechallenge.returned) : undefined],
-      text: a.rechallenge.answer === 'yes' ? t('aReYes', { days: a.rechallenge.days, date: date(a.rechallenge.restarted) })
-        : a.rechallenge.answer === 'unknown' ? t('aReUnknown', { date: date(a.rechallenge.restarted) }) : t('aReNotRestarted', { medicine: med }) },
+      text: a.rechallenge.answer === 'yes' ? t('aReYes', { days: daySpan(a.rechallenge.days), date: span(a.rechallenge.restarted) })
+        : a.rechallenge.answer === 'unknown' ? t('aReUnknown', { date: span(a.rechallenge.restarted) }) : t('aReNotRestarted', { medicine: med }) },
   ];
   const rowStatus = (fs: Reviewed[]): Status => (fs.some(f => f.status === 'conflict') ? 'conflict' : fs.some(f => f.status === 'needsConfirming') ? 'needsConfirming' : fs.every(f => f.status === 'confirmed') ? 'confirmed' : 'found');
   const left = active.filter(f => f.status !== 'confirmed').length;
@@ -79,7 +79,7 @@ export function Timeline({ initial, onBack, onDone }: { initial: Reviewed[]; onB
         {review.map(f => (
           <li key={f.id} className={`fact card fact-${f.status}`}>
             <p className="fact-what">{t(KIND_LABEL[f.kind], { name: f.entity })}</p>
-            <p className="fact-when tabular">{f.min !== f.max ? t('factAround', { date: date(f.date) }) : date(f.date)}</p>
+            <p className="fact-when tabular">{span(f)}</p>
             <Quote e={f.evidence} />
             <div className="fact-actions">
               <StatusChip s={f.status} />

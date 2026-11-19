@@ -7,7 +7,7 @@ const ctx = { medicines: ['atorvastatin', 'amlodipine'], terms, labelFacts: new 
 const ranker = (): RankerInput => ({
   anchor: 'report_date',
   medicines: [{ name: 'atorvastatin', start_kind: 'exact', start: -40 }],
-  facts: [{ term: 'R001', kind: 'symptom_started', day: [-30, -28], sender: 'own', confirmed: true }],
+  facts: [{ id: 3, term: 'R001', kind: 'symptom_started', day: [-30, -28], sender: 'own', confirmed: true }],
   pairs: [{ medicine: 'atorvastatin', term: 'R001', dechallenge: 'yes', rechallenge: 'unknown' }],
   labelFacts: [{ id: 'L-ATOR-1', text: 'Myopathy and rhabdomyolysis have been reported.' }],
 });
@@ -36,10 +36,10 @@ describe('ranker payload: confirmed, coded facts only', () => {
     const input = ranker() as any;
     input.note = 'Sarah said her legs were killing her';
     input.facts[0].quote = 'my legs are killing me';
-    const json = rankerPayload(input, ctx).text;
+    const json = rankerPayload(input, ctx).json!;
     expect(json).not.toMatch(/killing|Sarah/);
     expect(Object.keys(JSON.parse(json))).toEqual(['anchor', 'medicines', 'facts', 'pairs', 'labelFacts']);
-    expect(Object.keys(JSON.parse(json).facts[0])).toEqual(['term', 'kind', 'day', 'sender']);
+    expect(Object.keys(JSON.parse(json).facts[0])).toEqual(['id', 'term', 'kind', 'day', 'sender']);
   });
   it('refuses a medicine that is not on the confirmed list', () => {
     const input = ranker(); input.medicines[0].name = 'my nan\'s heart pill';

@@ -15,13 +15,18 @@ import { ownSenders } from './app/importChat.ts';
 import type { Medicine } from './app/medicines.ts';
 import { startReview, type Reviewed } from './app/review.ts';
 import { Timeline } from './screens/Timeline.tsx';
+import { Urgent } from './screens/Urgent.tsx';
+import { CloudSteps, type CloudResult } from './screens/CloudSteps.tsx';
+import { urgentHelp } from './pipeline/safety.ts';
 import './App.css';
 
 type Step = { at: 'start' } | { at: 'who'; chat: ParsedChat } | { at: 'arabic'; chat: ParsedChat } | { at: 'typed'; text: string }
   | { at: 'medicines'; chat: ParsedChat; roles: Roles }
   | { at: 'reading'; chat: ParsedChat; roles: Roles; meds: Medicine[]; names: string[]; own: string[] }
   | { at: 'timeline'; chat: ParsedChat; roles: Roles; meds: Medicine[]; read: ReadResult; review: Reviewed[] }
-  | { at: 'report'; chat: ParsedChat; roles: Roles; meds: Medicine[]; review: Reviewed[] };
+  | { at: 'urgent'; flags: string[]; then: Step }
+  | { at: 'cloud'; chat: ParsedChat; roles: Roles; meds: Medicine[]; review: Reviewed[] }
+  | { at: 'report'; chat: ParsedChat; roles: Roles; meds: Medicine[]; review: Reviewed[]; cloud: CloudResult };
 
 const defaultRegion = (): Region => { const l = navigator.language?.toLowerCase() ?? ''; return l.endsWith('-us') ? 'US' : l.startsWith('ar') || l.endsWith('-eg') ? 'EG' : 'UK'; };
 
@@ -50,9 +55,17 @@ function Flow() {
           {step.at === 'medicines' && <Medicines initial={[]} onBack={() => setStep({ at: 'who', chat: step.chat })}
             onDone={meds => setStep({ at: 'reading', chat: step.chat, roles: step.roles, meds, names: meds.map(m => m.name), own: [...ownSenders(step.roles.patient, step.roles.reporter)] })} />}
           {step.at === 'reading' && <Reading chat={step.chat} medicines={step.names} own={step.own} onBack={() => setStep({ at: 'medicines', chat: step.chat, roles: step.roles })}
-            onDone={read => setStep({ at: 'timeline', chat: step.chat, roles: step.roles, meds: step.meds, read, review: startReview(read.timeline, step.meds) })} />}
+            onDone={read => {
+              const next: Step = { at: 'timeline', chat: step.chat, roles: step.roles, meds: step.meds, read, review: startReview(read.timeline, step.meds) };
+              // Red flags in the patient's or reporter's own messages open urgent help before the case continues.
+              const u = urgentHelp(step.chat.messages.filter(m => step.own.includes(m.sender)), region);
+              setStep(u.show ? { at: 'urgent', flags: u.matches, then: next } : next);
+            }} />}
+          {step.at === 'urgent' && <Urgent flags={step.flags} region={region} onSafe={() => setStep(step.then)} />}
           {step.at === 'timeline' && <Timeline initial={step.review} onBack={() => setStep({ at: 'medicines', chat: step.chat, roles: step.roles })}
-            onDone={review => setStep({ at: 'report', chat: step.chat, roles: step.roles, meds: step.meds, review })} />}
+            onDone={review => setStep({ at: 'cloud', chat: step.chat, roles: step.roles, meds: step.meds, review })} />}
+          {step.at === 'cloud' && <CloudSteps review={step.review} meds={step.meds} own={ownSenders(step.roles.patient, step.roles.reporter)} messageCount={step.chat.messages.length}
+            onDone={cloud => setStep({ at: 'report', chat: step.chat, roles: step.roles, meds: step.meds, review: step.review, cloud })} />}
           {(step.at === 'typed' || step.at === 'report') && <section className="screen"><p className="alert alert-device">{t('nextStepSoon')}</p><button type="button" className="btn btn-secondary" onClick={restart}>{t('back')}</button></section>}
           <footer className="not-advice">{t('notAdvice')}</footer>
         </main>

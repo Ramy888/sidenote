@@ -121,13 +121,16 @@ h2 { font-size: var(--text-heading); line-height: 1.15; }
 code, pre, .mono { font-family: var(--font-mono); }
 .tabular { font-variant-numeric: tabular-nums; }
 
-#root {
-  max-width: 1180px;
-  margin-inline: auto;
-  padding-inline: 20px;
-  min-height: 100svh;
-  box-sizing: border-box;
+/* Ionic reads these: paper ground, ink text, our fonts (Cairo in Arabic). */
+:root {
+  --ion-background-color: var(--paper);
+  --ion-text-color: var(--text);
+  --ion-font-family: var(--font-sans);
+  --ion-toolbar-background: var(--paper);
+  --ion-toolbar-color: var(--text);
+  --ion-border-color: var(--line);
 }
+:root:lang(ar) { --ion-font-family: var(--font-arabic); }
 
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 

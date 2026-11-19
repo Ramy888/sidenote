@@ -23,6 +23,8 @@ export interface ReadChatOptions {
   /** Pack windows into calls of up to this many characters; 0 = one call per window. */
   packChars?: number;
   onWindow?: (done: number, total: number, events: DatedEvent[]) => void;
+  /** Cancel: stops between windows; what was read so far is kept. */
+  signal?: AbortSignal;
 }
 
 export async function readChat(messages: ChatMessage[], opts: ReadChatOptions) {
@@ -32,7 +34,10 @@ export async function readChat(messages: ChatMessage[], opts: ReadChatOptions) {
   const windows = packWindows(cueWindows(text, cueMatcher(opts.medicines), { before: 1, after: 1, maxChars: 1800 }), opts.packChars ?? 0);
   const events: DatedEvent[] = [];
   const rejected: { event: ReaderEvent; reason: string }[] = [];
+  opts.onWindow?.(0, windows.length, []);
+  let cancelled = false;
   for (const [i, w] of windows.entries()) {
+    if (opts.signal?.aborted) { cancelled = true; break; }
     const found: DatedEvent[] = [];
     for (const e of await opts.read(w)) {
       const loc = locateQuote(e.quote, w, e.message);
@@ -57,5 +62,5 @@ export async function readChat(messages: ChatMessage[], opts: ReadChatOptions) {
     events.push(...found);
     opts.onWindow?.(i + 1, windows.length, found);
   }
-  return { windows: windows.length, events, rejected, timeline: buildTimeline(events, opts.medicines) };
+  return { windows: windows.length, events, rejected, cancelled, timeline: buildTimeline(events, opts.medicines) };
 }

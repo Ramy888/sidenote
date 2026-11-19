@@ -13,12 +13,15 @@ import { Medicines } from './screens/Medicines.tsx';
 import { Reading, type ReadResult } from './screens/Reading.tsx';
 import { ownSenders } from './app/importChat.ts';
 import type { Medicine } from './app/medicines.ts';
+import { startReview, type Reviewed } from './app/review.ts';
+import { Timeline } from './screens/Timeline.tsx';
 import './App.css';
 
 type Step = { at: 'start' } | { at: 'who'; chat: ParsedChat } | { at: 'arabic'; chat: ParsedChat } | { at: 'typed'; text: string }
   | { at: 'medicines'; chat: ParsedChat; roles: Roles }
   | { at: 'reading'; chat: ParsedChat; roles: Roles; meds: Medicine[]; names: string[]; own: string[] }
-  | { at: 'timeline'; chat: ParsedChat; roles: Roles; meds: Medicine[]; read: ReadResult };
+  | { at: 'timeline'; chat: ParsedChat; roles: Roles; meds: Medicine[]; read: ReadResult; review: Reviewed[] }
+  | { at: 'report'; chat: ParsedChat; roles: Roles; meds: Medicine[]; review: Reviewed[] };
 
 const defaultRegion = (): Region => { const l = navigator.language?.toLowerCase() ?? ''; return l.endsWith('-us') ? 'US' : l.startsWith('ar') || l.endsWith('-eg') ? 'EG' : 'UK'; };
 
@@ -47,8 +50,10 @@ function Flow() {
           {step.at === 'medicines' && <Medicines initial={[]} onBack={() => setStep({ at: 'who', chat: step.chat })}
             onDone={meds => setStep({ at: 'reading', chat: step.chat, roles: step.roles, meds, names: meds.map(m => m.name), own: [...ownSenders(step.roles.patient, step.roles.reporter)] })} />}
           {step.at === 'reading' && <Reading chat={step.chat} medicines={step.names} own={step.own} onBack={() => setStep({ at: 'medicines', chat: step.chat, roles: step.roles })}
-            onDone={read => setStep({ at: 'timeline', chat: step.chat, roles: step.roles, meds: step.meds, read })} />}
-          {(step.at === 'typed' || step.at === 'timeline') && <section className="screen"><p className="alert alert-device">{t('nextStepSoon')}</p><button type="button" className="btn btn-secondary" onClick={restart}>{t('back')}</button></section>}
+            onDone={read => setStep({ at: 'timeline', chat: step.chat, roles: step.roles, meds: step.meds, read, review: startReview(read.timeline, step.meds) })} />}
+          {step.at === 'timeline' && <Timeline initial={step.review} onBack={() => setStep({ at: 'medicines', chat: step.chat, roles: step.roles })}
+            onDone={review => setStep({ at: 'report', chat: step.chat, roles: step.roles, meds: step.meds, review })} />}
+          {(step.at === 'typed' || step.at === 'report') && <section className="screen"><p className="alert alert-device">{t('nextStepSoon')}</p><button type="button" className="btn btn-secondary" onClick={restart}>{t('back')}</button></section>}
           <footer className="not-advice">{t('notAdvice')}</footer>
         </main>
       </IonContent>

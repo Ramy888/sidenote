@@ -73,3 +73,38 @@ legend { font-size: var(--text-answer); font-weight: 700; margin-block-end: var(
 .quote-own { background: var(--highlight); color: var(--on-highlight); border-radius: 3px; padding: 0 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .quote-kept { background: var(--kept); color: var(--on-kept); border-radius: 3px; padding: 0 4px; display: inline-flex; gap: 4px; align-items: baseline; }
 .fact-what:lang(en)::first-letter, :lang(en) .fact-what::first-letter { text-transform: uppercase; }
+
+.sr-only { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.pickers { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+.pickers label { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); font-weight: 700; }
+
+/* Answer rows: heading-size answer, status, Confirm. Confirmed rows take the device tint. */
+.answers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-sm); }
+.answer p { margin: 0; }
+.answer-q { color: var(--text-muted); font-weight: 700; }
+.answer-a { font-size: var(--text-answer); font-weight: 700; line-height: 1.25; }
+.answer-meta, .fact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-block-start: var(--space-sm); }
+.answer.is-confirmed { background: var(--device-tint); border-color: transparent; }
+
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: var(--radius-sm); font-size: var(--text-label); font-weight: 700; }
+.chip-found, .chip-confirmed { background: var(--device-tint); color: var(--device); }
+.chip-needsConfirming { background: var(--warning-tint); color: var(--warning); }
+.chip-conflict { background: var(--conflict-tint); color: var(--conflict); }
+.chip-rejected { background: var(--code-tint); color: var(--code); }
+.fact-rejected { opacity: 0.6; }
+.fact-rejected .fact-what { text-decoration: line-through; }
+
+.chart { margin: 0; padding: var(--space-sm); }
+.chart svg { inline-size: 100%; block-size: auto; display: block; direction: ltr; }
+.chart svg text { direction: ltr; unicode-bidi: plaintext; }
+.chart-label { font: 700 13px var(--font-sans); fill: var(--text); }
+.chart-tick { font: 12px var(--font-sans); fill: var(--text-muted); }
+.chart-axis { stroke: var(--line); stroke-width: 1; }
+.chart-bar { fill: var(--primary); }
+.chart-on { fill: var(--highlight); stroke: var(--text); stroke-width: 1.5; }
+.chart-gone { fill: var(--surface); stroke: var(--text); stroke-width: 1.5; }
+
+/* Phone: the primary action sits in a bottom bar above the safe area. */
+@media (max-width: 743px) {
+  .sticky-actions { position: sticky; inset-block-end: 0; background: var(--paper); padding-block: var(--space-sm) calc(var(--space-sm) + env(safe-area-inset-bottom)); border-block-start: 1px solid var(--line); }
+}

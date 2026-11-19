@@ -25,4 +25,13 @@ try {
   await page.getByText(/dated facts/).waitFor({ timeout: 300000 });
   console.log(`done ${Math.round((Date.now() - t0) / 1000)} s after the first fact; facts shown: ${await page.locator('.fact').count()}; cloud requests: ${cloud}`);
   await page.screenshot({ path: `${out}/4-reading-done.png`, fullPage: true });
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await page.getByRole('heading', { name: 'Your timeline' }).waitFor();
+  await page.screenshot({ path: `${out}/5-timeline-en-402.png`, fullPage: true });
+  await page.locator('.answer').first().getByRole('button', { name: 'Confirm' }).click().catch(() => {});
+  await page.setViewportSize({ width: 1512, height: 900 });
+  await page.getByRole('button', { name: 'العربية' }).first().click();
+  await page.screenshot({ path: `${out}/5-timeline-ar-1512.png`, fullPage: true });
+  const over = await page.evaluate(() => [...document.querySelectorAll('#main *')].filter(e => { const r = e.getBoundingClientRect(); return r.width && (r.left < -1 || r.right > innerWidth + 1); }).length);
+  console.log(`timeline: answers ${await page.locator('.answer').count()}, facts ${await page.locator('.facts .fact').count()}, elements outside the screen: ${over}`);
 } finally { await nano.close(); }

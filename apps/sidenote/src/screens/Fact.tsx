@@ -15,9 +15,16 @@ export function Fact({ e, index = 0 }: { e: DatedEvent; index?: number }) {
     <li className="fact" style={{ animationDelay: `${index * 140}ms` }}>
       <p className="fact-what">{t(LABEL[e.kind], { name })}</p>
       <p className="fact-when tabular">{fuzzy ? t('factAround', { date: date(e.date) }) : date(e.date)}</p>
-      {e.own
-        ? <p className="quote"><mark className="quote-own">{e.quote}</mark> <span className="sub">{e.sender} · {t('yourWords')}</span></p>
-        : <p className="quote"><span className="quote-kept"><Icon kind="device" /> {e.quote}</span> <span className="sub">{e.sender} · {t('keptOnDevice')}</span></p>}
+      <Quote e={e} />
     </li>
   );
+}
+
+/** Own words in the highlighter; anyone else's in a "kept on this device" chip; typed answers say so. */
+export function Quote({ e }: { e: DatedEvent }) {
+  const { t } = useI18n();
+  if (!e.quote) return <p className="quote"><span className="sub">{t('youToldUs')}</span></p>;
+  return e.own
+    ? <p className="quote"><mark className="quote-own">{e.quote}</mark> <span className="sub">{e.sender} · {t('yourWords')}</span></p>
+    : <p className="quote"><span className="quote-kept"><Icon kind="device" /> {e.quote}</span> <span className="sub">{e.sender} · {t('keptOnDevice')}</span></p>;
 }

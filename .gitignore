@@ -34,3 +34,6 @@ evals/*/results/
 
 # Capacitor regenerates these on `npx cap sync ios`; they hold absolute local paths
 apps/sidenote/ios/App/CapApp-SPM/symlinks/
+
+# Firebase Android config
+google-services.json

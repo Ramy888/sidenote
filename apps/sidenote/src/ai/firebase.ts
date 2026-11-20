@@ -15,10 +15,16 @@ export const app = initializeApp({
 // The token lives in .env.development.local, so production builds never contain it (checked by grep).
 const native = Capacitor.isNativePlatform();
 if (import.meta.env.DEV && !native) (self as any).FIREBASE_APPCHECK_DEBUG_TOKEN = import.meta.env.VITE_APPCHECK_DEBUG_TOKEN;
+// Android sets its provider here (iOS does it in AppDelegate): Play Integrity, or the debug provider in emulator
+// builds made with VITE_ANDROID_APPCHECK_DEBUG=1 (its secret must be allow-listed in App Check).
+let androidInit: Promise<void> | null = null;
+const nativeReady = () => (Capacitor.getPlatform() === 'android'
+  ? (androidInit ??= FirebaseAppCheck.initialize({ debugToken: env.VITE_ANDROID_APPCHECK_DEBUG === '1', isTokenAutoRefreshEnabled: true }))
+  : Promise.resolve());
 // In the iOS/Android app reCAPTCHA can't run, so tokens come from the native App Check SDK (App Attest on a
 // device; the debug provider on the simulator, set in AppDelegate before FirebaseApp.configure()).
 initializeAppCheck(app, { isTokenAutoRefreshEnabled: true, provider: native
-  ? new CustomProvider({ getToken: async () => { const r = await FirebaseAppCheck.getToken(); return { token: r.token, expireTimeMillis: r.expireTimeMillis ?? Date.now() + 30 * 60_000 }; } })
+  ? new CustomProvider({ getToken: async () => { await nativeReady(); const r = await FirebaseAppCheck.getToken(); return { token: r.token, expireTimeMillis: r.expireTimeMillis ?? Date.now() + 30 * 60_000 }; } })
   : new ReCaptchaEnterpriseProvider(env.VITE_RECAPTCHA_SITE_KEY) });
 export const ai = getAI(app, { backend: new GoogleAIBackend() });
 // firebase 12.19 defaults to gemini-2.5-flash-lite, which the API refuses for new projects (404, Nov 16).

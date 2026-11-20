@@ -6,7 +6,8 @@ import { useI18n } from './i18n.ts';
 import { I18nProvider } from './I18nProvider.tsx';
 import type { Region } from './app/importChat.ts';
 import { LanguageSwitch, Logo, Icon } from './screens/common.tsx';
-import { StepSidebar, StepProgress } from './screens/Shell.tsx';
+import { StepSidebar, StepProgress, LeaveDialog } from './screens/Shell.tsx';
+import { InfoSheet } from './screens/InfoSheet.tsx';
 import { useModelState } from './app/model.ts';
 import { Start } from './screens/Start.tsx';
 import { WhosWho, type Roles } from './screens/WhosWho.tsx';
@@ -60,6 +61,8 @@ function Flow() {
   const [forSomeone, setForSomeone] = useState(false);
   const [step, setStep] = useState<Step>({ at: 'start' });
   const [ledger, setLedger] = useState(false);
+  const [info, setInfo] = useState(false);
+  const [leaving, setLeaving] = useState(false);
   const [deleted, setDeleted] = useState(false);
   const [textSize, setTextSize] = useState(initialTextSize);
   const [demo, setDemo] = useState(initialDemo);
@@ -69,6 +72,18 @@ function Flow() {
   const STEP_OF: Partial<Record<Step['at'], number>> = { who: 1, medicines: 1, questions: 1, arabic: 1, reading: 2, urgent: 2, timeline: 3, cloud: 4, report: 5, checkinReport: 5 };
   const stepIndex = STEP_OF[step.at] ?? 0;
   const restart = () => { setDeleted(false); setStep({ at: 'start' }); };
+  // Back from the bar: the previous step, keeping what was already confirmed (report and sharing go back to the timeline).
+  const goBack = () => {
+    switch (step.at) {
+      case 'medicines': return step.mode === 'read' && step.chat ? setStep({ at: 'who', chat: step.chat }) : restart();
+      case 'questions': return setStep({ at: 'medicines', chat: null, roles: step.roles, mode: 'questions', prefill: step.prefill });
+      case 'reading': return setStep({ at: 'medicines', chat: step.chat, roles: step.roles, mode: 'read', prefill: '' });
+      case 'timeline': return step.chat ? setStep({ at: 'medicines', chat: step.chat, roles: step.roles, mode: 'read', prefill: '' }) : setStep({ at: 'questions', roles: step.roles, meds: step.meds, prefill: '' });
+      case 'cloud': case 'report': return setStep({ at: 'timeline', chat: step.chat, roles: step.roles, meds: step.meds, review: step.review });
+      default: return restart(); // who, arabic, urgent, check-in report
+    }
+  };
+  const leave = () => { router.ledger.length = 0; setLeaving(false); restart(); };
   const questions = (prefill: string) => setStep({ at: 'medicines', chat: null, roles: ME, mode: 'questions', prefill });
   const caseOf = (x: Case): Case => ({ chat: x.chat, roles: x.roles, meds: x.meds });
   // Judges without on-device AI (O4b): a synthetic chat and the facts Nano found in it on a laptop.
@@ -85,6 +100,7 @@ function Flow() {
         <IonToolbar>
           <IonTitle><button type="button" className="brand" onClick={restart}><Logo /><span>{t('appName')}</span></button></IonTitle>
           <div slot="end" className="toolbar-end">
+            <button type="button" className="btn-tool" aria-label={t('infoOpen')} aria-expanded={info} onClick={() => setInfo(v => !v)}><Icon kind="info" size={18} /><span>{t('infoOpen')}</span></button>
             <button type="button" className="btn-tool" aria-label={t('ledgerOpen')} onClick={() => setLedger(true)}><Icon kind="list" size={18} /><span>{t('ledgerOpen')}</span></button>
             <button type="button" className="btn-tool" aria-label={t('settingsOpen')} onClick={() => setStep({ at: 'settings' })}><Icon kind="sliders" size={18} /><span>{t('settingsOpen')}</span></button>
             <LanguageSwitch className="header-only" />
@@ -92,7 +108,7 @@ function Flow() {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        {stepIndex > 0 && <StepProgress current={stepIndex} />}
+        {stepIndex > 0 && <StepProgress current={stepIndex} onBack={goBack} onClose={() => setLeaving(true)} />}
         <div className={stepIndex > 0 ? 'layout with-sidebar' : 'layout'}>
         {stepIndex > 0 && <StepSidebar current={stepIndex} />}
         <main id="main">
@@ -140,6 +156,8 @@ function Flow() {
         </div>
       </IonContent>
       {ledger && <Ledger onClose={() => setLedger(false)} />}
+      {leaving && <LeaveDialog onLeave={leave} onStay={() => setLeaving(false)} />}
+      {info && <InfoSheet onClose={() => setInfo(false)} onHow={() => setStep({ at: 'how' })} />}
     </IonPage>
   );
 }

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useI18n } from '../i18n.ts';
 import { SUPPORTED, blankMedicine, medicineProblems, type Medicine, type StartKind } from '../app/medicines.ts';
+import { DateField } from './common.tsx';
 
 export function Medicines({ initial, onBack, onDone }: { initial: Medicine[]; onBack: () => void; onDone: (m: Medicine[]) => void }) {
   const { t } = useI18n();
@@ -28,8 +29,8 @@ export function Medicines({ initial, onBack, onDone }: { initial: Medicine[]; on
               <label className="choice" key={k}><input type="radio" name={`start-${i}`} checked={m.startKind === k} onChange={() => set(i, { startKind: k, start: '' })} /><span>{t(label)}</span></label>
             ))}
           </fieldset>
-          {m.startKind === 'exact' && <input className="input" type="date" max={today} value={m.start} aria-label={t('medStartExact')} onChange={e => set(i, { start: e.target.value })} />}
-          {m.startKind === 'month' && <input className="input" type="month" max={today.slice(0, 7)} value={m.start} aria-label={t('medStartMonth')} onChange={e => set(i, { start: e.target.value })} />}
+          {m.startKind === 'exact' && <DateField label={t('dateStarted')} required max={today} value={m.start} invalid={tried && problems[i].includes('medDateNeeded')} onChange={v => set(i, { start: v })} />}
+          {m.startKind === 'month' && <DateField month label={t('monthStarted')} required max={today.slice(0, 7)} value={m.start} invalid={tried && problems[i].includes('medDateNeeded')} onChange={v => set(i, { start: v })} />}
           {tried && problems[i].map(p => <p key={p} className="alert alert-warning" role="alert">{t(p)}</p>)}
           {meds.length > 1 && <button type="button" className="btn btn-quiet" onClick={() => setMeds(ms => ms.filter((_, j) => j !== i))}>{t('medRemove')}</button>}
         </div>

@@ -1,4 +1,5 @@
 // Small shared pieces: route badges (icon + words, never colour alone) and the language switch.
+import { useId } from 'react';
 import { useI18n, type Lang } from '../i18n.ts';
 
 // Line icons (24 grid, drawn here; no emoji, DESIGN.md). `dir` icons mirror in Arabic.
@@ -20,9 +21,12 @@ const PATHS = {
   chip: 'M9 3v2M15 3v2M9 19v2M15 19v2M3 9h2M3 15h2M19 9h2M19 15h2M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM9 9h6v6H9z',
   play: 'M7 4l13 8-13 8z',
   arrow: 'M5 12h14M13 6l6 6-6 6',
+  back: 'M19 12H5M11 6l-6 6 6 6',
   type: 'M4 7V5h16v2M9 19h6M12 5v14',
+  info: 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-4M12 8h.01',
+  close: 'M6 6l12 12M18 6L6 18',
 } as const;
-const DIRECTIONAL = new Set(['arrow']);
+const DIRECTIONAL = new Set(['arrow', 'back']);
 export const Icon = ({ kind, size = 16 }: { kind: keyof typeof PATHS; size?: number }) => (
   <svg className={`icon${DIRECTIONAL.has(kind) ? ' icon-dir' : ''}`} viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d={PATHS[kind]} /></svg>
 );
@@ -50,4 +54,24 @@ export function LanguageSwitch({ className = '' }: { className?: string }) {
     <button type="button" lang={l} aria-pressed={lang === l} className={lang === l ? 'selected' : ''} onClick={() => setLang(l)}>{label}</button>
   );
   return <div className={`language-switch ${className}`} role="group" aria-label={t('languageSwitch')}>{opt('en', 'English')}{opt('ar', 'العربية')}</div>;
+}
+
+/** A date (or month) field that says what it is: a label, a Required marker, a calendar icon and, while empty,
+ * "Tap to choose a date" (native date inputs show nothing on Android when empty). */
+export function DateField({ label, value, onChange, max, month = false, required = false, invalid = false, autoFocus = false }: {
+  label: string; value: string; onChange: (v: string) => void; max?: string; month?: boolean; required?: boolean; invalid?: boolean; autoFocus?: boolean;
+}) {
+  const { t } = useI18n();
+  const id = useId();
+  return (
+    <div className={`date-field${value ? '' : ' is-empty'}${invalid ? ' is-invalid' : ''}`}>
+      <label htmlFor={id} className="field-label">{label}{required && <span className="req">{t('required')}</span>}</label>
+      <div className="date-box">
+        <Icon kind="calendar" size={20} />
+        <input id={id} className="input" type={month ? 'month' : 'date'} max={max} value={value} required={required} aria-invalid={invalid || undefined}
+          autoFocus={autoFocus} onChange={e => onChange(e.target.value)} />
+        {!value && <span className="date-hint" aria-hidden="true">{month ? t('monthTap') : t('dateTap')}</span>}
+      </div>
+    </div>
+  );
 }

@@ -5,7 +5,7 @@ import { useI18n } from '../i18n.ts';
 import type { StringKey } from '../strings.ts';
 import { answers } from '../app/answers.ts';
 import { confirm, reject, changeDate, type Reviewed, type Status } from '../app/review.ts';
-import { Badge, Icon } from './common.tsx';
+import { Badge, Icon, DateField } from './common.tsx';
 import { Quote } from './Fact.tsx';
 import { TimelineChart } from './TimelineChart.tsx';
 
@@ -90,7 +90,7 @@ export function Timeline({ initial, onBack, onDone }: { initial: Reviewed[]; onB
                 ? <button type="button" className="btn btn-quiet" onClick={() => setReview(rv => reject(rv, f.id))}>{t('actNotRight')}</button>
                 : <button type="button" className="btn btn-quiet" onClick={() => setReview(rv => rv.map(x => (x.id === f.id ? { ...x, status: 'found' } : x)))}>{t('actUndo')}</button>}
             </div>
-            {editing === f.id && <input className="input" type="date" defaultValue={f.date} aria-label={t('actChangeDate')} onChange={e => { if (e.target.value) { setReview(rv => changeDate(rv, f.id, e.target.value)); setEditing(null); } }} />}
+            {editing === f.id && <DateField label={t('dateNew')} value="" autoFocus onChange={v => { if (v) { setReview(rv => changeDate(rv, f.id, v)); setEditing(null); } }} />}
           </li>
         ))}
       </ol>

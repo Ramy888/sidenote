@@ -29,8 +29,8 @@ export const STRINGS = {
   modelDownload: { en: 'Download the on-device model', ar: 'نزّل النموذج على الجهاز' },
   modelDownloading: { en: 'Downloading the on-device model: {pct}%', ar: 'جارٍ تنزيل النموذج على الجهاز: {pct}٪' },
   modelUnavailable: {
-    en: "This browser can't read chats on the device, so chats stay closed here. You can answer 5 short questions instead, or load the demo case.",
-    ar: 'لا يستطيع هذا المتصفح قراءة المحادثات على الجهاز، لذلك تبقى المحادثات مغلقة هنا. يمكنك بدلًا من ذلك الإجابة عن ٥ أسئلة قصيرة، أو فتح الحالة التجريبية.',
+    en: "On-device AI isn't available here, so chats stay closed: nothing from a chat is sent anywhere. You can answer 5 short questions instead, or load the demo case.",
+    ar: 'الذكاء الاصطناعي على الجهاز غير متاح هنا، لذلك تبقى المحادثات مغلقة: لا يُرسل شيء من أي محادثة. يمكنك بدلًا من ذلك الإجابة عن ٥ أسئلة قصيرة، أو فتح الحالة التجريبية.',
   },
   badgeDevice: { en: 'On this device', ar: 'على هذا الجهاز' },
   badgeCloud: { en: 'Google cloud, approved by you', ar: 'سحابة جوجل، بموافقتك' },

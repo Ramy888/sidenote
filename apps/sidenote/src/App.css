@@ -7,7 +7,8 @@
 .section-title { font-size: var(--text-answer); line-height: 1.25; font-weight: 700; margin-block: var(--space-md) 0; }
 
 ion-toolbar { --padding-start: 20px; --padding-end: 20px; --min-height: 56px; }
-ion-title { padding-inline: 0; }
+/* iOS mode centres the title absolutely; keep it in the flow, at the start, so it never covers the buttons. */
+ion-title { position: static; padding-inline: 0; text-align: start; flex: 1; }
 .brand { all: unset; cursor: pointer; font-weight: 800; font-size: 1.35rem; }
 .brand:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 

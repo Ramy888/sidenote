@@ -13,7 +13,3 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
-
-// shortcut: day-1 spike runs on native launch; remove when the real pipeline lands (T1).
-import { Capacitor } from '@capacitor/core'
-if (Capacitor.isNativePlatform()) import('./spikes/t18').then(m => m.runT18())

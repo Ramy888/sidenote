@@ -2,7 +2,9 @@
 import { initializeApp } from 'firebase/app';
 import { getAI, getGenerativeModel, GoogleAIBackend, type InferenceMode } from 'firebase/ai';
 import type { ModelFactory } from './route';
-import { initializeAppCheck, ReCaptchaEnterpriseProvider } from 'firebase/app-check';
+import { initializeAppCheck, ReCaptchaEnterpriseProvider, CustomProvider } from 'firebase/app-check';
+import { Capacitor } from '@capacitor/core';
+import { FirebaseAppCheck } from '@capacitor-firebase/app-check';
 
 const env = import.meta.env;
 export const app = initializeApp({
@@ -11,8 +13,13 @@ export const app = initializeApp({
 });
 // Dev only: the debug token (registered in App Check, kept in .env.local) stands in for reCAPTCHA.
 // The token lives in .env.development.local, so production builds never contain it (checked by grep).
-if (import.meta.env.DEV) (self as any).FIREBASE_APPCHECK_DEBUG_TOKEN = import.meta.env.VITE_APPCHECK_DEBUG_TOKEN;
-initializeAppCheck(app, { provider: new ReCaptchaEnterpriseProvider(env.VITE_RECAPTCHA_SITE_KEY), isTokenAutoRefreshEnabled: true });
+const native = Capacitor.isNativePlatform();
+if (import.meta.env.DEV && !native) (self as any).FIREBASE_APPCHECK_DEBUG_TOKEN = import.meta.env.VITE_APPCHECK_DEBUG_TOKEN;
+// In the iOS/Android app reCAPTCHA can't run, so tokens come from the native App Check SDK (App Attest on a
+// device; the debug provider on the simulator, set in AppDelegate before FirebaseApp.configure()).
+initializeAppCheck(app, { isTokenAutoRefreshEnabled: true, provider: native
+  ? new CustomProvider({ getToken: async () => { const r = await FirebaseAppCheck.getToken(); return { token: r.token, expireTimeMillis: r.expireTimeMillis ?? Date.now() + 30 * 60_000 }; } })
+  : new ReCaptchaEnterpriseProvider(env.VITE_RECAPTCHA_SITE_KEY) });
 export const ai = getAI(app, { backend: new GoogleAIBackend() });
 // firebase 12.19 defaults to gemini-2.5-flash-lite, which the API refuses for new projects (404, Nov 16).
 export const CLOUD_MODEL = 'gemini-3.5-flash-lite';

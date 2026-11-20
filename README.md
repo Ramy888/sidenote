@@ -6,6 +6,8 @@ When a medicine might be causing a problem, a regulator's report (FDA MedWatch 3
 
 Built for #BuildHybridAI 2026. Not medical advice, not a diagnosis.
 
+**Try it:** https://sidenote-hybrid.web.app (Chrome; with Gemini Nano the chat is read on your device, without it use the demo case or the 5 questions).
+
 ## Hybrid inference: one routing table, every call through Firebase AI Logic
 
 All model calls go through [`apps/sidenote/src/ai/route.ts`](apps/sidenote/src/ai/route.ts) (the routing table) and [`apps/sidenote/src/ai/firebase.ts`](apps/sidenote/src/ai/firebase.ts) (`getAI`, `getGenerativeModel` with `InferenceMode`). Each feature uses the mode its data allows:
@@ -14,7 +16,7 @@ All model calls go through [`apps/sidenote/src/ai/route.ts`](apps/sidenote/src/a
 |---|---|---|---|
 | Chat reader | the chat, including other people's messages | `ONLY_ON_DEVICE` behind a guard | other people's words must never reach the cloud; no model here = fail closed, nothing sent |
 | Symptom coder | one approved phrase (≤ 8 words) of the patient's own words | `PREFER_ON_DEVICE` | Nano first; automatic cloud fallback on devices without a model |
-| Suspect ranker | confirmed, coded facts as JSON (no free text) | `PREFER_IN_CLOUD` | cloud first; runs only with 2+ medicines to compare |
+| Suspect ranker | confirmed, coded facts as JSON (no free text) | `PREFER_IN_CLOUD` | cloud first; offline, the SDK falls back to Nano on its own (tested); runs only with 2+ medicines to compare |
 
 - **The guard** ([`packages/private-evidence/src/on-device-guard.ts`](packages/private-evidence/src/on-device-guard.ts)): the JS SDK sends an `ONLY_ON_DEVICE` request to the cloud when the browser has no `LanguageModel` global, so every private-text call checks availability first and rejects any answer whose `inferenceSource` isn't `on_device`.
 - **The payload builder** ([`apps/sidenote/src/ai/payload.ts`](apps/sidenote/src/ai/payload.ts)) is the only code that produces text for a cloud-capable route; only its sealed output can be approved, and the approved bytes are exactly what is sent. The app shows them first ("What leaves this device").

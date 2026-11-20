@@ -260,21 +260,15 @@ pre.data { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.9rem; ba
    the choices first (the same preview is in "How it works"). */
 .hero-visual { display: none; }
 @media (min-width: 900px) {
-  /* same three columns as the choices below: the headline spans the first two, the picture sits over the third */
-  .hero { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; column-gap: var(--space-md); }
-  .hero-visual { display: none; flex-direction: column; gap: 10px; }
-  .hero h1 { grid-column: 1 / -1; }
-  .hero-bubble { padding: 12px 16px; border-radius: 16px 16px 16px 4px; box-shadow: var(--shadow-sm); max-inline-size: 100%; gap: 2px; inline-size: fit-content; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 440px); align-items: center; gap: var(--space-xl); }
+  .start .hero h1 { max-width: 15ch; } :lang(ar) .start .hero h1 { max-width: 20ch; } /* ch of the headline's own size */
+  .hero-visual { display: flex; flex-direction: column; gap: 10px; }
+  .hero-bubble { padding: 12px 16px; border-radius: 16px 16px 16px 4px; box-shadow: var(--shadow-sm); max-inline-size: 400px; gap: 2px; inline-size: fit-content; }
   :lang(ar) .hero-bubble { border-radius: 16px 16px 4px 16px; }
   .hero-bubble p { margin: 0; line-height: 1.5; }
-  .hero-bubble.b2 { margin-inline-start: 24px; }
+  .hero-bubble.b2 { margin-inline-start: 36px; }
   .hero-who { font-size: var(--text-label); font-weight: 700; color: var(--text-muted); }
   .hero-visual .preview-title { justify-content: space-between; }
   .hero-visual .preview-title .badge { margin-inline-start: auto; }
   .hero-visual .preview { padding: var(--space-md) var(--space-lg); }
-}
-/* From 1100px the third column is wide enough for the picture; the headline grows to fill the first two. */
-@media (min-width: 1100px) {
-  .hero h1 { grid-column: span 2; padding-inline-end: var(--space-lg); font-size: clamp(3.4rem, 1.6rem + 2.6vw, 4.4rem); text-wrap: pretty; }
-  .hero-visual { display: flex; }
 }

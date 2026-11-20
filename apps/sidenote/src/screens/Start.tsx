@@ -5,6 +5,7 @@ import { useI18n } from '../i18n.ts';
 import { exportText, classify, type ImportResult, type Region } from '../app/importChat.ts';
 import { Icon, LanguageSwitch, type IconKind } from './common.tsx';
 import { ModelStatus } from './ModelStatus.tsx';
+import { HeroVisual } from './InfoSheet.tsx';
 import type { useModelState } from '../app/model.ts';
 
 interface Props {
@@ -46,7 +47,7 @@ export function Start({ region, setRegion, forSomeone, setForSomeone, model, onI
 
   return (
     <section className="start">
-      <div className="hero"><h1>{t('startTitle')}</h1></div>
+      <div className="hero"><h1>{t('startTitle')}</h1><HeroVisual /></div>
 
       <ModelStatus model={model} />
 

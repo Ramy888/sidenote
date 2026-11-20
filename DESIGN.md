@@ -3,15 +3,15 @@
 name: SideNote
 description: Evidence you can read at arm's length. Large, plain official-form type, ink-black actions, and the patient's own words lit like a highlighter on paper.
 colors:
-  paper: "#F6F7F4"
+  paper: "#F5F6F8"
   surface: "#FFFFFF"
-  surface-quiet: "#EEF0EB"
-  line: "#D5D9D2"
-  text: "#15181C"
-  text-muted: "#4A525C"
-  primary: "#15181C"
+  surface-quiet: "#F0F2F5"
+  line: "#E3E7EC"
+  text: "#101828"
+  text-muted: "#475467"
+  primary: "#111827"
   on-primary: "#FFFFFF"
-  primary-hover: "#2B3138"
+  primary-hover: "#1F2937"
   highlight: "#FFE45C"
   on-highlight: "#15181C"
   kept: "#E6E8EC"
@@ -29,13 +29,13 @@ colors:
   error: "#B3261E"
   on-error: "#FFFFFF"
   focus: "#1E5BC6"
-  dark-paper: "#121417"
-  dark-surface: "#1B1F24"
-  dark-surface-quiet: "#22272D"
-  dark-line: "#343B44"
-  dark-text: "#EDEFF2"
-  dark-text-muted: "#AEB6C0"
-  dark-primary: "#EDEFF2"
+  dark-paper: "#0E1116"
+  dark-surface: "#161A21"
+  dark-surface-quiet: "#1D222B"
+  dark-line: "#2B323D"
+  dark-text: "#EEF1F5"
+  dark-text-muted: "#A8B1BD"
+  dark-primary: "#EEF1F5"
   dark-on-primary: "#121417"
   dark-primary-hover: "#C9CED5"
   dark-highlight: "#4A4210"
@@ -235,7 +235,7 @@ components:
 
 ## Elevation & Depth
 
-Flat. Depth comes from surface steps (paper → surface → surface-quiet) and 1px `line` borders. Sheets (iOS) and Material bottom sheets use the platform's own shadow. No glows, no frosted glass, no card inside a card.
+Product-grade, quiet depth: white cards on a cool neutral ground with two soft shadows (`shadow-sm` for cards and inputs, `shadow-md` for the hero preview, entry cards on hover and the ledger drawer) plus 1px `line` borders. No glows, no frosted glass, no card inside a card.
 
 ## Shapes
 
@@ -285,3 +285,4 @@ Radii: 6px for chips and badges, 10px for buttons, inputs and answer rows, 16px 
 | 2026-11-16 | English and Arabic both first-class, with a language switch on Start, in the header and in Settings; language independent of region | Owner decision: English and Arabic, with the option to change language |
 | 2026-11-16 | Self-hosted fonts | Offline PWA and the zero-third-party-request leakage test |
 | 2026-11-18 | Dark primary-hover `#C9CED5` | The dark primary button needed a hover step; one notch darker than dark-primary, approved |
+| 2026-11-20 | Commercial redesign: cool neutral ground (`paper` #F5F6F8), near-black ink, soft card shadows, 20px hero radius, logo mark, step navigation (sidebar on desktop, progress bar on phones), product hero with a result preview and three entry cards, line-icon set | Owner asked for a professional commercial design ("surprise me"); route colours, highlighter and fonts unchanged |

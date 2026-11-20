@@ -15,4 +15,10 @@ describe('interface strings', () => {
     expect(makeT('en').t('messagesCount', { count: 412 })).toBe('412 messages');
     expect(makeT('ar').t('messagesCount', { count: 412 })).toBe('٤١٢ رسالة');
   });
+  it('day counts use each language\'s plural forms', () => {
+    const en = makeT('en'), ar = makeT('ar');
+    expect([1, 5].map(n => en.daySpan({ lo: n, hi: n }))).toEqual(['1 day', '5 days']);
+    expect(en.daySpan({ lo: 6, hi: 47 })).toBe('6–47 days');
+    expect([1, 2, 3, 11].map(n => ar.daySpan({ lo: n, hi: n }))).toEqual(['يوم واحد', 'يومان', '٣ أيام', '١١ يومًا']);
+  });
 });

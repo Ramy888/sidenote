@@ -7,7 +7,7 @@ try {
   const page = await (await browser.newContext({ viewport: { width: 402, height: 860 }, locale: 'en-GB' })).newPage();
   const cloud: string[] = []; page.on('request', r => { if (r.url().includes('firebasevertexai')) cloud.push(r.url()); });
   await page.goto('http://localhost:5173/');
-  await page.getByRole('button', { name: 'Answer 5 short questions' }).click();
+  await page.getByRole('button', { name: /Answer 5 questions/ }).click();
   await page.getByLabel('Medicine name').fill('amlodipine');
   await page.getByRole('button', { name: 'Read the chat on this device' }).click();
   await page.getByRole('textbox').fill('my ankles are swollen by the evening');
@@ -34,7 +34,7 @@ try {
   await page.screenshot({ path: `${out}/q-report.png`, fullPage: true });
   console.log('report:', (await page.locator('.draft').innerText()).replace(/\s+/g, ' ').slice(0, 300));
   await page.getByRole('button', { name: 'SideNote' }).click();
-  await page.getByRole('button', { name: /Load the demo case/ }).first().click();
+  await page.getByRole('button', { name: /Try the demo case/ }).first().click();
   await page.getByRole('heading', { name: 'Your timeline' }).waitFor();
   console.log('demo facts:', await page.locator('.facts .fact').count(), '| cloud requests in total:', cloud.length);
 } finally { await browser.close(); }

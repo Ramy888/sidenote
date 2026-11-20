@@ -18,7 +18,11 @@ export function makeT(lang: Lang) {
     STRINGS[key][lang].replace(/\{(\w+)\}/g, (_, k) => (typeof vars[k] === 'number' ? num(vars[k] as number) : String(vars[k] ?? '')));
   /** A date, or "between A and B" for a range; day counts as "6–47" when they span a range. */
   const span = (x: { min: string; max: string }) => (x.min === x.max ? date(x.min) : t('between', { a: date(x.min), b: date(x.max) }));
-  const daySpan = (d: { lo: number; hi: number }) => (d.lo === d.hi ? num(d.lo) : `${num(d.lo)}–${num(d.hi)}`);
+  // Day counts with their unit, using each language's plural rules (Arabic: one, two, few, many, other).
+  const plural = new Intl.PluralRules(locale(lang));
+  const AR_DAYS: Record<string, (n: string) => string> = { zero: n => `${n} يوم`, one: () => 'يوم واحد', two: () => 'يومان', few: n => `${n} أيام`, many: n => `${n} يومًا`, other: n => `${n} يوم` };
+  const days = (n: number, text: string) => (lang === 'ar' ? AR_DAYS[plural.select(n)](text) : `${text} ${plural.select(n) === 'one' ? 'day' : 'days'}`);
+  const daySpan = (d: { lo: number; hi: number }) => (d.lo === d.hi ? days(d.lo, num(d.lo)) : days(d.hi, `${num(d.lo)}–${num(d.hi)}`));
   return { lang, t, num, date, span, daySpan };
 }
 

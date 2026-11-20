@@ -25,7 +25,7 @@ function Approval({ items, payloads, notSent, onSend, onKeep }: { items: ReactNo
   return (
     <>
       <ul className="out-items">{items.map((it, i) => <li key={i} className="card">{it}</li>)}</ul>
-      <p className="status status-device not-sent"><Icon kind="device" /> {t('outNotSent', { count: notSent })}</p>
+      <p className="status status-device not-sent"><Icon kind="device" /><span>{t('outNotSent', { count: notSent })}</span></p>
       <p className="mono">{t('outBytes', { bytes })}</p>
       <details className="card"><summary>{t('outShowData')}</summary>{payloads.map((p, i) => <pre key={i} className="mono data">{p.text}</pre>)}</details>
       <div className="actions">

@@ -1,12 +1,21 @@
 // The timeline chart (decorative: aria-hidden; the answers say the same in words). Time runs left to right in
 // both languages (DESIGN.md Languages). Medicine bars in ink; symptom marks: filled = started or back, hollow = gone.
+import { useEffect, useRef, useState } from 'react';
 import { useI18n } from '../i18n.ts';
 import type { Reviewed } from '../app/review.ts';
 
-const W = 600, PAD = 24, DAY = 86_400_000;
+const PAD = 24, DAY = 86_400_000;
 
 export function TimelineChart({ facts }: { facts: Reviewed[] }) {
   const { t, date } = useI18n();
+  // Draw at the card's real width, so labels stay readable on phones (no scaled-down desktop drawing).
+  const box = useRef<HTMLElement>(null);
+  const [W, setW] = useState(600);
+  useEffect(() => {
+    const el = box.current; if (!el) return;
+    const ro = new ResizeObserver(([e]) => setW(Math.max(280, Math.round(e.contentRect.width))));
+    ro.observe(el); return () => ro.disconnect();
+  }, []);
   if (!facts.length) return null;
   const ds = facts.map(f => Date.parse(f.date));
   const lo = Math.min(...ds) - 3 * DAY, hi = Math.max(...ds) + 3 * DAY;
@@ -29,7 +38,7 @@ export function TimelineChart({ facts }: { facts: Reviewed[] }) {
   };
 
   return (
-    <figure className="chart card">
+    <figure className="chart card" ref={box}>
       <svg viewBox={`0 0 ${W} ${H}`} aria-hidden="true" preserveAspectRatio="xMinYMin meet">
         {rows.map((r, i) => {
           const y = 34 + i * 44;

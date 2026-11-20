@@ -40,7 +40,7 @@ export function Reading({ chat, medicines, own, onBack, onQuestions, onDone }: {
   return (
     <section className="screen">
       <h1>{t('readingTitle')}</h1>
-      <p className="status status-device" role="status" aria-live="polite"><Badge kind="device" /> {state === 'reading' ? t('readingProgress', { done: progress.done, total: progress.total }) : t('readingNotKept', { count: chat.messages.length })}</p>
+      <p className="status status-device" role="status" aria-live="polite"><Badge kind="device" /><span>{state === 'reading' ? t('readingProgress', { done: progress.done, total: progress.total }) : t('readingNotKept', { count: chat.messages.length })}</span></p>
       {progress.total > 0 && <progress className="bar" max={progress.total} value={progress.done} aria-label={t('readingProgress', { done: progress.done, total: progress.total })} />}
       <ol className="facts">{found.map((e, i) => <Fact key={`${e.messageId}-${e.kind}-${i}`} e={e} index={i % 6} />)}</ol>
       {state === 'reading' && <button type="button" className="btn btn-secondary" onClick={() => ctl.current?.abort()}>{t('readingCancel')}</button>}

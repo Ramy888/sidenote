@@ -29,7 +29,7 @@ for (const lang of ['en', 'ar']) for (const width of [360, 402, 744, 1512]) {
   await check('2-who');
   // The demo case runs the rest of the flow without on-device AI: timeline, approval, suggestion, report.
   await page.locator('.brand').click();
-  await page.locator('.start .actions button').filter({ hasText: /demo|التجريبية/ }).first().click();
+  await page.locator('.entry').filter({ hasText: /demo|التجريبية/ }).first().click();
   await page.waitForSelector('.answers');
   await check('3-timeline');
   for (let b = page.locator('.facts .fact-actions .btn-primary'); await b.count(); ) await b.first().click();

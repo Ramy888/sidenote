@@ -24,6 +24,6 @@ export function Quote({ e }: { e: DatedEvent }) {
   const { t } = useI18n();
   if (!e.quote) return <p className="quote"><span className="sub">{t('youToldUs')}</span></p>;
   return e.own
-    ? <p className="quote"><mark className="quote-own">{e.quote}</mark> <span className="sub">{e.sender} · {t('yourWords')}</span></p>
-    : <p className="quote"><span className="quote-kept"><Icon kind="device" /> {e.quote}</span> <span className="sub">{e.sender} · {t('keptOnDevice')}</span></p>;
+    ? <p className="quote"><mark className="quote-own" dir="auto">{e.quote}</mark> <span className="sub">{e.sender} · {t('yourWords')}</span></p>
+    : <p className="quote"><span className="quote-kept" dir="auto"><Icon kind="device" /> {e.quote}</span> <span className="sub">{e.sender} · {t('keptOnDevice')}</span></p>;
 }

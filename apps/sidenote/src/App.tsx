@@ -5,7 +5,8 @@ import type { ParsedChat } from '@sidenote/private-evidence';
 import { useI18n } from './i18n.ts';
 import { I18nProvider } from './I18nProvider.tsx';
 import type { Region } from './app/importChat.ts';
-import { LanguageSwitch } from './screens/common.tsx';
+import { LanguageSwitch, Logo, Icon } from './screens/common.tsx';
+import { StepSidebar, StepProgress } from './screens/Shell.tsx';
 import { useModelState } from './app/model.ts';
 import { Start } from './screens/Start.tsx';
 import { WhosWho, type Roles } from './screens/WhosWho.tsx';
@@ -65,6 +66,8 @@ function Flow() {
   useEffect(() => saveTextSize(textSize), [textSize]);
   useEffect(() => saveDemo(demo), [demo]);
   const checkin = step.at === 'start' ? dueCheckIn(today(), demo) : null;
+  const STEP_OF: Partial<Record<Step['at'], number>> = { who: 1, medicines: 1, questions: 1, arabic: 1, reading: 2, urgent: 2, timeline: 3, cloud: 4, report: 5, checkinReport: 5 };
+  const stepIndex = STEP_OF[step.at] ?? 0;
   const restart = () => { setDeleted(false); setStep({ at: 'start' }); };
   const questions = (prefill: string) => setStep({ at: 'medicines', chat: null, roles: ME, mode: 'questions', prefill });
   const caseOf = (x: Case): Case => ({ chat: x.chat, roles: x.roles, meds: x.meds });
@@ -80,15 +83,18 @@ function Flow() {
     <IonPage>
       <IonHeader className="ion-no-border">
         <IonToolbar>
-          <IonTitle><button type="button" className="brand" onClick={restart}>{t('appName')}</button></IonTitle>
+          <IonTitle><button type="button" className="brand" onClick={restart}><Logo /><span>{t('appName')}</span></button></IonTitle>
           <div slot="end" className="toolbar-end">
-            <button type="button" className="btn btn-secondary btn-small" onClick={() => setLedger(true)}>{t('ledgerOpen')}</button>
-            <button type="button" className="btn btn-secondary btn-small" onClick={() => setStep({ at: 'settings' })}>{t('settingsOpen')}</button>
+            <button type="button" className="btn-tool" aria-label={t('ledgerOpen')} onClick={() => setLedger(true)}><Icon kind="list" size={18} /><span>{t('ledgerOpen')}</span></button>
+            <button type="button" className="btn-tool" aria-label={t('settingsOpen')} onClick={() => setStep({ at: 'settings' })}><Icon kind="sliders" size={18} /><span>{t('settingsOpen')}</span></button>
             <LanguageSwitch className="header-only" />
           </div>
         </IonToolbar>
       </IonHeader>
       <IonContent>
+        {stepIndex > 0 && <StepProgress current={stepIndex} />}
+        <div className={stepIndex > 0 ? 'layout with-sidebar' : 'layout'}>
+        {stepIndex > 0 && <StepSidebar current={stepIndex} />}
         <main id="main">
           {step.at === 'start' && <Start region={region} setRegion={setRegion} forSomeone={forSomeone} setForSomeone={setForSomeone} model={model}
             onImport={r => {
@@ -131,6 +137,7 @@ function Flow() {
           {deleted && step.at === 'start' && <p className="alert alert-device" role="status">{t('rptDeleted')}</p>}
           <footer className="not-advice">{t('notAdvice')}</footer>
         </main>
+        </div>
       </IonContent>
       {ledger && <Ledger onClose={() => setLedger(false)} />}
     </IonPage>

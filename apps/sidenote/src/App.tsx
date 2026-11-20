@@ -1,5 +1,5 @@
 // SideNote app shell: one flow, kept in memory only (nothing about the chat is stored).
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IonApp, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import type { ParsedChat } from '@sidenote/private-evidence';
 import { useI18n } from './i18n.ts';
@@ -28,12 +28,17 @@ import { questionsToFacts } from './app/questions.ts';
 import { buildTimeline } from './pipeline/timeline.ts';
 import { parseWhatsApp } from '@sidenote/private-evidence';
 import demoCase from './demo/demo-case.json' with { type: 'json' };
+import { Settings } from './screens/Settings.tsx';
+import { CheckIn } from './screens/CheckIn.tsx';
+import { dueCheckIn } from './app/checkin.ts';
+import { initialTextSize, saveTextSize, initialDemo, saveDemo } from './app/prefs.ts';
+import type { Draft } from './app/report.ts';
 import demoChat from './demo/demo-chat.txt?raw';
 import './App.css';
 
 // Later steps carry the chat when there is one; the 5-question path has none.
 type Case = { chat: ParsedChat | null; roles: Roles; meds: Medicine[] };
-type Step = { at: 'start' } | { at: 'how' } | { at: 'who'; chat: ParsedChat } | { at: 'arabic'; chat: ParsedChat }
+type Step = { at: 'start' } | { at: 'how' } | { at: 'settings' } | { at: 'checkinReport'; draft: Draft } | { at: 'who'; chat: ParsedChat } | { at: 'arabic'; chat: ParsedChat }
   | { at: 'medicines'; chat: ParsedChat | null; roles: Roles; mode: 'read' | 'questions'; prefill: string }
   | { at: 'reading'; chat: ParsedChat; roles: Roles; meds: Medicine[]; names: string[]; own: string[] }
   | { at: 'questions'; roles: Roles; meds: Medicine[]; prefill: string }
@@ -55,6 +60,11 @@ function Flow() {
   const [step, setStep] = useState<Step>({ at: 'start' });
   const [ledger, setLedger] = useState(false);
   const [deleted, setDeleted] = useState(false);
+  const [textSize, setTextSize] = useState(initialTextSize);
+  const [demo, setDemo] = useState(initialDemo);
+  useEffect(() => saveTextSize(textSize), [textSize]);
+  useEffect(() => saveDemo(demo), [demo]);
+  const checkin = step.at === 'start' ? dueCheckIn(today(), demo) : null;
   const restart = () => { setDeleted(false); setStep({ at: 'start' }); };
   const questions = (prefill: string) => setStep({ at: 'medicines', chat: null, roles: ME, mode: 'questions', prefill });
   const caseOf = (x: Case): Case => ({ chat: x.chat, roles: x.roles, meds: x.meds });
@@ -73,6 +83,7 @@ function Flow() {
           <IonTitle><button type="button" className="brand" onClick={restart}>{t('appName')}</button></IonTitle>
           <div slot="end" className="toolbar-end">
             <button type="button" className="btn btn-secondary btn-small" onClick={() => setLedger(true)}>{t('ledgerOpen')}</button>
+            <button type="button" className="btn btn-secondary btn-small" onClick={() => setStep({ at: 'settings' })}>{t('settingsOpen')}</button>
             <LanguageSwitch className="header-only" />
           </div>
         </IonToolbar>
@@ -87,7 +98,10 @@ function Flow() {
               setStep(u.show ? { at: 'urgent', flags: u.matches, then: next } : next);
             }}
             onTyped={text => questions(text)} onQuestions={() => questions('')} onDemo={loadDemo} onHow={() => setStep({ at: 'how' })} />}
+          {checkin && <CheckIn draft={checkin.draft} onDone={draft => setStep({ at: 'checkinReport', draft })} />}
           {step.at === 'how' && <HowWeKnow onBack={restart} />}
+          {step.at === 'settings' && <Settings region={region} setRegion={setRegion} textSize={textSize} setTextSize={setTextSize} demo={demo} setDemo={setDemo} onBack={restart} />}
+          {step.at === 'checkinReport' && <Report draft={step.draft} onDelete={() => { setStep({ at: 'start' }); setDeleted(true); }} />}
           {step.at === 'who' && <WhosWho chat={step.chat} forSomeone={forSomeone} onBack={restart} onDone={roles => setStep({ at: 'medicines', chat: step.chat, roles, mode: 'read', prefill: '' })} />}
           {step.at === 'arabic' && <section className="screen"><p className="alert alert-warning">{t('arabicChat')}</p>
             <div className="actions"><button type="button" className="btn btn-secondary" onClick={restart}>{t('back')}</button>

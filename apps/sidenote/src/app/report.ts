@@ -20,6 +20,8 @@ export interface Draft {
   narrative: string[];
   /** Fields the person fills on the official form (they are not in a chat). */
   missing: string[];
+  /** Set by the 2-week check-in. */
+  outcome?: string;
 }
 
 export function buildDraft({ review, meds, coding, ranking, region }: { review: Reviewed[]; meds: Medicine[]; coding: { entity: string; term: string | null }[]; ranking: Ranked[] | null; region: Region }): Draft {
@@ -69,7 +71,8 @@ export function draftText(d: Draft): string {
   return [
     `${d.form.name}: draft of a suspected side-effect report`, '',
     `Reaction (suspected): ${[...d.reaction.terms, ...d.reaction.uncoded].join('; ') || 'not coded'}`,
-    `Date it started: ${d.reaction.onset ? spanText(d.reaction.onset) : 'not known'}`, '',
+    `Date it started: ${d.reaction.onset ? spanText(d.reaction.onset) : 'not known'}`,
+    ...(d.outcome ? [`Outcome: ${d.outcome}`] : []), '',
     ...d.products.flatMap(p => [`Medicine: ${p.name}${p.strength ? ` ${p.strength}` : ''}${p.suspected ? ' (suspected)' : ''}`,
       `  Started: ${p.started ? spanText(p.started) : p.startNote}  Stopped: ${p.stopped ? spanText(p.stopped) : 'not stopped / not known'}`,
       `  Did the problem stop after stopping? ${p.dechallenge}`, `  Did it return after starting again? ${p.rechallenge}`]),

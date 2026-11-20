@@ -19,7 +19,7 @@ export function answers(facts: TimelineFact[], medicine: string, symptom: string
   const gone = stop && of('symptom_gone', symptom, stop.min);
   const restart = stop && of('medicine_restarted', medicine, stop.min), back = restart && of('symptom_returned', symptom, restart.min);
   return {
-    onset: onsetF ? { when: span(onsetF), daysAfterStart: start ? gap(start, onsetF) : null } : null,
+    onset: onsetF ? { when: span(onsetF), started: start ? span(start) : null, daysAfterStart: start ? gap(start, onsetF) : null } : null,
     dechallenge: !stop ? { answer: 'notStopped' as const }
       : gone ? { answer: 'yes' as const, stopped: span(stop), gone: span(gone), days: gap(stop, gone) }
       : { answer: 'unknown' as const, stopped: span(stop) },

@@ -31,7 +31,7 @@ export function Timeline({ initial, onBack, onDone }: { initial: Reviewed[]; onB
   const find = (kind: Reviewed['kind'], entity: string, w?: { min: string; max: string }) => active.find(f => f.kind === kind && f.entity === entity && f.min === w?.min && f.max === w?.max);
 
   const rows: { q: StringKey; text: string; facts: (Reviewed | undefined)[] }[] = [
-    { q: 'qOnset', facts: [a.onset ? find('symptom_started', sym, a.onset.when) : undefined],
+    { q: 'qOnset', facts: [a.onset ? find('symptom_started', sym, a.onset.when) : undefined, a.onset?.started ? find('medicine_started', med, a.onset.started) : undefined], // "11 days after starting" rests on the start fact too
       text: !a.onset ? t('aOnsetNone') : a.onset.daysAfterStart === null ? t('aOnsetNoStart', { date: span(a.onset.when) })
         : t('aOnset', { date: span(a.onset.when), days: daySpan(a.onset.daysAfterStart), medicine: med }) },
     { q: 'qDechallenge', facts: a.dechallenge.answer === 'notStopped' ? [] : [find('medicine_stopped', med, a.dechallenge.stopped), a.dechallenge.answer === 'yes' ? find('symptom_gone', sym, a.dechallenge.gone) : undefined],

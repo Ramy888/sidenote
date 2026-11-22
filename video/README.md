@@ -44,7 +44,7 @@ Cut first if long: S08's iPhone half, then S07's PiP, then L13. Never cut the co
 
 ## Open items
 
-- The 94% figure is cited from the draft; confirm against the paper (Hazell & Shakir 2006) before the final cut.
+- The 94% figure: confirmed Nov 22 against the abstract (Hazell & Shakir, Drug Saf 2006;29(5):385-96, PMID 16689555).
 - The draft's "Reader F1 0.80 on CADEC" has no results file in `evals/`; it is not used in the video.
 
 ## How to rebuild it

@@ -3,7 +3,7 @@
     "value": "94%",
     "label": "median under-reporting of suspected side effects",
     "source": "Hazell & Shakir, Drug Safety 2006 (37 studies)",
-    "verified": "cited in submission/devpost-draft.md; check the paper before the final cut"
+    "verified": "2026-11-22 against the PubMed abstract (PMID 16689555): median 94% across 37 studies, IQR 82-98%"
   },
   "heldOutChats": {
     "value": 10,

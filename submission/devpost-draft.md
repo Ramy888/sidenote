@@ -2,6 +2,8 @@
 
 All names and messages below are synthetic. Every number comes from a test in the repo (evals/, apps/sidenote/test, the leakage script). Try it: https://sidenote-hybrid.web.app
 
+Demo video (YouTube, unlisted, 2:03): https://youtu.be/x77m0SzuuJQ
+
 ## Tagline (≤200 chars)
 Stop trying to remember when the side effect started. SideNote reads the family chat you already have, on your device, and turns it into a dated report for the FDA. Your family's words never leave.
 
@@ -17,25 +19,27 @@ Patients stop filling in a form from memory and start showing their own receipts
 - **Hybrid, cloud first (`PREFER_IN_CLOUD`):** the suspect ranker compares two or more medicines from confirmed, coded facts (JSON, no free text); offline, the SDK moves it to Nano automatically (verified with the network cut). Code keeps only the reasons the data supports.
 - Nothing that can reach the cloud is sent until you approve the exact bytes on "What leaves this device".
 - **Every call is visible:** the ledger shows each step, where it ran (`inferenceSource`) and the exact bytes that left.
-- App Check enforced on the AI endpoint: reCAPTCHA Enterprise on the web, the native SDK (App Attest / debug on the simulator) in the iOS app. Firebase Hosting for the judge URL.
+- **Three platforms, one codebase (React + Capacitor):** the web app (Chrome, the only one with Gemini Nano today), an Android app and an iOS app. On the phones the on-device reader stays closed (no Nano in the WebView), so they show the fail-closed path, the 5 questions, and the hybrid coder and ranker running in the cloud through Firebase AI Logic (the full flow verified on an Android emulator, with the AI call returning 200 through native App Check; the iOS app verified to the fail-closed start on the simulator).
+- App Check enforced on the AI endpoint: reCAPTCHA Enterprise on the web; native App Check in the apps through `@capacitor-firebase/app-check` (debug providers on the emulator and simulator; store builds would switch to Play Integrity and App Attest, not set up yet). Firebase Hosting for the judge URL.
 
-## Named agents and their handoffs (shown in the ledger)
+## Named agents and their handoffs
 Importer → Prefilter → Reader (on device) → Evidence Challenger → Timeline → Safety (red flags) → Lookup coder → Model coder (Nano first, approved) → Payload builder → Suspect ranker (cloud first, approved) → Report → You.
-Each hands its output to the next; the Challenger rejects any fact whose quote it can't find in the chat; you approve before anything leaves.
+Each hands its output to the next; the Challenger rejects any fact whose quote it can't find in the chat; you approve before anything leaves. The three model agents (Reader, Coder, Suspect ranker) appear in the ledger with where each call ran; the code agents do their work on screen (facts appear with their quote while the Reader runs; the timeline shows what the Challenger kept). See the architecture diagram (gallery 7).
 
 ## How we know (measured)
 - Chat test on 10 held-out planted chats (written by another model family): 43 of 49 dates right, 4.4% unsupported, +3.3 needed dates per chat over 5 questions alone [2.2, 4.5]; median 33 s per chat; 0 requests to the AI endpoint while reading.
 - Leakage test: 0 of 135 cloud payloads and report exports from 30 chats share a phrase with anyone else's messages; leaks we planted on purpose were caught (it also caught a real one in the report draft, fixed).
-- Reader through Firebase on 120 research posts (CADEC): F1 0.80, false blame 9/94 vs 35% for the best code baseline.
-- Coder on 179 unseen everyday phrases (CADEC, kept local): word lookup 27%, Nano 58%, cloud 72%; both models pass the +0.15 bar.
+- Coder on 111 unseen everyday phrases that map to a reaction term (from a 179-phrase CADEC test set, kept local; evals/coder/RESULT.md): word lookup 27%, Nano 58%, cloud 72%; both models pass the +0.15 bar.
 
 ## Gallery (captions; one frame each, readable without narration)
+0. **The start page (wide screen):** two of Dad's chat messages, the key words highlighted, beside the timeline they become ("On this device", "Began 11 days after starting"). Caption: "Your family chat already holds the dates. SideNote finds them on your device." (Use as the cover image.)
 1. **The timeline:** atorvastatin bar with a gap (paused) and the aches disappearing in the gap, then returning. Caption: "The aches stopped when the pill was paused and came back when it restarted. Found in the family chat, read on this laptop."
 2. **What leaves this device:** "Coded facts, to suggest which medicine is more likely: 3 facts about 2 medicines. Includes facts from Ellie's messages, coded (their words are not sent). Not sent: 400 chat messages." Caption: "You see every byte before it leaves."
 3. **iPhone app without an on-device model:** "On-device AI isn't available here, so chats stay closed." Caption: "No private model here, so nothing is uploaded."
 4. **Network off:** the ranker's badge reads "On this device". Caption: "Offline, the cloud agent moves to the device."
 5. **The report draft:** MedWatch 3500B filled from confirmed facts, missing fields listed, Copy / Print / Open the official form. Caption: "Dates and answers filled; you add what only you know."
-6. **Architecture diagram** (render from the ASCII in the design doc, Section 1).
+6. **Android app:** the same flow on a Pixel, suggestion labelled "Google cloud, approved by you". Caption: "Web, Android and iOS from one codebase."
+7. **Architecture diagram:** `submission/architecture.png` (source `submission/architecture.html`). Caption: "One routing table: the reader never leaves the device; only coded facts you approve reach the cloud."
 
 ## Demo shot additions from the SPARK pass
 - At 1:40 (hybrid proof), hold 3 seconds on the ledger with the agent names visible as the handoff runs (A).

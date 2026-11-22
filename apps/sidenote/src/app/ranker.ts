@@ -60,7 +60,8 @@ export function checkRanking(text: string, input: RankerInput): Ranked[] | null 
   };
   const ids = new Set(input.facts.map(f => f.id));
   const out: Ranked[] = data.ranked
-    .filter((r: any) => input.medicines.some(m => m.name === r?.medicine))
+    // known medicines only, each once (the on-device model isn't held to the cloud's schema and can repeat one)
+    .filter((r: any, i: number, all: any[]) => input.medicines.some(m => m.name === r?.medicine) && all.findIndex((x: any) => x?.medicine === r.medicine) === i)
     .map((r: any) => ({ medicine: r.medicine,
       reasons: (Array.isArray(r.reasons) ? r.reasons : []).filter((x: any) => REASONS.includes(x) && supports(r.medicine, x)),
       facts: (Array.isArray(r.facts) ? r.facts : []).filter((x: any) => ids.has(x)) }));

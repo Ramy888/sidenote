@@ -1,0 +1,69 @@
+{
+  "underReported": {
+    "value": "94%",
+    "label": "median under-reporting of suspected side effects",
+    "source": "Hazell & Shakir, Drug Safety 2006 (37 studies)",
+    "verified": "cited in submission/devpost-draft.md; check the paper before the final cut"
+  },
+  "heldOutChats": {
+    "value": 10,
+    "label": "held-out family chats, never tuned on",
+    "source": "evals/chattest/RESULT.md, held-out table (run 2026-11-17T21-35-28)",
+    "verified": "2026-11-22"
+  },
+  "datesRight": {
+    "value": "43 / 49",
+    "label": "timeline facts right on held-out chats",
+    "source": "evals/chattest/RESULT.md line 41",
+    "verified": "2026-11-22"
+  },
+  "gapVsQuestions": {
+    "value": "+3.3",
+    "ci": "[2.2, 4.5]",
+    "label": "needed dates per case over 5 questions alone",
+    "source": "evals/chattest/RESULT.md line 42",
+    "verified": "2026-11-22"
+  },
+  "cloudRequestsWhileReading": {
+    "value": 0,
+    "label": "requests to the AI endpoint while reading",
+    "source": "evals/chattest/RESULT.md line 37; flow-check.mts live run 2026-11-20 (cloud requests: 0)",
+    "verified": "2026-11-22"
+  },
+  "payloads": {
+    "value": 135,
+    "label": "cloud payloads and report exports checked",
+    "source": "npm run leakage -w @sidenote/app (run-2026-11-17T22-00-24), 30 chats",
+    "verified": "2026-11-22"
+  },
+  "leaks": {
+    "value": 0,
+    "label": "payloads sharing a phrase with anyone else's messages",
+    "source": "npm run leakage -w @sidenote/app: 'no leaks'",
+    "verified": "2026-11-22"
+  },
+  "bytesSent": {
+    "value": "1,349 bytes",
+    "label": "everything the demo sends to the cloud",
+    "source": "approval screen, demo case, hosted site (judge test 2026-11-20)",
+    "verified": "2026-11-22 (S05 recording; was 1,352 on Nov 20)"
+  },
+  "messagesNotSent": {
+    "value": 400,
+    "label": "chat messages not sent",
+    "source": "approval screen, demo case",
+    "verified": "2026-11-20"
+  },
+  "tests": {
+    "value": 221,
+    "label": "unit tests",
+    "source": "node_modules/.bin/vitest run (25 files)",
+    "verified": "2026-11-22"
+  },
+  "coder": {
+    "value": "27% / 58% / 72%",
+    "label": "coding accuracy: lookup / Nano / cloud fallback, 179 unseen everyday phrases",
+    "source": "evals/coder/RESULT.md lines 7-9",
+    "verified": "2026-11-22"
+  }
+}

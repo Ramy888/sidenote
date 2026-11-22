@@ -1,0 +1,127 @@
+{
+ "language": "en",
+ "segments": [
+  {
+   "id": "L01",
+   "start": 0.4,
+   "end": 7.24,
+   "shot": "S01",
+   "card": "94% of suspected side effects are never reported",
+   "text": "Most suspected side effects are never reported. The form asks for dates nobody remembers."
+  },
+  {
+   "id": "L02",
+   "start": 7.94,
+   "end": 13.53,
+   "shot": "S02",
+   "text": "But those dates are already in the family chat. SideNote reads it on your own device."
+  },
+  {
+   "id": "L03",
+   "start": 14.23,
+   "end": 21.47,
+   "shot": "S03",
+   "card": "Gemini Nano · on this device",
+   "text": "Gemini Nano, through Firebase AI Logic, finds each event and the exact message it came from."
+  },
+  {
+   "id": "L04",
+   "start": 22.17,
+   "end": 29.75,
+   "shot": "S04",
+   "text": "Three answers the report needs: when it started, if it stopped when the pill was paused, and if it came back."
+  },
+  {
+   "id": "L05",
+   "start": 29.95,
+   "end": 34.55,
+   "shot": "S04",
+   "text": "You confirm each one. Only what you confirm goes into the report."
+  },
+  {
+   "id": "L06",
+   "start": 36.45,
+   "end": 45.13,
+   "shot": "C01",
+   "card": "43 / 49 dates right · 10 held-out chats · 0 cloud requests while reading",
+   "text": "On ten chats we had never tuned on, it got forty-three of forty-nine dates right, and sent nothing to the cloud while reading."
+  },
+  {
+   "id": "L07",
+   "start": 45.33,
+   "end": 50.51,
+   "shot": "C01",
+   "card": "+3.3 needed dates per case vs 5 questions",
+   "text": "That's three more of the needed dates per case than asking five questions alone."
+  },
+  {
+   "id": "L08",
+   "start": 52.01,
+   "end": 59.03,
+   "shot": "D01",
+   "text": "Hybrid inference here is a privacy decision. One routing table decides where each agent runs."
+  },
+  {
+   "id": "L09",
+   "start": 59.23,
+   "end": 65.75,
+   "shot": "D01",
+   "card": "ONLY_ON_DEVICE + guard",
+   "text": "The reader is on-device only. With no model, the chat stays closed and nothing is sent."
+  },
+  {
+   "id": "L10",
+   "start": 67.05,
+   "end": 75.09,
+   "shot": "S05",
+   "card": "PREFER_IN_CLOUD",
+   "text": "Comparing two medicines needs stronger reasoning, so the suspect ranker prefers the cloud. You see the exact bytes first."
+  },
+  {
+   "id": "L11",
+   "start": 75.29,
+   "end": 82.3,
+   "shot": "S05",
+   "card": "0 leaks · 135 payloads",
+   "text": "Coded facts only. Your family's words are never in it: zero leaks across a hundred thirty-five payloads."
+  },
+  {
+   "id": "L12",
+   "start": 83.0,
+   "end": 89.91,
+   "shot": "S06",
+   "card": "Offline → On this device",
+   "text": "Cut the network, and the same agent moves to Nano on its own. The ledger shows where every call ran."
+  },
+  {
+   "id": "L13",
+   "start": 90.61,
+   "end": 96.82,
+   "shot": "S07",
+   "card": "PREFER_ON_DEVICE",
+   "text": "The coder works the other way: Nano first, and the cloud only on devices without a model."
+  },
+  {
+   "id": "L14",
+   "start": 97.52,
+   "end": 103.2,
+   "shot": "S08",
+   "card": "Web · Android · iPhone",
+   "text": "The same code ships to the web, Android and iPhone, with App Check on every call."
+  },
+  {
+   "id": "L15",
+   "start": 103.9,
+   "end": 110.65,
+   "shot": "S09",
+   "text": "Then SideNote drafts the FDA, Yellow Card or Egyptian report, in English or Arabic."
+  },
+  {
+   "id": "L16",
+   "start": 111.95,
+   "end": 115.67,
+   "shot": "E01",
+   "text": "The chat stays home. The dates reach the regulator."
+  }
+ ]
+}

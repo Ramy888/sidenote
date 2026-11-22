@@ -1,7 +1,7 @@
 # secrets
 .env
 .env.*
-# agent files and personal notes (global rule: never pushed)
+# local tooling and notes
 CLAUDE.md
 AGENTS.md
 .claude/
@@ -9,7 +9,7 @@ AGENTS.md
 .gstack/
 .vscode/
 skills-lock.json
-# ideation holds CADEC-derived files and personal notes; never public
+# local research notes (licensed data stays local)
 ideation/
 brief-medical.md
 brief.md
@@ -37,3 +37,11 @@ apps/sidenote/ios/App/CapApp-SPM/symlinks/
 
 # Firebase Android config
 google-services.json
+
+# demo video media (plan, script and numbers stay tracked)
+video/footage/
+video/voice/
+video/out/
+video/node_modules/
+video/public/
+video/stills/

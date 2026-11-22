@@ -44,6 +44,13 @@ describe('suspect ranker: input and the check on its answer', () => {
       { medicine: 'amlodipine', reasons: ['TIMING_FITS', 'DECHALLENGE_POSITIVE', 'ON_LABEL'], facts: [input.facts[0].id] },
       { medicine: 'metformin', reasons: ['TIMING_FITS'], facts: [] }]);
   });
+  it('a medicine ranked twice keeps only its first place (seen from Nano offline, Nov 22)', () => {
+    const out = checkRanking(JSON.stringify({ ranked: [
+      { medicine: 'amlodipine', reasons: ['TIMING_FITS'], facts: [] },
+      { medicine: 'metformin', reasons: ['TIMING_FITS'], facts: [] },
+      { medicine: 'metformin', reasons: [], facts: [] }] }), input);
+    expect(out?.map(r => r.medicine)).toEqual(['amlodipine', 'metformin']);
+  });
   it('unreadable output is no suggestion', () => {
     expect(checkRanking('not json', input)).toBeNull();
     expect(checkRanking('{"ranked":[]}', input)).toBeNull();

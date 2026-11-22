@@ -1,5 +1,4 @@
 ---
-# gstack: design-md-format=spec
 name: SideNote
 description: Evidence you can read at arm's length. Large, plain official-form type, ink-black actions, and the patient's own words lit like a highlighter on paper.
 colors:

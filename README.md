@@ -6,9 +6,11 @@ When a medicine might be causing a problem, a regulator's report (FDA MedWatch 3
 
 Built for #BuildHybridAI 2026. Not medical advice, not a diagnosis.
 
-**Try it:** https://sidenote-hybrid.web.app (Chrome; with Gemini Nano the chat is read on your device, without it use the demo case or the 5 questions).
+**Try it:** https://sidenote-hybrid.web.app (Chrome; with Gemini Nano the chat is read on your device, without it use the demo case or the 5 questions). The same codebase builds Android and iOS apps with Capacitor (`apps/sidenote/android`, `apps/sidenote/ios`).
 
 ## Hybrid inference: one routing table, every call through Firebase AI Logic
+
+![SideNote architecture: on-device agents, the approval gate, and Firebase AI Logic in the cloud](submission/architecture.png)
 
 All model calls go through [`apps/sidenote/src/ai/route.ts`](apps/sidenote/src/ai/route.ts) (the routing table) and [`apps/sidenote/src/ai/firebase.ts`](apps/sidenote/src/ai/firebase.ts) (`getAI`, `getGenerativeModel` with `InferenceMode`). Each feature uses the mode its data allows:
 
@@ -72,4 +74,4 @@ On-device reading needs Chrome with Gemini Nano available (`LanguageModel.availa
 
 ## License
 
-Apache-2.0 ([LICENSE](LICENSE)). Reaction terms and label excerpts come from public-domain FDA drug labels (openFDA).
+MIT ([LICENSE](LICENSE)). Reaction terms and label excerpts come from public-domain FDA drug labels (openFDA).

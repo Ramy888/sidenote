@@ -2,7 +2,7 @@
 
 All names and messages below are synthetic. Every number comes from a test in the repo (evals/, apps/sidenote/test, the leakage script). Try it: https://sidenote-hybrid.web.app
 
-Demo video (YouTube, unlisted, 2:03): https://youtu.be/x77m0SzuuJQ
+Demo video (YouTube, unlisted, 2:03): https://youtu.be/xKsX8D_JLx8
 
 ## Tagline (≤200 chars)
 Stop trying to remember when the side effect started. SideNote reads the family chat you already have, on your device, and turns it into a dated report for the FDA. Your family's words never leave.
